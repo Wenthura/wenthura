@@ -1,0 +1,288 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  background: #ffffff;
+}
+
+body {
+  background: #ffffff;
+  color: #0f172a;
+  font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Lenis momentum scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+::selection {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #f8fafc; }
+::-webkit-scrollbar-thumb {
+  background: rgba(37, 99, 235, 0.25);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(37, 99, 235, 0.45); }
+
+/* noise overlay */
+.noise::before {
+  display: none;
+}
+
+/* Old hero-drift keyframes removed (no longer used) */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.grid-lines {
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 35%, black 10%, transparent 75%);
+}
+
+/* ambient glow orbs */
+.glow-orb {
+  display: none;
+}
+
+@layer components {
+  .container-p {
+    @apply mx-auto w-full max-w-[1360px] px-6 sm:px-8 lg:px-12;
+  }
+
+  /* Light card / glass */
+  .glass {
+    @apply rounded-2xl border border-ink-700/50 bg-white shadow-sm;
+  }
+
+  .hairline {
+    @apply border border-ink-700/50;
+  }
+
+  /* Orange CTA — primary action */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-lg bg-[#F97316] px-7 py-3.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white shadow-[0_4px_20px_-4px_rgba(249,115,22,0.40)] transition-all duration-300 ease-smooth hover:-translate-y-0.5 hover:shadow-[0_8px_28px_-4px_rgba(249,115,22,0.50)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F97316] focus-visible:ring-offset-2;
+  }
+
+  /* Blue outline ghost button */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-lg border border-ink-700 bg-transparent px-7 py-3.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-ink-50 transition-all duration-300 ease-smooth hover:-translate-y-0.5 hover:border-glow/50 hover:text-glow focus:outline-none;
+  }
+
+  /* Small capability chip */
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full border border-glow/20 bg-glow/5 px-4 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-glow;
+  }
+
+  /* Section eyebrow label */
+  .eyebrow {
+    @apply mb-3 inline-flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.35em] text-glow;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply inline-block h-px w-8 bg-glow;
+  }
+
+  /* Display serif type */
+  .display {
+    @apply font-display font-light leading-[0.92] tracking-tight;
+  }
+
+  .section-title {
+    @apply display text-4xl sm:text-5xl lg:text-[3.25rem];
+  }
+
+  .lead {
+    @apply mt-5 max-w-2xl text-base leading-relaxed text-ink-400 sm:text-lg;
+  }
+
+  /* Light card */
+  .card-glass {
+    @apply relative overflow-hidden rounded-xl border border-ink-700/50 bg-white p-6 shadow-sm transition-all duration-500 ease-smooth hover:border-glow/30 hover:shadow-md;
+  }
+
+  /* Section number decorator */
+  .section-num {
+    @apply font-mono text-[10px] uppercase tracking-[0.3em] text-glow/50;
+  }
+
+  /* Horizontal divider */
+  .divider {
+    @apply h-px w-full bg-ink-700/60;
+  }
+}
+
+/* reveal helpers (split-type) */
+.reveal-wrap { overflow: hidden; display: inline-block; }
+.reveal-wrap .char,
+.reveal-wrap .word,
+.reveal-wrap .line {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+/* hide stuff until fonts/Lenis ready */
+.is-loading {
+  overflow: hidden;
+}
+
+/* ─── Delight: button press & lift ──────────────────────────── */
+.btn-primary:active,
+.btn-ghost:active {
+  transform: translateY(1px) scale(0.98);
+  transition-duration: 80ms;
+}
+
+/* ─── Delight: ripple effect for primary buttons ────────────── */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--ripple-x, 50%) var(--ripple-y, 50%), rgba(255,255,255,0.35) 0%, transparent 60%);
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.5s, transform 0.5s;
+  pointer-events: none;
+}
+.btn-primary:active::after {
+  opacity: 1;
+  transform: scale(2.5);
+  transition-duration: 0.1s, 0.3s;
+}
+
+/* ─── Delight: card hover magnetic glow ─────────────────────── */
+.card-glass::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(
+    400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(37, 99, 235, 0.08),
+    transparent 60%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: 0;
+}
+.card-glass:hover::before {
+  opacity: 1;
+}
+
+/* ─── Delight: input focus glow ring ────────────────────────── */
+.input-delight {
+  transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+}
+.input-delight:focus {
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* ─── Delight: validation shake ─────────────────────────────── */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(2px); }
+}
+.shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+/* ─── Delight: confetti fall ────────────────────────────────── */
+@keyframes confetti-fall {
+  0% { opacity: 1; transform: translateY(0) rotate(0deg); }
+  100% { opacity: 0; transform: translateY(100vh) rotate(720deg); }
+}
+
+/* ─── Delight: easter egg fade ──────────────────────────────── */
+@keyframes easter-fade {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+  15% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  75% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(0.95); }
+}
+
+/* ─── Delight: success checkmark draw ───────────────────────── */
+@keyframes draw-check {
+  0% { stroke-dashoffset: 24; }
+  100% { stroke-dashoffset: 0; }
+}
+.draw-check {
+  stroke-dasharray: 24;
+  stroke-dashoffset: 24;
+  animation: draw-check 0.5s 0.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ─── Delight: success ring expand ──────────────────────────── */
+@keyframes ring-expand {
+  0% { transform: scale(0.6); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.ring-expand {
+  animation: ring-expand 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ─── Delight: link hover arrow nudge ───────────────────────── */
+.arrow-nudge {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.group:hover .arrow-nudge {
+  transform: translateX(3px);
+}
+
+/* ─── Delight: nav link active dot ──────────────────────────── */
+@keyframes dot-appear {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
