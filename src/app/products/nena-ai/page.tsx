@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle, Brain, Target, BarChart2, Users, BookOpen, Shield, ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { NenaAIIll } from "@/components/illustrations";
+import { NenaHero } from "./NenaHero";
 
 export const metadata: Metadata = {
   title: "Nena AI — AI-Powered Learning for Students & Institutions",
@@ -46,71 +47,8 @@ const features = [
 export default function NenaAIPage() {
   return (
     <>
-      {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden pt-28 pb-20 lg:pt-40 lg:pb-28" style={{ background: "linear-gradient(160deg, #0B1945 0%, #0F2460 50%, #0B1945 100%)" }}>
-        {/* glow effects */}
-        <div className="pointer-events-none absolute top-0 right-1/4 h-[500px] w-[500px] rounded-full" style={{ background: "radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%)" }} />
-        <div className="pointer-events-none absolute bottom-0 left-0 h-64 w-64 rounded-full" style={{ background: "radial-gradient(circle, rgba(96,165,250,0.08) 0%, transparent 70%)" }} />
-
-        {/* grid */}
-        <div className="pointer-events-none absolute inset-0" style={{
-          backgroundImage: "linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px), linear-gradient(to right, rgba(59,130,246,0.04) 1px, transparent 1px)",
-          backgroundSize: "64px 64px",
-        }} />
-
-        <div className="container-p relative">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
-            <div>
-              <Reveal>
-                <div className="mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-[10px] font-semibold uppercase tracking-widest" style={{ borderColor: "rgba(96,165,250,0.3)", background: "rgba(59,130,246,0.1)", color: "#93C5FD" }}>
-                  <span className="h-1.5 w-1.5 rounded-full" style={{ background: "#60A5FA" }} />
-                  AI Learning Platform
-                </div>
-                <h1 className="display text-5xl leading-[1.05] text-white sm:text-6xl lg:text-[3.5rem] xl:text-[4rem]">
-                  Learning that{" "}
-                  <span className="italic" style={{ color: "#60A5FA" }}>adapts</span>{" "}
-                  to every{" "}
-                  <span className="italic" style={{ color: "#93C5FD" }}>student.</span>
-                </h1>
-                <p className="mt-6 max-w-lg text-lg leading-relaxed" style={{ color: "rgba(147,197,253,0.7)" }}>
-                  Nena AI empowers students and institutions with intelligent academic support —
-                  adaptive learning paths, smart assessments, and deep analytics for educators
-                  and institutions.
-                </p>
-                <div className="mt-8 flex flex-wrap items-center gap-4">
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-2.5 rounded-lg px-7 py-3.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white shadow-lg transition-all hover:-translate-y-0.5"
-                    style={{ background: "linear-gradient(135deg, #2563EB, #1D4ED8)", boxShadow: "0 4px 20px -4px rgba(37,99,235,0.5)" }}
-                  >
-                    Get Started <ArrowRight className="h-4 w-4" />
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-2 rounded-lg border px-7 py-3.5 text-[11px] font-semibold uppercase tracking-[0.14em] transition-all hover:-translate-y-0.5"
-                    style={{ borderColor: "rgba(96,165,250,0.3)", color: "#93C5FD" }}
-                  >
-                    Book a Demo
-                  </Link>
-                </div>
-                <ul className="mt-10 space-y-2">
-                  {["Powered by advanced AI & machine learning", "Built for K-12, higher education & professional learning"].map((t) => (
-                    <li key={t} className="flex items-center gap-2 text-sm" style={{ color: "rgba(147,197,253,0.6)" }}>
-                      <CheckCircle className="h-4 w-4 shrink-0" style={{ color: "#60A5FA" }} />
-                      {t}
-                    </li>
-                  ))}
-                </ul>
-              </Reveal>
-            </div>
-            <Reveal delay={0.1}>
-              <div className="overflow-hidden rounded-3xl aspect-video" style={{ border: "1px solid rgba(96,165,250,0.2)", boxShadow: "0 0 60px rgba(37,99,235,0.1)" }}>
-                <NenaAIIll className="h-full w-full" />
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
+      {/* ── Cinematic Video Hero ─────────────────────────────────────────── */}
+      <NenaHero />
 
       {/* ── Features ─────────────────────────────────────────────────────── */}
       <section className="py-24" style={{ background: "#0F1E40" }}>

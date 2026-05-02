@@ -1,5 +1,4 @@
 import { Hero } from "@/components/hero/Hero";
-import { LogoWall } from "@/components/LogoWall";
 import { Reveal } from "@/components/Reveal";
 import { StaggerList, StaggerItem } from "@/components/StaggerList";
 import { AnimatedLine } from "@/components/AnimatedLine";
@@ -12,18 +11,11 @@ import {
   ArrowRight,
   ArrowUpRight,
   CheckCircle,
-  TrendingUp,
-  Globe,
-  Shield,
-  Zap,
-  Users,
-  Layers,
 } from "lucide-react";
 import {
   DoodleNestIll,
   AutoFlowIll,
   NenaAIIll,
-  FinancialDashboard,
 } from "@/components/illustrations";
 
 // --- Feature lists ------------------------------------------------------------
@@ -54,15 +46,6 @@ const autoflowFeatures = [
   { title: "Multi-branch Operations",      desc: "Manage multiple garages from a single command centre"       },
 ];
 
-const bizServices = [
-  { Icon: TrendingUp, title: "Fintech Solutions",     desc: "Payment systems, digital wallets, and core banking",       color: "#2563EB" },
-  { Icon: Globe,      title: "eCommerce Engineering", desc: "Platforms, payment integration, and catalogue management",  color: "#F97316" },
-  { Icon: Shield,     title: "Cloud Services",        desc: "AWS, Azure & GCP infrastructure, migration & DevOps",      color: "#2563EB" },
-  { Icon: Zap,        title: "Managed Services",      desc: "24/7 monitoring, support, SLA management & security",      color: "#F97316" },
-  { Icon: Layers,     title: "Custom Development",    desc: "Bespoke software for complex enterprise requirements",      color: "#2563EB" },
-  { Icon: Users,      title: "IT Talent Solutions",   desc: "Staff augmentation and technical talent placement",         color: "#F97316" },
-];
-
 export default function HomePage() {
   return (
     <>
@@ -72,71 +55,26 @@ export default function HomePage() {
       {/* ------------------------------------------------------------------
           OUR SERVICES & PRODUCTS
       ------------------------------------------------------------------ */}
-      <section id="services" className="bg-white py-28 border-t border-slate-100">
+      <section id="services" className="bg-white py-16 border-t border-slate-100 sm:py-28">
         <div className="container-p">
           <Reveal className="mb-16 text-center">
             <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-slate-400">
-              Services &amp; Products
+              Our Products
             </p>
             <h2
               className="mt-4 font-display font-black text-slate-900"
               style={{ fontSize: "clamp(2rem, 5vw, 3.75rem)", lineHeight: "0.93" }}
             >
-              Enterprise services.{" "}
-              <span style={{ color: "#2563EB" }}>Purpose-built products.</span>
+              Purpose-built{" "}
+              <span style={{ color: "#2563EB" }}>products.</span>
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-400">
-              We deliver end-to-end technology services for enterprises — from fintech
-              and cloud to managed IT — alongside dedicated products for education,
-              AI learning, and automotive operations.
+              Dedicated products for education, AI learning, and automotive operations —
+              built with deep domain expertise and modern technology.
             </p>
           </Reveal>
 
           <div className="space-y-4">
-            {/* Featured — Business Solutions */}
-            <Reveal>
-              <Link
-                href="/products/business-solutions"
-                className="group relative flex flex-col gap-6 overflow-hidden rounded-3xl border border-blue-50 bg-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-50/50 sm:flex-row sm:items-stretch"
-              >
-                <div className="relative hidden w-[280px] shrink-0 overflow-hidden sm:block">
-                  <LazyImage
-                    src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80&fit=crop"
-                    alt="Executive team in strategy boardroom"
-                    ratio={3 / 4}
-                    inView
-                    AspectRatioClassName="rounded-none border-0"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent to-white/20" />
-                </div>
-                <div className="flex flex-1 flex-col justify-center p-8 lg:p-10">
-                  <span className="font-mono text-[9px] uppercase tracking-[0.22em] text-blue-600/60">
-                    Enterprise Services
-                  </span>
-                  <h3 className="mt-1.5 font-display text-2xl font-black text-slate-900 sm:text-3xl">
-                    Business Solutions
-                  </h3>
-                  <p className="mt-3 max-w-xl text-sm leading-relaxed text-slate-400">
-                    End-to-end technology services — fintech, ecommerce, cloud infrastructure,
-                    managed services, custom development, and IT talent solutions for enterprises across 15+ countries.
-                  </p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {["Fintech", "eCommerce", "Cloud", "Managed Services", "Custom Dev", "IT Talent"].map((t) => (
-                      <span
-                        key={t}
-                        className="rounded-full bg-blue-50 px-3 py-1 font-mono text-[9px] uppercase tracking-wider text-blue-600"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="mt-5 flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider text-blue-600 opacity-0 transition-opacity group-hover:opacity-100">
-                    Explore <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
-                  </div>
-                </div>
-              </Link>
-            </Reveal>
-
             {/* Three products */}
             <div className="grid gap-4 sm:grid-cols-3">
               {/* DoodleNest */}
@@ -240,137 +178,7 @@ export default function HomePage() {
       </section>
 
       {/* ------------------------------------------------------------------
-          PHOTO DIVIDER — Enterprise
-      ------------------------------------------------------------------ */}
-      <section className="relative h-[260px] overflow-hidden sm:h-[320px] lg:h-[400px]">
-        <LazyImage
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80&fit=crop"
-          alt="Panoramic view of sleek modern office"
-          ratio={16 / 5}
-          inView
-          AspectRatioClassName="rounded-none border-0 h-full"
-          className="h-full"
-        />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
-        <div className="pointer-events-none absolute inset-0 bg-slate-900/10" />
-      </section>
-
-      {/* ------------------------------------------------------------------
-          01 — ENTERPRISE — BUSINESS SOLUTIONS
-      ------------------------------------------------------------------ */}
-      <section id="business-solutions" className="relative overflow-hidden bg-white">
-        <div
-          className="absolute left-0 right-0 top-0 h-px"
-          style={{ background: "linear-gradient(90deg, transparent, #2563EB40, #F9731640, transparent)" }}
-        />
-        <div
-          className="pointer-events-none absolute left-0 top-0 select-none font-black leading-[0.8]"
-          style={{ fontSize: "clamp(10rem, 22vw, 22rem)", color: "rgba(37,99,235,0.03)" }}
-        >
-          01
-        </div>
-        <div className="container-p relative z-10 py-28 lg:py-36">
-          <Reveal>
-            <div className="mb-16">
-              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-blue-600/50">01 — Enterprise Services</p>
-              <AnimatedLine style={{ background: "linear-gradient(90deg, #2563EB, #F97316)" }} />
-            </div>
-          </Reveal>
-          <div className="grid gap-16 lg:grid-cols-2 lg:items-start lg:gap-20">
-            <Reveal>
-              <h2
-                className="font-display font-black leading-[0.92] tracking-tight text-slate-900"
-                style={{ fontSize: "clamp(2.5rem, 5vw, 4.25rem)" }}
-              >
-                Enterprise technology{" "}
-                <em className="not-italic" style={{ color: "#2563EB" }}>at scale.</em>
-              </h2>
-              <p className="mt-6 max-w-lg text-base leading-relaxed text-slate-400">
-                From payment platforms and ecommerce to cloud infrastructure and managed services —
-                we engineer secure, scalable technology for modern enterprises
-                across 15+ countries.
-              </p>
-              <StaggerList className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                {bizServices.map((s) => {
-                  const Icon = s.Icon;
-                  return (
-                    <StaggerItem
-                      key={s.title}
-                      className="flex gap-3 rounded-xl border border-slate-100 bg-white p-4 transition-all hover:border-blue-100 hover:shadow-sm"
-                    >
-                      <div
-                        className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg"
-                        style={{ background: `${s.color}0C` }}
-                      >
-                        <Icon className="h-4 w-4" style={{ color: s.color }} />
-                      </div>
-                      <div>
-                        <p className="text-sm font-semibold text-slate-800">{s.title}</p>
-                        <p className="mt-0.5 text-xs leading-relaxed text-slate-400">{s.desc}</p>
-                      </div>
-                    </StaggerItem>
-                  );
-                })}
-              </StaggerList>
-              <div className="mt-10 flex flex-wrap gap-4">
-                <TapTarget>
-                  <Link
-                    href="/products/business-solutions"
-                    className="inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.16em] text-white transition-all hover:-translate-y-0.5 hover:shadow-xl"
-                    style={{ background: "#2563EB" }}
-                  >
-                    Explore Business Solutions <ArrowRight className="h-3.5 w-3.5" />
-                  </Link>
-                </TapTarget>
-                <TapTarget>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-7 py-3.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500 transition hover:border-orange-300 hover:text-slate-800"
-                  >
-                    Request a demo
-                  </Link>
-                </TapTarget>
-              </div>
-            </Reveal>
-            <Reveal delay={0.1} direction="right">
-              <div className="relative overflow-hidden rounded-3xl border border-slate-100 bg-gradient-to-br from-slate-50 via-white to-blue-50/40 shadow-xl shadow-slate-100/60">
-                <FinancialDashboard className="aspect-[4/3] h-full w-full" />
-              </div>
-              {/* Contextual photo */}
-              <div className="mt-5 grid grid-cols-2 gap-4">
-                <LazyImage
-                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&q=80&fit=crop"
-                  alt="Business professionals reviewing analytics dashboard"
-                  ratio={4 / 3}
-                  inView
-                />
-                <LazyImage
-                  src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&q=80&fit=crop"
-                  alt="Engineers collaborating on fintech platform"
-                  ratio={4 / 3}
-                  inView
-                />
-              </div>
-              <div className="mt-4 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-slate-100">
-                {[
-                  { v: "200+",  l: "Enterprise clients",       color: "#2563EB" },
-                  { v: "15+",   l: "Countries served",         color: "#F97316" },
-                  { v: "$4.2B", l: "Transactions processed",   color: "#2563EB" },
-                  { v: "99.9%", l: "Platform uptime SLA",      color: "#F97316" },
-                ].map((s) => (
-                  <div key={s.l} className="flex flex-col gap-1 bg-white px-6 py-5">
-                    <div className="font-display text-3xl font-black" style={{ color: s.color }}>{s.v}</div>
-                    <div className="font-mono text-[9px] uppercase tracking-wider text-slate-400">{s.l}</div>
-                  </div>
-                ))}
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* ------------------------------------------------------------------
-          02 — EDUTECH — DOODLENEST
+          01 — EDUTECH — DOODLENEST
       ------------------------------------------------------------------ */}
       <section
         id="doodlenest"
@@ -380,13 +188,13 @@ export default function HomePage() {
           className="pointer-events-none absolute right-0 top-0 select-none font-black leading-[0.8] text-orange-100/40"
           style={{ fontSize: "clamp(10rem, 22vw, 22rem)" }}
         >
-          02
+          01
         </div>
 
-        <div className="container-p relative z-10 py-28 lg:py-36">
+        <div className="container-p relative z-10 py-16 sm:py-28 lg:py-36">
           <Reveal>
-            <div className="mb-16">
-              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-orange-500/50">02 — Edutech Product</p>
+            <div className="mb-10 sm:mb-16">
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-orange-500/50">01 — Edutech Product</p>
               <AnimatedLine className="bg-orange-500" />
             </div>
           </Reveal>
@@ -444,13 +252,13 @@ export default function HomePage() {
                 <div className="relative overflow-hidden rounded-3xl border border-orange-100 bg-gradient-to-br from-orange-50/60 via-white to-white shadow-xl shadow-orange-100/30">
                   <DoodleNestIll className="aspect-[4/3] h-full w-full" />
                 </div>
-                <div className="absolute -bottom-5 -left-5 rounded-2xl border border-orange-100 bg-white px-5 py-3.5 shadow-lg">
+                <div className="absolute -bottom-3 -left-3 rounded-2xl border border-orange-100 bg-white px-4 py-2.5 shadow-lg sm:-bottom-5 sm:-left-5 sm:px-5 sm:py-3.5">
                   <p className="font-mono text-[9px] uppercase tracking-widest text-orange-500">Active Schools</p>
-                  <p className="mt-0.5 text-2xl font-black text-slate-900">500+</p>
+                  <p className="mt-0.5 text-xl font-black text-slate-900 sm:text-2xl">500+</p>
                 </div>
-                <div className="absolute -right-5 -top-5 rounded-2xl border border-orange-100 bg-white px-5 py-3.5 shadow-lg">
+                <div className="absolute -right-3 -top-3 rounded-2xl border border-orange-100 bg-white px-4 py-2.5 shadow-lg sm:-right-5 sm:-top-5 sm:px-5 sm:py-3.5">
                   <p className="font-mono text-[9px] uppercase tracking-widest text-orange-500">Students Reached</p>
-                  <p className="mt-0.5 text-2xl font-black text-slate-900">50K+</p>
+                  <p className="mt-0.5 text-xl font-black text-slate-900 sm:text-2xl">50K+</p>
                 </div>
               </div>
               {/* Contextual photo */}
@@ -467,15 +275,15 @@ export default function HomePage() {
           </div>
 
           <Reveal className="mt-20">
-            <div className="grid grid-cols-3 gap-8 border-t border-orange-100 pt-12">
+            <div className="grid grid-cols-3 gap-4 border-t border-orange-100 pt-8 sm:gap-8 sm:pt-12">
               {[
                 { v: "500+", l: "Active schools & centres"  },
                 { v: "50K+", l: "Students on the platform"  },
                 { v: "98%",  l: "Parent satisfaction rate"  },
               ].map((s) => (
                 <div key={s.l} className="text-center">
-                  <div className="text-4xl font-black" style={{ color: "#F97316" }}>{s.v}</div>
-                  <div className="mt-1 text-xs text-slate-400">{s.l}</div>
+                  <div className="text-2xl font-black sm:text-4xl" style={{ color: "#F97316" }}>{s.v}</div>
+                  <div className="mt-1 text-[10px] text-slate-400 sm:text-xs">{s.l}</div>
                 </div>
               ))}
             </div>
@@ -484,7 +292,7 @@ export default function HomePage() {
       </section>
 
       {/* ------------------------------------------------------------------
-          03 — AI LEARNING — NENA AI
+          02 — AI LEARNING — NENA AI
       ------------------------------------------------------------------ */}
       <section
         id="nena-ai"
@@ -501,13 +309,13 @@ export default function HomePage() {
           className="pointer-events-none absolute left-0 top-0 select-none font-black leading-[0.8] text-blue-50"
           style={{ fontSize: "clamp(10rem, 22vw, 22rem)" }}
         >
-          03
+          02
         </div>
 
-        <div className="container-p relative z-10 py-28 lg:py-36">
+        <div className="container-p relative z-10 py-16 sm:py-28 lg:py-36">
           <Reveal>
-            <div className="mb-16">
-              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-blue-600/50">03 — AI-Powered Product</p>
+            <div className="mb-10 sm:mb-16">
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-blue-600/50">02 — AI-Powered Product</p>
               <AnimatedLine className="bg-blue-500" />
             </div>
           </Reveal>
@@ -518,7 +326,7 @@ export default function HomePage() {
                 <div className="relative overflow-hidden rounded-3xl border border-blue-100 bg-gradient-to-br from-blue-50/60 via-white to-white shadow-xl shadow-blue-50/60">
                   <NenaAIIll className="aspect-[4/3] h-full w-full" />
                 </div>
-                <div className="absolute -bottom-5 -right-5 rounded-2xl border border-blue-100 bg-white px-5 py-3.5 shadow-lg">
+                <div className="absolute -bottom-3 -right-3 rounded-2xl border border-blue-100 bg-white px-4 py-2.5 shadow-lg sm:-bottom-5 sm:-right-5 sm:px-5 sm:py-3.5">
                   <p className="font-mono text-[9px] uppercase tracking-widest text-blue-600">Score Improvement</p>
                   <p className="mt-0.5 text-2xl font-black text-slate-900">+42%</p>
                 </div>
@@ -583,7 +391,7 @@ export default function HomePage() {
           </div>
 
           <Reveal className="mt-20">
-            <div className="grid grid-cols-2 gap-6 border-t border-blue-100 pt-12 sm:grid-cols-4">
+            <div className="grid grid-cols-2 gap-4 border-t border-blue-100 pt-8 sm:grid-cols-4 sm:gap-6 sm:pt-12">
               {[
                 { v: "42%",  l: "Average score improvement" },
                 { v: "3x",   l: "Faster content mastery"    },
@@ -591,8 +399,8 @@ export default function HomePage() {
                 { v: "24/7", l: "AI tutoring availability"   },
               ].map((s) => (
                 <div key={s.l} className="text-center">
-                  <div className="text-4xl font-black text-blue-600">{s.v}</div>
-                  <div className="mt-1 text-xs text-slate-400">{s.l}</div>
+                  <div className="text-2xl font-black text-blue-600 sm:text-4xl">{s.v}</div>
+                  <div className="mt-1 text-[10px] text-slate-400 sm:text-xs">{s.l}</div>
                 </div>
               ))}
             </div>
@@ -601,7 +409,7 @@ export default function HomePage() {
       </section>
 
       {/* ------------------------------------------------------------------
-          04 — AUTOMOTIVE — AUTOFLOW
+          03 — AUTOMOTIVE — AUTOFLOW
       ------------------------------------------------------------------ */}
       <section
         id="autoflow"
@@ -619,13 +427,13 @@ export default function HomePage() {
           className="pointer-events-none absolute right-0 top-0 select-none font-black leading-[0.8] text-orange-50"
           style={{ fontSize: "clamp(10rem, 22vw, 22rem)" }}
         >
-          04
+          03
         </div>
 
-        <div className="container-p relative z-10 py-28 lg:py-36">
+        <div className="container-p relative z-10 py-16 sm:py-28 lg:py-36">
           <Reveal>
-            <div className="mb-16">
-              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-orange-500/50">04 — Automotive Product</p>
+            <div className="mb-10 sm:mb-16">
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-orange-500/50">03 — Automotive Product</p>
               <AnimatedLine style={{ background: "#F97316" }} />
             </div>
           </Reveal>
@@ -683,7 +491,7 @@ export default function HomePage() {
                 <div className="relative overflow-hidden rounded-3xl border border-orange-100 bg-gradient-to-br from-orange-50/60 via-white to-white shadow-xl shadow-orange-50/60">
                   <AutoFlowIll className="aspect-[4/3] h-full w-full" />
                 </div>
-                <div className="absolute -left-5 -top-5 rounded-2xl border border-orange-100 bg-white px-5 py-3.5 shadow-lg">
+                <div className="absolute -left-3 -top-3 rounded-2xl border border-orange-100 bg-white px-4 py-2.5 shadow-lg sm:-left-5 sm:-top-5 sm:px-5 sm:py-3.5">
                   <p className="font-mono text-[9px] uppercase tracking-widest text-orange-500">Efficiency Gain</p>
                   <p className="mt-0.5 text-2xl font-black text-slate-900">+40%</p>
                 </div>
@@ -702,15 +510,15 @@ export default function HomePage() {
           </div>
 
           <Reveal className="mt-20">
-            <div className="grid grid-cols-3 gap-6 border-t border-orange-100 pt-12">
+            <div className="grid grid-cols-3 gap-4 border-t border-orange-100 pt-8 sm:gap-6 sm:pt-12">
               {[
                 { v: "200+", l: "Garages & service stations" },
                 { v: "95%",  l: "Customer satisfaction"       },
                 { v: "40%",  l: "Operational efficiency gain" },
               ].map((s) => (
                 <div key={s.l} className="text-center">
-                  <div className="text-4xl font-black" style={{ color: "#F97316" }}>{s.v}</div>
-                  <div className="mt-1 text-xs text-slate-400">{s.l}</div>
+                  <div className="text-2xl font-black sm:text-4xl" style={{ color: "#F97316" }}>{s.v}</div>
+                  <div className="mt-1 text-[10px] text-slate-400 sm:text-xs">{s.l}</div>
                 </div>
               ))}
             </div>
@@ -737,7 +545,7 @@ export default function HomePage() {
       {/* ------------------------------------------------------------------
           ABOUT WENTHURA
       ------------------------------------------------------------------ */}
-      <section className="bg-white py-28">
+      <section className="bg-white py-16 sm:py-28">
         <div className="container-p">
           <div className="grid gap-12 lg:grid-cols-[1fr,1.6fr] lg:items-center lg:gap-20">
             <Reveal>
@@ -790,10 +598,9 @@ export default function HomePage() {
                   in an increasingly connected world.
                 </p>
                 <p>
-                  Our enterprise services cover fintech, ecommerce, cloud infrastructure,
-                  managed IT, custom development, and talent solutions. Our products —
-                  DoodleNest, Nena AI, and AutoFlow — serve education, AI learning,
-                  and automotive industries with deep domain expertise.
+                  Our products — DoodleNest, Nena AI, and AutoFlow — serve education,
+                  AI learning, and automotive industries with deep domain expertise
+                  and modern technology.
                 </p>
                 <p>
                   From strategy through to execution, Wenthura provides comprehensive
@@ -806,13 +613,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Partner logos */}
-      <LogoWall />
-
       {/* ------------------------------------------------------------------
           FINAL CTA
       ------------------------------------------------------------------ */}
-      <section className="relative overflow-hidden bg-slate-900 py-36">
+      <section className="relative overflow-hidden bg-slate-900 py-20 sm:py-36">
         <div className="absolute inset-0">
           <LazyImage
             src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1600&q=80&fit=crop"

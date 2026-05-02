@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Bricolage_Grotesque, Urbanist, JetBrains_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Urbanist, JetBrains_Mono, Sora, Instrument_Serif, Condiment, Space_Grotesk, Inter, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -25,6 +25,43 @@ const mono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
   display: "swap",
+});
+const sora = Sora({
+  subsets: ["latin"],
+  variable: "--font-sora",
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+});
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  variable: "--font-instrument",
+  display: "swap",
+  weight: ["400"],
+  style: ["normal", "italic"],
+});
+const condiment = Condiment({
+  subsets: ["latin"],
+  variable: "--font-condiment",
+  display: "swap",
+  weight: ["400"],
+});
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space",
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+});
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+  weight: ["400", "500", "600"],
+});
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  variable: "--font-bebas",
+  display: "swap",
+  weight: ["400"],
 });
 
 export const viewport: Viewport = {
@@ -56,7 +93,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${bricolage.variable} ${urbanist.variable} ${mono.variable}`}
+      className={`${bricolage.variable} ${urbanist.variable} ${mono.variable} ${sora.variable} ${instrumentSerif.variable} ${condiment.variable} ${spaceGrotesk.variable} ${inter.variable} ${bebasNeue.variable}`}
     >
       <body className="font-sans">
         <ScrollProgress />

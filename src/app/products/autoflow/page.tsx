@@ -1,140 +1,288 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle, Activity, Layers, Eye, Package, Cpu, BarChart2, ArrowUpRight } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Activity,
+  Layers,
+  Eye,
+  Package,
+  Cpu,
+  BarChart2,
+  Wrench,
+  Clock,
+  Users,
+  Zap,
+} from "lucide-react";
 import { Reveal } from "@/components/Reveal";
-import { AutoFlowIll } from "@/components/illustrations";
+import { AutoFlowHero } from "./AutoFlowHero";
 
 export const metadata: Metadata = {
-  title: "AutoFlow — AI-Driven Automotive ERP for Service Stations & Garages",
+  title: "AutoFlow \u2014 AI-Driven Automotive ERP for Service Stations & Garages",
   description:
-    "AutoFlow brings intelligent automation to auto service stations and garages — real-time job tracking, bay management, customer visibility, and streamlined operations.",
+    "AutoFlow brings intelligent automation to auto service stations and garages \u2014 real-time job tracking, bay management, customer visibility, and streamlined operations.",
+};
+
+/* ── palette ── */
+const c = {
+  bg: "#010101",
+  surface: "#0A0A0A",
+  surfaceAlt: "#111111",
+  border: "rgba(255,255,255,0.08)",
+  fg: "#ffffff",
+  muted: "rgba(255,255,255,0.45)",
+  accent: "#F97316",
+  accentFg: "#000000",
+};
+
+const clipBtn =
+  "polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px))";
+
+const glass = {
+  background:
+    "linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)",
+  backdropFilter: "blur(40px) saturate(180%)",
+  WebkitBackdropFilter: "blur(40px) saturate(180%)",
+  border: "1px solid rgba(255,255,255,0.10)",
+  boxShadow:
+    "inset 0 1px 1px rgba(255,255,255,0.05), 0 4px 24px rgba(0,0,0,0.3)",
+} as const;
+
+const interFont = {
+  fontFamily:
+    "var(--font-sora), var(--font-inter), ui-sans-serif, system-ui, sans-serif",
+  fontFeatureSettings: "'ss01' 1, 'cv11' 1",
+  letterSpacing: "-0.005em",
+};
+
+const displayFont = {
+  fontFamily:
+    "var(--font-bricolage), ui-sans-serif, system-ui, sans-serif",
+  fontFeatureSettings: "'ss01' 1, 'ss02' 1, 'cv11' 1",
+};
+
+const serifAccent = {
+  fontFamily:
+    "var(--font-instrument), ui-serif, Georgia, serif",
+  fontStyle: "italic" as const,
+  fontWeight: 400,
+};
+
+const monoFont = {
+  fontFamily:
+    "var(--font-mono), 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace",
+  fontFeatureSettings: "'zero' 1, 'ss02' 1",
 };
 
 const features = [
   {
     Icon: Activity,
     title: "Real-Time Job Tracking",
-    desc: "Monitor every service job from intake to delivery. Live status updates ensure your team and customers always know what's happening.",
+    desc: "Monitor every service job from intake to delivery with live status updates across all bays.",
   },
   {
     Icon: Layers,
-    title: "Bay Management",
-    desc: "Intelligent allocation of service bays and technicians based on job type, priority, and availability — maximizing throughput.",
+    title: "Smart Bay Management",
+    desc: "Intelligent allocation of service bays and technicians \u2014 maximizing throughput automatically.",
   },
   {
     Icon: Eye,
     title: "Customer Visibility Portal",
-    desc: "Keep customers informed with a branded live job-status portal. Reduce inbound calls and build trust through transparency.",
+    desc: "Branded live job-status portal. Reduce phone calls and build trust through real-time transparency.",
   },
   {
     Icon: Package,
-    title: "Inventory & Parts Management",
-    desc: "Track parts in real time, automate reorder triggers, reduce waste, and maintain accurate stock levels across all bays.",
+    title: "Inventory & Parts",
+    desc: "Real-time parts tracking, auto reorder triggers, and accurate stock across all locations.",
   },
   {
     Icon: Cpu,
-    title: "AI-Powered Diagnostics",
-    desc: "Smart fault detection and service recommendations based on vehicle history and sensor data — empowering technicians to work faster.",
+    title: "AI Diagnostics",
+    desc: "Smart fault detection and service recommendations based on vehicle history and sensor data.",
   },
   {
     Icon: BarChart2,
     title: "Revenue Analytics",
-    desc: "Track performance, revenue per bay, technician efficiency, and service trends. Make data-driven decisions to grow your business.",
+    desc: "Track performance, revenue per bay, and service trends to make data-driven decisions.",
   },
 ];
 
 export default function AutoFlowPage() {
   return (
-    <>
-      {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden pt-28 pb-20 lg:pt-40 lg:pb-28" style={{ background: "#060A14" }}>
-        {/* orange glow */}
-        <div className="pointer-events-none absolute -top-40 right-0 h-[480px] w-[480px] rounded-full" style={{ background: "radial-gradient(circle, rgba(249,115,22,0.15) 0%, transparent 70%)" }} />
-        <div className="pointer-events-none absolute bottom-0 left-0 h-64 w-64 rounded-full" style={{ background: "radial-gradient(circle, rgba(249,115,22,0.08) 0%, transparent 70%)" }} />
+    <div style={{ ...interFont, background: c.bg }}>
+      {/* ── Hero ── */}
+      <AutoFlowHero />
 
-        {/* grid overlay */}
-        <div className="pointer-events-none absolute inset-0" style={{
-          backgroundImage: "linear-gradient(rgba(249,115,22,0.04) 1px, transparent 1px), linear-gradient(to right, rgba(249,115,22,0.04) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }} />
-
-        <div className="container-p relative">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+      {/* ── About / Trust Bar ── */}
+      <section className="py-20 sm:py-28" style={{ background: c.bg }}>
+        <div className="mx-auto max-w-6xl px-8 sm:px-16">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <Reveal>
-                <div className="mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-[10px] font-semibold uppercase tracking-widest" style={{ borderColor: "rgba(249,115,22,0.3)", background: "rgba(249,115,22,0.1)", color: "#F97316" }}>
-                  <span className="h-1.5 w-1.5 rounded-full" style={{ background: "#F97316" }} />
-                  Automotive ERP
-                </div>
-                <h1 className="display text-5xl leading-[1.05] text-white sm:text-6xl lg:text-[3.5rem] xl:text-[4rem]">
-                  Your garage,{" "}
-                  <span className="italic" style={{ color: "#F97316" }}>intelligently</span>{" "}
-                  managed.
-                </h1>
-                <p className="mt-6 max-w-lg text-lg leading-relaxed" style={{ color: "rgba(248,250,252,0.6)" }}>
-                  AutoFlow brings AI-driven automation to auto service stations and garages —
-                  real-time job tracking, bay management, customer visibility, and streamlined
-                  operations from intake to delivery.
+                <p
+                  className="text-[11px] font-medium uppercase tracking-[0.22em] mb-4"
+                  style={{ ...monoFont, color: c.accent }}
+                >
+                  About the Platform
                 </p>
-                <div className="mt-8 flex flex-wrap items-center gap-4">
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-2.5 rounded-lg px-7 py-3.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white shadow-lg transition-all hover:-translate-y-0.5"
-                    style={{ background: "#F97316", boxShadow: "0 4px 20px -4px rgba(249,115,22,0.5)" }}
+              </Reveal>
+              <Reveal>
+                <h2
+                  className="leading-[0.98] mb-5"
+                  style={{
+                    ...displayFont,
+                    fontSize: "clamp(2rem, 4.5vw, 3.25rem)",
+                    fontWeight: 500,
+                    color: c.fg,
+                    letterSpacing: "-0.04em",
+                  }}
+                >
+                  Intelligent ERP for
+                  <br />
+                  <span
+                    style={{
+                      ...serifAccent,
+                      color: c.accent,
+                      letterSpacing: "-0.02em",
+                    }}
                   >
-                    Request a Demo <ArrowRight className="h-4 w-4" />
-                  </Link>
-                  <a
-                    href="mailto:hello@wenthura.lk"
-                    className="inline-flex items-center gap-2 rounded-lg border px-7 py-3.5 text-[11px] font-semibold uppercase tracking-[0.14em] transition-all hover:-translate-y-0.5"
-                    style={{ borderColor: "rgba(249,115,22,0.3)", color: "#F97316" }}
-                  >
-                    Talk to Sales
-                  </a>
-                </div>
-                <ul className="mt-10 space-y-2">
-                  {["Cloud-based · Mobile-ready · Multi-location", "AI diagnostics & predictive maintenance support"].map((t) => (
-                    <li key={t} className="flex items-center gap-2 text-sm" style={{ color: "rgba(248,250,252,0.55)" }}>
-                      <CheckCircle className="h-4 w-4 shrink-0" style={{ color: "#F97316" }} />
-                      {t}
-                    </li>
-                  ))}
-                </ul>
+                    auto service
+                  </span>
+                </h2>
+              </Reveal>
+              <Reveal>
+                <p
+                  className="font-light leading-relaxed max-w-md"
+                  style={{ fontSize: "0.975rem", color: c.muted, fontWeight: 350 }}
+                >
+                  AutoFlow is an intelligent platform engineered for modern
+                  workshops. Real-time operations, smart bay management, and
+                  seamless customer experience — deployed in days, not
+                  months.
+                </p>
               </Reveal>
             </div>
+
+            {/* Stats */}
             <Reveal delay={0.1}>
-              <div className="overflow-hidden rounded-3xl aspect-video" style={{ border: "1px solid rgba(249,115,22,0.2)", boxShadow: "0 0 60px rgba(249,115,22,0.08)" }}>
-                <AutoFlowIll className="h-full w-full" />
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { stat: "200+", label: "Service Stations" },
+                  { stat: "40%", label: "Efficiency Gain" },
+                  { stat: "95%", label: "Satisfaction" },
+                  { stat: "2\u00D7", label: "Faster Turnaround" },
+                ].map((s) => (
+                  <div
+                    key={s.label}
+                    className="p-5"
+                    style={{ ...glass, borderRadius: "2px" }}
+                  >
+                    <div
+                      className="text-3xl sm:text-4xl"
+                      style={{
+                        ...displayFont,
+                        fontWeight: 500,
+                        letterSpacing: "-0.04em",
+                        color: c.accent,
+                      }}
+                    >
+                      {s.stat}
+                    </div>
+                    <div
+                      className="mt-1.5 text-[10px] uppercase tracking-[0.22em]"
+                      style={{ ...monoFont, color: c.muted }}
+                    >
+                      {s.label}
+                    </div>
+                  </div>
+                ))}
               </div>
             </Reveal>
           </div>
         </div>
       </section>
 
-      {/* ── Features ─────────────────────────────────────────────────────── */}
-      <section className="py-24" style={{ background: "#0A0F1A" }}>
-        <div className="container-p">
-          <Reveal className="mb-16 text-center">
-            <span className="font-mono text-[10px] uppercase tracking-[0.35em] mb-3 inline-flex items-center gap-3" style={{ color: "#F97316" }}>
-              <span className="h-px w-8 inline-block" style={{ background: "#F97316" }} />
+      {/* ── Features ── */}
+      <section
+        id="features"
+        className="py-20 sm:py-28"
+        style={{ background: c.surface }}
+      >
+        <div className="mx-auto max-w-6xl px-8 sm:px-16">
+          <Reveal>
+            <p
+              className="text-[11px] font-medium uppercase tracking-[0.22em] mb-4"
+              style={{ ...monoFont, color: c.accent }}
+            >
               Core Features
-            </span>
-            <h2 className="section-title mt-3 text-white">Built for the modern workshop</h2>
-            <p className="lead mx-auto text-center" style={{ color: "rgba(248,250,252,0.5)" }}>
-              Every feature in AutoFlow is designed to eliminate friction, reduce downtime, and maximize revenue.
             </p>
           </Reveal>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <Reveal>
+            <h2
+              className="leading-[0.98] mb-3"
+              style={{
+                ...displayFont,
+                fontSize: "clamp(2rem, 4.5vw, 3.25rem)",
+                fontWeight: 500,
+                color: c.fg,
+                letterSpacing: "-0.04em",
+              }}
+            >
+              Built for the{" "}
+              <span
+                style={{
+                  ...serifAccent,
+                  color: c.accent,
+                  letterSpacing: "-0.02em",
+                }}
+              >
+                modern workshop
+              </span>
+            </h2>
+          </Reveal>
+          <Reveal>
+            <p
+              className="max-w-lg leading-relaxed mb-12"
+              style={{ fontSize: "0.975rem", color: c.muted, fontWeight: 350 }}
+            >
+              Every feature eliminates friction, reduces downtime, and
+              maximizes revenue.
+            </p>
+          </Reveal>
+
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((f, i) => {
               const Icon = f.Icon;
               return (
                 <Reveal key={f.title} delay={i * 0.06}>
-                  <div className="h-full rounded-2xl p-6 transition hover:border-orange-500/30" style={{ background: "#0F172A", border: "1px solid rgba(30,41,59,1)" }}>
-                    <span className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl" style={{ background: "rgba(249,115,22,0.12)", color: "#F97316" }}>
-                      <Icon className="h-5 w-5" />
+                  <div
+                    className="group h-full p-5 transition-all hover:border-orange-500/20"
+                    style={{ ...glass, borderRadius: "2px" }}
+                  >
+                    <span
+                      className="mb-4 inline-flex h-9 w-9 items-center justify-center"
+                      style={{
+                        background: "rgba(249,115,22,0.12)",
+                        clipPath: clipBtn,
+                      }}
+                    >
+                      <Icon
+                        className="h-4 w-4"
+                        style={{ color: c.accent }}
+                      />
                     </span>
-                    <h3 className="font-semibold text-white">{f.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(248,250,252,0.5)" }}>{f.desc}</p>
+                    <h3
+                      className="text-[15px] mb-1.5"
+                      style={{ color: c.fg, fontWeight: 500, letterSpacing: "-0.01em" }}
+                    >
+                      {f.title}
+                    </h3>
+                    <p
+                      className="text-[12.5px] leading-relaxed"
+                      style={{ color: c.muted, fontWeight: 350 }}
+                    >
+                      {f.desc}
+                    </p>
                   </div>
                 </Reveal>
               );
@@ -143,74 +291,247 @@ export default function AutoFlowPage() {
         </div>
       </section>
 
-      {/* ── How it works ─────────────────────────────────────────────────── */}
-      <section className="py-24" style={{ background: "#060A14" }}>
-        <div className="container-p">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
-            <Reveal>
-              <span className="font-mono text-[10px] uppercase tracking-[0.35em] mb-3 inline-flex items-center gap-3" style={{ color: "#F97316" }}>
-                <span className="h-px w-8 inline-block" style={{ background: "#F97316" }} />
-                Workflow
-              </span>
-              <h2 className="section-title mt-3 text-white">From check-in to sign-off</h2>
-              <div className="mt-10 space-y-0">
-                {[
-                  { step: "01", title: "Vehicle Check-In",    desc: "Scan the vehicle, log details, and capture customer information in seconds. AI pre-fills service history." },
-                  { step: "02", title: "Bay Assignment",       desc: "AutoFlow automatically assigns the optimal bay and technician based on job type and current load." },
-                  { step: "03", title: "Live Job Tracking",    desc: "Technicians update job status in real-time. Customers receive automated notifications at each milestone." },
-                  { step: "04", title: "Quality & Sign-off",   desc: "Digital checklists ensure quality control. Invoices are generated automatically and sent to the customer." },
-                ].map((s, i, arr) => (
-                  <div key={s.step} className="flex gap-4">
+      {/* ── How It Works ── */}
+      <section className="py-20 sm:py-28" style={{ background: c.bg }}>
+        <div className="mx-auto max-w-6xl px-8 sm:px-16">
+          <div className="grid gap-14 lg:grid-cols-2 lg:items-start">
+            <div>
+              <Reveal>
+                <p
+                  className="text-[11px] font-medium uppercase tracking-[0.22em] mb-4"
+                  style={{ ...monoFont, color: c.accent }}
+                >
+                  Workflow
+                </p>
+              </Reveal>
+              <Reveal>
+                <h2
+                  className="leading-[0.98] mb-10"
+                  style={{
+                    ...displayFont,
+                    fontSize: "clamp(2rem, 4.5vw, 3rem)",
+                    fontWeight: 500,
+                    color: c.fg,
+                    letterSpacing: "-0.04em",
+                  }}
+                >
+                  From check-in
+                  <br />
+                  to{" "}
+                  <span
+                    style={{
+                      ...serifAccent,
+                      color: c.accent,
+                      letterSpacing: "-0.02em",
+                    }}
+                  >
+                    sign-off
+                  </span>
+                </h2>
+              </Reveal>
+              {[
+                {
+                  step: "01",
+                  title: "Vehicle Check-In",
+                  desc: "Scan the vehicle, log details, capture customer info. AI pre-fills service history.",
+                },
+                {
+                  step: "02",
+                  title: "Bay Assignment",
+                  desc: "AutoFlow assigns the optimal bay and technician based on job type and load.",
+                },
+                {
+                  step: "03",
+                  title: "Live Job Tracking",
+                  desc: "Real-time status updates. Customers get automated notifications at each milestone.",
+                },
+                {
+                  step: "04",
+                  title: "Quality & Sign-off",
+                  desc: "Digital checklists for QC. Invoices generated and sent automatically.",
+                },
+              ].map((s, i, arr) => (
+                <Reveal key={s.step} delay={i * 0.06}>
+                  <div className="flex gap-4 mb-1">
                     <div className="flex flex-col items-center">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-sm font-bold text-white" style={{ background: "#F97316" }}>
+                      <div
+                        className="flex h-8 w-8 shrink-0 items-center justify-center text-[11px] font-bold text-black"
+                        style={{
+                          background: c.accent,
+                          clipPath: clipBtn,
+                        }}
+                      >
                         {s.step}
                       </div>
-                      {i < arr.length - 1 && <div className="mt-1 h-10 w-px" style={{ background: "rgba(249,115,22,0.2)" }} />}
+                      {i < arr.length - 1 && (
+                        <div
+                          className="mt-1 h-10 w-px"
+                          style={{
+                            background: "rgba(249,115,22,0.15)",
+                          }}
+                        />
+                      )}
                     </div>
-                    <div className="pb-8">
-                      <div className="font-semibold text-white">{s.title}</div>
-                      <div className="mt-1 text-sm leading-relaxed" style={{ color: "rgba(248,250,252,0.5)" }}>{s.desc}</div>
+                    <div className="pb-6">
+                      <div
+                        className="text-[15px]"
+                        style={{ color: c.fg, fontWeight: 500, letterSpacing: "-0.01em" }}
+                      >
+                        {s.title}
+                      </div>
+                      <div
+                        className="mt-1 text-[12.5px] leading-relaxed"
+                        style={{ color: c.muted, fontWeight: 350 }}
+                      >
+                        {s.desc}
+                      </div>
                     </div>
                   </div>
-                ))}
-              </div>
-            </Reveal>
+                </Reveal>
+              ))}
+            </div>
 
-            {/* Stats panel */}
+            {/* Live Dashboard panel */}
             <Reveal delay={0.1}>
-              <div className="rounded-2xl p-8" style={{ background: "#0F172A", border: "1px solid rgba(249,115,22,0.15)" }}>
-                <div className="mb-6 flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full" style={{ background: "#22C55E" }} />
-                  <span className="text-xs font-mono" style={{ color: "#64748B" }}>AutoFlow Live Dashboard</span>
+              <div className="p-6" style={{ ...glass, borderRadius: "2px" }}>
+                <div className="mb-5 flex items-center gap-2">
+                  <div
+                    className="h-2 w-2 rounded-full"
+                    style={{ background: "#22C55E" }}
+                  />
+                  <span
+                    className="text-[10px] uppercase tracking-[0.22em]"
+                    style={{ ...monoFont, color: c.muted }}
+                  >
+                    Live Dashboard
+                  </span>
                 </div>
-                <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="grid grid-cols-2 gap-2.5 mb-5">
                   {[
-                    { label: "Active Jobs",    value: "12",  color: "#F97316" },
-                    { label: "Bays Occupied",  value: "8/10",color: "#F59E0B" },
-                    { label: "Avg. TAT",       value: "2.4h",color: "#22C55E" },
-                    { label: "Today Revenue",  value: "$3.8K",color: "#60A5FA" },
+                    {
+                      label: "Active Jobs",
+                      value: "12",
+                      color: c.accent,
+                    },
+                    {
+                      label: "Bays Occupied",
+                      value: "8/10",
+                      color: "#F59E0B",
+                    },
+                    {
+                      label: "Avg. TAT",
+                      value: "2.4h",
+                      color: "#22C55E",
+                    },
+                    {
+                      label: "Today Revenue",
+                      value: "$3.8K",
+                      color: "#60A5FA",
+                    },
                   ].map((stat) => (
-                    <div key={stat.label} className="rounded-xl p-4" style={{ background: "#060A14" }}>
-                      <div className="text-[10px] font-mono uppercase tracking-wider" style={{ color: "#64748B" }}>{stat.label}</div>
-                      <div className="mt-1 text-2xl font-bold" style={{ color: stat.color }}>{stat.value}</div>
+                    <div
+                      key={stat.label}
+                      className="p-3.5"
+                      style={{
+                        background: "rgba(255,255,255,0.03)",
+                        border: "1px solid rgba(255,255,255,0.05)",
+                        borderRadius: "2px",
+                      }}
+                    >
+                      <div
+                        className="text-[10px] uppercase tracking-[0.2em]"
+                        style={{ ...monoFont, color: c.muted }}
+                      >
+                        {stat.label}
+                      </div>
+                      <div
+                        className="mt-1 text-2xl"
+                        style={{
+                          ...displayFont,
+                          fontWeight: 500,
+                          letterSpacing: "-0.03em",
+                          color: stat.color,
+                        }}
+                      >
+                        {stat.value}
+                      </div>
                     </div>
                   ))}
                 </div>
-                {/* bay status bars */}
-                <div className="space-y-2">
+                <div className="space-y-1">
                   {[
-                    { bay: "Bay 01", job: "Full Service — Toyota Camry",  pct: 75, active: true  },
-                    { bay: "Bay 02", job: "Tyre Rotation — Honda Civic",  pct: 40, active: true  },
-                    { bay: "Bay 03", job: "Available",                    pct: 0,  active: false },
-                    { bay: "Bay 04", job: "Brake Service — Ford F-150",   pct: 90, active: true  },
+                    {
+                      bay: "Bay 01",
+                      job: "Full Service \u2014 Toyota Camry",
+                      pct: 75,
+                      active: true,
+                    },
+                    {
+                      bay: "Bay 02",
+                      job: "Tyre Rotation \u2014 Honda Civic",
+                      pct: 40,
+                      active: true,
+                    },
+                    {
+                      bay: "Bay 03",
+                      job: "Available",
+                      pct: 0,
+                      active: false,
+                    },
+                    {
+                      bay: "Bay 04",
+                      job: "Brake Service \u2014 Ford F-150",
+                      pct: 90,
+                      active: true,
+                    },
                   ].map((b) => (
-                    <div key={b.bay} className="flex items-center gap-3 rounded-lg p-2.5" style={{ background: b.active ? "rgba(249,115,22,0.05)" : "transparent" }}>
-                      <span className="text-[10px] font-mono w-12 shrink-0" style={{ color: b.active ? "#F97316" : "#475569" }}>{b.bay}</span>
+                    <div
+                      key={b.bay}
+                      className="flex items-center gap-3 p-2"
+                      style={{
+                        background: b.active
+                          ? "rgba(249,115,22,0.04)"
+                          : "transparent",
+                        borderRadius: "2px",
+                      }}
+                    >
+                      <span
+                        className="w-12 shrink-0 text-[10px]"
+                        style={{
+                          ...monoFont,
+                          color: b.active
+                            ? c.accent
+                            : "rgba(255,255,255,0.2)",
+                        }}
+                      >
+                        {b.bay}
+                      </span>
                       <div className="flex-1 min-w-0">
-                        <div className="text-xs truncate" style={{ color: b.active ? "rgba(248,250,252,0.7)" : "#475569" }}>{b.job}</div>
+                        <div
+                          className="text-[12px] truncate"
+                          style={{
+                            color: b.active
+                              ? "rgba(255,255,255,0.65)"
+                              : "rgba(255,255,255,0.2)",
+                            fontWeight: 400,
+                          }}
+                        >
+                          {b.job}
+                        </div>
                         {b.active && (
-                          <div className="mt-1 h-1 rounded-full" style={{ background: "rgba(249,115,22,0.2)" }}>
-                            <div className="h-full rounded-full" style={{ width: `${b.pct}%`, background: "#F97316" }} />
+                          <div
+                            className="mt-1 h-1 rounded-full"
+                            style={{
+                              background: "rgba(249,115,22,0.12)",
+                            }}
+                          >
+                            <div
+                              className="h-full rounded-full"
+                              style={{
+                                width: `${b.pct}%`,
+                                background: c.accent,
+                              }}
+                            />
                           </div>
                         )}
                       </div>
@@ -223,23 +544,76 @@ export default function AutoFlowPage() {
         </div>
       </section>
 
-      {/* ── Results ──────────────────────────────────────────────────────── */}
-      <section className="py-24" style={{ background: "#0A0F1A", borderTop: "1px solid rgba(249,115,22,0.1)" }}>
-        <div className="container-p">
-          <Reveal className="text-center mb-12">
-            <h2 className="section-title text-white">What AutoFlow delivers</h2>
+      {/* ── Results ── */}
+      <section
+        className="py-20 sm:py-28"
+        style={{
+          background: c.surface,
+          borderTop: `1px solid ${c.border}`,
+        }}
+      >
+        <div className="mx-auto max-w-6xl px-8 sm:px-16 text-center">
+          <Reveal>
+            <p
+              className="text-[11px] font-medium uppercase tracking-[0.22em] mb-4"
+              style={{ ...monoFont, color: c.accent }}
+            >
+              Results
+            </p>
           </Reveal>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <Reveal>
+            <h2
+              className="leading-[0.98] mb-12"
+              style={{
+                ...displayFont,
+                fontSize: "clamp(2rem, 4.5vw, 3rem)",
+                fontWeight: 500,
+                color: c.fg,
+                letterSpacing: "-0.04em",
+              }}
+            >
+              What AutoFlow{" "}
+              <span
+                style={{
+                  ...serifAccent,
+                  color: c.accent,
+                  letterSpacing: "-0.02em",
+                }}
+              >
+                delivers
+              </span>
+            </h2>
+          </Reveal>
+
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { stat: "35%",  label: "Increase in bay utilization"  },
-              { stat: "50%",  label: "Fewer customer complaints"     },
-              { stat: "2×",   label: "Faster vehicle turnaround"     },
-              { stat: "99.9%",label: "Platform uptime"               },
+              { stat: "35%", label: "Bay utilization increase" },
+              { stat: "50%", label: "Fewer complaints" },
+              { stat: "2\u00D7", label: "Faster turnaround" },
+              { stat: "99.9%", label: "Platform uptime" },
             ].map((s, i) => (
-              <Reveal key={s.label} delay={i * 0.07}>
-                <div className="rounded-2xl p-6 text-center" style={{ background: "#0F172A", border: "1px solid rgba(249,115,22,0.15)" }}>
-                  <div className="display text-5xl" style={{ color: "#F97316" }}>{s.stat}</div>
-                  <div className="mt-2 text-sm" style={{ color: "rgba(248,250,252,0.5)" }}>{s.label}</div>
+              <Reveal key={s.label} delay={i * 0.06}>
+                <div
+                  className="p-6 text-center transition-all"
+                  style={{ ...glass, borderRadius: "2px" }}
+                >
+                  <div
+                    className="text-3xl sm:text-4xl"
+                    style={{
+                      ...displayFont,
+                      fontWeight: 500,
+                      letterSpacing: "-0.04em",
+                      color: c.accent,
+                    }}
+                  >
+                    {s.stat}
+                  </div>
+                  <div
+                    className="mt-2 text-xs"
+                    style={{ color: c.muted, fontWeight: 350 }}
+                  >
+                    {s.label}
+                  </div>
                 </div>
               </Reveal>
             ))}
@@ -247,35 +621,90 @@ export default function AutoFlowPage() {
         </div>
       </section>
 
-      {/* ── CTA ──────────────────────────────────────────────────────────── */}
-      <section className="py-24" style={{ background: "linear-gradient(135deg, #F97316 0%, #EA580C 100%)" }}>
-        <div className="container-p text-center">
-          <Reveal>
-            <h2 className="display text-4xl text-white sm:text-5xl">
-              Ready to modernize your service station?
-            </h2>
-            <p className="mx-auto mt-5 max-w-xl text-lg text-white/80">
-              Get AutoFlow running in your garage. Our team handles onboarding
-              and training so you can focus on the cars.
-            </p>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2.5 rounded-lg bg-white px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.14em] shadow-xl transition-all hover:-translate-y-0.5"
-                style={{ color: "#EA580C" }}
+      {/* ── CTA ── */}
+      <section
+        className="relative overflow-hidden"
+        style={{ background: c.bg }}
+      >
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source
+            src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260213_051817_c7d8ccc6-bfaa-417c-8474-e5cefeea26b4.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+
+        <div className="relative z-10 mx-auto max-w-6xl px-8 py-24 sm:px-16 sm:py-32">
+          <div className="max-w-lg">
+            <Reveal>
+              <p
+                className="text-[11px] font-medium uppercase tracking-[0.22em] mb-4"
+                style={{ ...monoFont, color: c.accent }}
               >
-                Get Started <ArrowRight className="h-4 w-4" />
-              </Link>
-              <a
-                href="mailto:hello@wenthura.lk"
-                className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition hover:border-white/60 hover:-translate-y-0.5"
+                Get Started
+              </p>
+            </Reveal>
+            <Reveal>
+              <h2
+                className="leading-[0.98] mb-5"
+                style={{
+                  ...displayFont,
+                  fontSize: "clamp(2rem, 4.5vw, 3.25rem)",
+                  fontWeight: 500,
+                  color: c.fg,
+                  letterSpacing: "-0.04em",
+                }}
               >
-                Email Us <ArrowUpRight className="h-4 w-4" />
-              </a>
-            </div>
-          </Reveal>
+                Ready to modernize
+                <br />
+                your{" "}
+                <span
+                  style={{
+                    ...serifAccent,
+                    color: c.accent,
+                    letterSpacing: "-0.02em",
+                  }}
+                >
+                  station?
+                </span>
+              </h2>
+            </Reveal>
+            <Reveal>
+              <p
+                className="leading-relaxed mb-7"
+                style={{ fontSize: "0.975rem", color: c.muted, fontWeight: 350 }}
+              >
+                Get AutoFlow running in your garage. Our team handles
+                onboarding and training so you can focus on the cars.
+              </p>
+            </Reveal>
+            <Reveal>
+              <div className="flex flex-wrap items-center gap-3">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 text-[13px] uppercase tracking-[0.18em] text-white transition-all hover:brightness-110 active:scale-[0.97]"
+                  style={{ ...monoFont, background: c.accent, clipPath: clipBtn, fontWeight: 500 }}
+                >
+                  Get Started <ArrowRight className="h-4 w-4" />
+                </Link>
+                <a
+                  href="mailto:hello@wenthura.lk"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 text-[13px] uppercase tracking-[0.18em] text-black transition-all hover:brightness-90 active:scale-[0.97]"
+                  style={{ ...monoFont, background: "#fff", clipPath: clipBtn, fontWeight: 500 }}
+                >
+                  Email Us <ArrowUpRight className="h-4 w-4" />
+                </a>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

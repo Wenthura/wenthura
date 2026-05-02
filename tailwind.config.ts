@@ -31,11 +31,26 @@ const config: Config = {
           ink:         "#0F172A",
           cream:       "#FFFFFF",
         },
+        "sintra-dark": "#00041F",
+        "sintra-accent": "#B56939",
+        "sintra-light": "#EFF4FF",
+        "sintra-gray": "#49484F",
       },
       fontFamily: {
         sans: ["var(--font-urbanist)", "system-ui", "sans-serif"],
         display: ["var(--font-bricolage)", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+        manrope: ["Manrope", "sans-serif"],
+        helvetica: ["Helvetica", "Arial", "sans-serif"],
+        "helvetica-neue": ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+        "product-sans": ["Product Sans", "sans-serif"],
+        "sf-compact": [
+          "SF Compact Display",
+          "SF Compact Text",
+          "system-ui",
+          "sans-serif",
+        ],
       },
       transitionTimingFunction: {
         smooth: "cubic-bezier(0.22, 1, 0.36, 1)",
@@ -70,8 +85,8 @@ const config: Config = {
           "100%": { backgroundPosition: "200% center" },
         },
         "fade-up": {
-          "0%": { opacity: "0", transform: "translateY(28px)" },
-          "100%": { opacity: "1", transform: "translateY(0px)" },
+          "0%": { opacity: "0", transform: "translateY(20px)", filter: "blur(4px)" },
+          "100%": { opacity: "1", transform: "translateY(0px)", filter: "blur(0)" },
         },
         "fade-in": {
           "0%": { opacity: "0" },

@@ -4,13 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
 
 const products = [
   { href: "/products/doodlenest",         label: "DoodleNest",         desc: "Early Learning Platform",   dot: "#FBBF24" },
   { href: "/products/autoflow",           label: "AutoFlow",           desc: "Automotive ERP",            dot: "#F97316" },
   { href: "/products/nena-ai",            label: "Nena AI",            desc: "AI Learning Platform",      dot: "#3B82F6" },
-  { href: "/products/business-solutions", label: "Business Solutions", desc: "Fintech & Cloud Services",  dot: "#0F172A" },
 ];
 
 const links = [
@@ -22,7 +22,6 @@ const links = [
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [productsOpen, setProductsOpen] = useState(false);
   const logoClickRef = useRef(0);
   const logoTimerRef = useRef<ReturnType<typeof setTimeout>>();
 
@@ -145,75 +144,124 @@ export function Navbar() {
               aria-label="Toggle menu"
               aria-expanded={open}
               onClick={() => setOpen((v) => !v)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-600 transition-colors hover:border-blue-300 hover:text-blue-600 md:hidden"
+              className="relative inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-600 transition-colors hover:border-blue-300 hover:text-blue-600 md:hidden"
             >
-              {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+              <AnimatePresence mode="wait" initial={false}>
+                {open ? (
+                  <motion.span
+                    key="close"
+                    initial={{ rotate: -90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <X className="h-4 w-4" />
+                  </motion.span>
+                ) : (
+                  <motion.span
+                    key="menu"
+                    initial={{ rotate: 90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: -90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Menu className="h-4 w-4" />
+                  </motion.span>
+                )}
+              </AnimatePresence>
             </button>
           </div>
         </div>
       </div>
 
       {/* Mobile menu */}
-      {open && (
-        <div className="border-t border-slate-200 bg-white md:hidden">
-          <div className="container-p py-4">
-            <nav className="flex flex-col gap-1">
-              <Link
-                href="/"
-                onClick={() => setOpen(false)}
-                className="rounded-lg px-4 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-600 transition-colors hover:bg-blue-50 hover:text-blue-700"
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            className="overflow-y-auto border-t border-slate-200 bg-white md:hidden"
+            style={{ maxHeight: 'calc(100dvh - 4rem)' }}
+          >
+            <div className="container-p py-4">
+              <motion.nav
+                initial="closed"
+                animate="open"
+                exit="closed"
+                variants={{
+                  open: { transition: { staggerChildren: 0.06, delayChildren: 0.1 } },
+                  closed: { transition: { staggerChildren: 0.03, staggerDirection: -1 } },
+                }}
+                className="flex flex-col gap-1"
               >
-                Home
-              </Link>
+                <motion.div variants={{ closed: { opacity: 0, x: -16 }, open: { opacity: 1, x: 0 } }} transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}>
+                  <Link
+                    href="/"
+                    onClick={() => setOpen(false)}
+                    className="block rounded-lg px-4 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-600 transition-colors hover:bg-blue-50 hover:text-blue-700"
+                  >
+                    Home
+                  </Link>
+                </motion.div>
 
-              {/* Products accordion */}
-              <button
-                type="button"
-                onClick={() => setProductsOpen((v) => !v)}
-                className="flex items-center justify-between rounded-lg px-4 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-600 transition-colors hover:bg-blue-50 hover:text-blue-700"
-              >
-                Products
-                <ChevronDown className={clsx("h-3 w-3 transition-transform", productsOpen && "rotate-180")} />
-              </button>
-              {productsOpen && (
-                <div className="ml-4 flex flex-col gap-0.5 border-l-2 border-slate-200 pl-3">
-                  {products.map((p) => (
+                {/* Products — direct links */}
+                <motion.div variants={{ closed: { opacity: 0, x: -16 }, open: { opacity: 1, x: 0 } }} transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}>
+                  <p className="px-4 py-2 font-mono text-[10px] uppercase tracking-[0.22em] text-slate-400">
+                    Products
+                  </p>
+                  <div className="ml-4 flex flex-col gap-0.5 border-l-2 border-slate-200 pl-3">
+                    {products.map((p, idx) => (
+                      <motion.div
+                        key={p.href}
+                        variants={{ closed: { opacity: 0, x: -12 }, open: { opacity: 1, x: 0 } }}
+                        transition={{ duration: 0.25, delay: idx * 0.05, ease: [0.22, 1, 0.36, 1] }}
+                      >
+                        <Link
+                          href={p.href}
+                          onClick={() => setOpen(false)}
+                          className="flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm text-slate-600 transition-colors hover:bg-blue-50 hover:text-blue-700"
+                        >
+                          <span className="h-2 w-2 shrink-0 rounded-full" style={{ background: p.dot }} />
+                          <div>
+                            <span className="font-semibold">{p.label}</span>
+                            <span className="ml-2 text-xs text-slate-400">{p.desc}</span>
+                          </div>
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+
+                {links.map((l) => (
+                  <motion.div key={l.href} variants={{ closed: { opacity: 0, x: -16 }, open: { opacity: 1, x: 0 } }} transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}>
                     <Link
-                      key={p.href}
-                      href={p.href}
+                      href={l.href}
                       onClick={() => setOpen(false)}
-                      className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-slate-600 transition-colors hover:text-blue-700"
+                      className="block rounded-lg px-4 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-600 transition-colors hover:bg-blue-50 hover:text-blue-700"
                     >
-                      <span className="h-1.5 w-1.5 rounded-full shrink-0" style={{ background: p.dot }} />
-                      {p.label}
+                      {l.label}
                     </Link>
-                  ))}
-                </div>
-              )}
+                  </motion.div>
+                ))}
 
-              {links.map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  className="rounded-lg px-4 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-600 transition-colors hover:bg-blue-50 hover:text-blue-700"
-                >
-                  {l.label}
-                </Link>
-              ))}
-              <div className="mt-3 border-t border-slate-200 pt-3">
-                <Link
-                  href="/contact"
-                  onClick={() => setOpen(false)}
-                  className="btn-primary w-full"
-                >
-                  Talk to Us
-                </Link>
-              </div>
-            </nav>
-          </div>
-        </div>
-      )}
+                <motion.div variants={{ closed: { opacity: 0, y: 8 }, open: { opacity: 1, y: 0 } }} transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}>
+                  <div className="mt-3 border-t border-slate-200 pt-3">
+                    <Link
+                      href="/contact"
+                      onClick={() => setOpen(false)}
+                      className="btn-primary w-full"
+                    >
+                      Talk to Us
+                    </Link>
+                  </div>
+                </motion.div>
+              </motion.nav>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

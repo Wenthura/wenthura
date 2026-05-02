@@ -134,17 +134,19 @@ export default function CubeLoader({ theme = cubeThemes.default }: CubeLoaderPro
       <style jsx>{`
         .perspective-container {
           perspective: 1200px;
+          -webkit-perspective: 1200px;
         }
         .preserve-3d {
           transform-style: preserve-3d;
+          -webkit-transform-style: preserve-3d;
         }
         @keyframes cubeSpin {
           0% { transform: rotateX(0deg) rotateY(0deg); }
           100% { transform: rotateX(360deg) rotateY(360deg); }
         }
         @keyframes breathe {
-          0%, 100% { transform: translateZ(40px); opacity: 0.8; }
-          50% { transform: translateZ(64px); opacity: 0.35; }
+          0%, 100% { opacity: 0.8; }
+          50% { opacity: 0.35; }
         }
         @keyframes pulse-fast {
           0%, 100% { transform: scale(0.8); opacity: 0.5; }
@@ -180,13 +182,15 @@ export default function CubeLoader({ theme = cubeThemes.default }: CubeLoaderPro
           border-style: solid;
           animation: breathe 3s ease-in-out infinite;
           backdrop-filter: blur(2px);
+          -webkit-backface-visibility: visible;
+          backface-visibility: visible;
         }
-        .front  { transform: rotateY(0deg); }
-        .back   { transform: rotateY(180deg); }
-        .right  { transform: rotateY(90deg); }
-        .left   { transform: rotateY(-90deg); }
-        .top    { transform: rotateX(90deg); }
-        .bottom { transform: rotateX(-90deg); }
+        .front  { transform: rotateY(0deg) translateZ(40px); }
+        .back   { transform: rotateY(180deg) translateZ(40px); }
+        .right  { transform: rotateY(90deg) translateZ(40px); }
+        .left   { transform: rotateY(-90deg) translateZ(40px); }
+        .top    { transform: rotateX(90deg) translateZ(40px); }
+        .bottom { transform: rotateX(-90deg) translateZ(40px); }
       `}</style>
     </div>
   )

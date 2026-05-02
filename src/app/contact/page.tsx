@@ -20,12 +20,12 @@ const rows = [
 export default function ContactPage() {
   return (
     <>
-      <section className="relative overflow-hidden border-b border-ink-700/50 bg-ink-900 pt-40 pb-20">
+      <section className="relative overflow-hidden border-b border-ink-700/50 bg-ink-900 pt-28 pb-16 sm:pt-40 sm:pb-20">
         <div className="absolute inset-0 grid-lines" />
         <div className="container-p relative">
           <Reveal>
             <span className="eyebrow">Contact</span>
-            <h1 className="display text-6xl leading-[0.95] text-ink-50 sm:text-7xl lg:text-8xl">
+            <h1 className="display text-4xl leading-[0.95] text-ink-50 sm:text-6xl md:text-7xl lg:text-8xl">
               Let&rsquo;s build{" "}
               <span className="italic text-glow">what&rsquo;s next.</span>
             </h1>
