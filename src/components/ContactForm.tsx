@@ -87,7 +87,7 @@ export function ContactForm() {
   }
 
   const field =
-    "input-delight mt-2 block w-full rounded-lg border border-ink-700/50 bg-ink-900 px-4 py-3.5 text-sm text-ink-50 outline-none transition focus:border-glow/60 focus:bg-white focus:ring-1 focus:ring-glow/20 placeholder:text-ink-400";
+    "input-delight mt-2 block w-full min-h-[48px] rounded-lg border border-ink-700/50 bg-ink-900 px-4 py-3 text-base text-ink-50 outline-none transition focus:border-glow/60 focus:bg-white focus:ring-1 focus:ring-glow/20 placeholder:text-ink-400";
   const label =
     "font-mono text-[10px] uppercase tracking-[0.3em] text-ink-400";
 
@@ -174,7 +174,7 @@ export function ContactForm() {
           </div>
           <motion.button
             type="submit"
-            className="btn-primary"
+            className="btn-primary min-h-[50px] w-full sm:w-auto"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.97 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}

@@ -67,11 +67,11 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="group flex items-center gap-2.5" onClick={handleLogoClick}>
             <Image
-              src="/Logo - White LinkedIn (Without Lines).png"
+              src="/img/logo-dark.png"
               alt="Wenthura"
-              width={480}
-              height={120}
-              className="h-10 w-auto transition-transform duration-300 group-hover:scale-105 sm:h-12"
+              width={800}
+              height={137}
+              className="h-8 w-auto transition-transform duration-300 group-hover:scale-105 sm:h-10"
               data-logo
               priority
               quality={100}

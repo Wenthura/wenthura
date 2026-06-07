@@ -1,0 +1,2445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Wenthura — Disruptive Digital Solutions</title>
+<meta name="description" content="Purpose-built software platforms, dedicated engineering teams, and expert talent acquisition. Wenthura builds intelligent platforms and scalable teams for education, automotive, and enterprise.">
+<meta name="keywords" content="software development, engineering teams, talent acquisition, DoodleNest, Nena AI, AutoFlow, managed services, Sri Lanka, technology">
+<meta name="author" content="Wenthura Solutions (Private) Limited">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Wenthura — Disruptive Digital Solutions">
+<meta property="og:description" content="Purpose-built platforms, dedicated engineering teams, and expert talent acquisition — precision-engineered for outcomes that last.">
+<meta property="og:image" content="img/autoflow.png">
+<meta property="og:url" content="https://wenthura.lk">
+<meta property="og:site_name" content="Wenthura Solutions">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wenthuras">
+<meta name="twitter:title" content="Wenthura — Disruptive Digital Solutions">
+<meta name="twitter:description" content="Purpose-built platforms, dedicated engineering teams, and expert talent acquisition.">
+<meta name="twitter:image" content="img/autoflow.png">
+
+<!-- Security -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+
+<!-- Preload critical images (hero panels load-in order) -->
+<link rel="preload" as="image" href="img/doodlenest.png">
+<link rel="preload" as="image" href="img/nena-ai.png">
+<link rel="preload" as="image" href="img/autoflow.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/premium.css">
+<link rel="stylesheet" href="css/mobile.css">
+
+<style>
+/* ─── RESET & ROOT ─────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  /* Brand palette — white-dominant SaaS system */
+  --white:#FFFFFF;
+  --gray-50:#F8F9FC;
+  --gray-100:#F1F3F8;
+  --gray-200:#E4E8F0;
+  --gray-300:#CDD4E0;
+  --gray-500:#7A8BA8;
+  --gray-700:#3D4F68;
+  --navy:#0D1B3E;
+  --navy-80:rgba(13,27,62,.8);
+  --blue-100:#EBF3FC;
+  --blue-300:#93C4E8;
+  --blue-500:#3B82C4;
+  --blue-700:#1E5DA0;
+  --orange:#E8541A;   /* accent only — <5% usage */
+  --orange-lt:rgba(232,84,26,.08);
+  --green:#1A9E50;
+  --f:"Plus Jakarta Sans",sans-serif;
+  --r:8px;--r2:14px;--r3:22px;
+  --shadow-sm:0 1px 4px rgba(13,27,62,.06);
+  --shadow-md:0 4px 20px rgba(13,27,62,.09);
+  --shadow-lg:0 12px 48px rgba(13,27,62,.13);
+  --shadow-xl:0 24px 72px rgba(13,27,62,.16);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);color:var(--navy);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:#fff}::-webkit-scrollbar-thumb{background:var(--gray-200)}
+
+/* ─── NAV ──────────────────────────────────────────────── */
+#mainNav{position:fixed;top:0;left:0;right:0;z-index:1000}
+.nav-in{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 clamp(16px,4%,48px)}
+.nav-logo-fb{font-size:17px;font-weight:800;color:var(--navy);display:none}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--gray-500);padding:7px 13px;border-radius:7px;transition:all .18s}
+.nav-links a:hover,.nav-links a.on{color:var(--navy);background:var(--gray-50);font-weight:600}
+.nav-right{display:flex;align-items:center;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:7px;font-size:13.5px;font-weight:600;font-family:var(--f);transition:all .2s;cursor:pointer;line-height:1;border:none;white-space:nowrap}
+.btn-primary{background:var(--navy);color:#fff}.btn-primary:hover{background:#162750;box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.btn-accent{background:var(--orange);color:#fff}.btn-accent:hover{background:#d44915;box-shadow:0 4px 16px rgba(232,84,26,.3);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--gray-300)}.btn-outline:hover{border-color:var(--navy);background:var(--gray-50)}
+.btn-ghost-dk{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)}.btn-ghost-dk:hover{background:rgba(255,255,255,.18)}
+.btn-blue{background:var(--blue-500);color:#fff}.btn-blue:hover{background:var(--blue-700);transform:translateY(-1px)}
+.btn-lg{padding:12px 26px;font-size:15px;border-radius:9px}
+.btn-xl{padding:14px 32px;font-size:16px;border-radius:10px}
+/* mobile menu styles → css/mobile.css */
+/* ─── PAGES ─────────────────────────────────────────────── */
+.page{display:none}.page.active{display:block}
+/* ─── ANIMATIONS ──────────────────────────────────────── */
+.fade-up{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
+.fade-up.vis{opacity:1;transform:translateY(0)}
+.fade-left{opacity:0;transform:translateX(-22px);transition:opacity .55s ease,transform .55s ease}
+.fade-left.vis{opacity:1;transform:translateX(0)}
+.fade-right{opacity:0;transform:translateX(22px);transition:opacity .55s ease,transform .55s ease}
+.fade-right.vis{opacity:1;transform:translateX(0)}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+/* ─── LAYOUT UTILITIES ─────────────────────────────────── */
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(16px,4%,48px)}
+.sec{padding:88px 0}
+.sec-sm{padding:64px 0}
+.sec-bg-white{background:var(--white)}
+.sec-bg-gray{background:var(--gray-50)}
+.sec-bg-blue{background:var(--blue-100)}
+.sec-bg-navy{background:var(--navy)}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-500);margin-bottom:10px}
+.eyebrow::before{content:"";display:block;width:14px;height:2px;background:var(--blue-500);border-radius:1px}
+.eyebrow.orange{color:var(--orange)}.eyebrow.orange::before{background:var(--orange)}
+.eyebrow.navy{color:var(--navy)}.eyebrow.navy::before{background:var(--navy)}
+.eyebrow.green{color:var(--green)}.eyebrow.green::before{background:var(--green)}
+.heading-xl{font-size:clamp(32px,4.5vw,60px);font-weight:800;letter-spacing:-.03em;line-height:1.07;color:var(--navy)}
+.heading-lg{font-size:clamp(26px,3.5vw,44px);font-weight:800;letter-spacing:-.025em;line-height:1.1;color:var(--navy)}
+.heading-md{font-size:clamp(20px,2.5vw,32px);font-weight:700;letter-spacing:-.02em;line-height:1.2;color:var(--navy)}
+.heading-sm{font-size:clamp(16px,1.8vw,22px);font-weight:700;letter-spacing:-.01em;color:var(--navy)}
+.body-lg{font-size:16px;color:var(--gray-500);line-height:1.78}
+.body-md{font-size:14px;color:var(--gray-500);line-height:1.75}
+.accent{color:var(--orange)}
+.blue-accent{color:var(--blue-500)}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+
+/* ─── HERO ───────────────────────────────────────────────
+   Clean, minimal, single-CTA SaaS hero
+   No tabs, no sliders, no grids
+   ──────────────────────────────────────────────────────── */
+.hero{padding:130px 0 72px;background:var(--navy);border-bottom:none;overflow:hidden}
+.hero-inner{max-width:1200px;margin:0 auto;padding:0 clamp(16px,4%,48px);display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--blue-100);border:1px solid rgba(59,130,196,.18);border-radius:100px;padding:5px 13px;font-size:11px;font-weight:700;color:var(--blue-500);letter-spacing:.07em;text-transform:uppercase;margin-bottom:20px}
+.hero-dot{width:5px;height:5px;background:var(--blue-500);border-radius:50%;animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.75)}}
+.hero-headline{margin-bottom:16px;color:#fff}
+.hero-sub{margin-bottom:32px;max-width:480px;color:rgba(255,255,255,.72)}
+.hero-cta-row{display:flex;align-items:center;gap:12px}
+.hero-metrics{display:flex;gap:0;margin-top:36px;padding-top:28px;border-top:1px solid var(--gray-100)}
+.hm{padding:0 24px;border-right:1px solid var(--gray-200)}.hm:first-child{padding-left:0}.hm:last-child{border-right:none}
+.hm-n{font-size:22px;font-weight:800;color:var(--navy);line-height:1;letter-spacing:-.02em}
+.hm-n span{color:var(--orange)}
+.hm-l{font-size:11px;color:var(--gray-500);margin-top:3px;font-weight:500}
+/* Hero right — image mosaic */
+.hero-visual{position:relative}
+.hero-img-main{border-radius:var(--r3);overflow:hidden;height:440px;position:relative;box-shadow:var(--shadow-xl)}
+.hero-img-main img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-img-ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(13,27,62,.5))}
+.hero-badge{position:absolute;bottom:20px;left:20px;background:#fff;border-radius:var(--r2);padding:12px 16px;box-shadow:var(--shadow-lg);display:flex;align-items:center;gap:10px;min-width:190px}
+.hb-ico{width:36px;height:36px;border-radius:8px;background:var(--blue-100);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.hb-t{font-size:12px;font-weight:700;color:var(--navy);margin-bottom:1px}
+.hb-d{font-size:10.5px;color:var(--gray-500)}
+/* Floating mini card on hero image */
+.hero-float{position:absolute;top:24px;right:-16px;background:#fff;border-radius:var(--r2);padding:13px 15px;box-shadow:var(--shadow-lg);min-width:150px}
+.hf-tag{font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-500);margin-bottom:5px}
+.hf-items{display:flex;flex-direction:column;gap:4px}
+.hf-item{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:var(--navy)}
+.hf-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.hf-dot.o{background:var(--orange)}.hf-dot.b{background:var(--blue-500)}.hf-dot.g{background:var(--green)}.hf-dot.n{background:var(--navy)}
+
+/* ─── TICKER ─────────────────────────────────────────────
+   Very subtle — navy background, small
+   ──────────────────────────────────────────────────────── */
+.ticker-wrap{background:var(--navy);padding:9px 0;overflow:hidden}
+.ticker-track{display:flex;animation:ticker 32s linear infinite;width:max-content}
+.t-item{display:flex;align-items:center;gap:9px;padding:0 28px;border-right:1px solid rgba(255,255,255,.1);font-size:11.5px;font-weight:600;color:rgba(255,255,255,.55);letter-spacing:.03em;white-space:nowrap}
+.t-item strong{color:rgba(255,255,255,.85)}
+.t-sep{width:3px;height:3px;background:rgba(255,255,255,.3);border-radius:50%;flex-shrink:0}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ─── VALUE PROPOSITION STRIP ───────────────────────────
+   4 pillars — white background, clean
+   ──────────────────────────────────────────────────────── */
+.vp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--gray-200);border-radius:var(--r3);overflow:hidden;box-shadow:var(--shadow-sm)}
+.vp-item{padding:28px 24px;border-right:1px solid var(--gray-200);background:var(--white);transition:background .2s}
+.vp-item:last-child{border-right:none}
+.vp-item:hover{background:var(--gray-50)}
+.vp-ico{width:40px;height:40px;border-radius:10px;background:var(--blue-100);display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:12px}
+.vp-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:5px}
+.vp-desc{font-size:12.5px;color:var(--gray-500);line-height:1.6}
+
+/* ─── SECTION DIVIDER LABEL ─────────────────────────────── */
+.section-label{display:flex;align-items:center;gap:12px;margin-bottom:48px}
+.section-label::before,.section-label::after{content:"";flex:1;height:1px;background:var(--gray-200)}
+.sl-text{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-500);white-space:nowrap}
+
+/* ─── PRODUCT SECTIONS ───────────────────────────────────
+   Each product: split row with image slideshow + content
+   Alternating left/right layout
+   ──────────────────────────────────────────────────────── */
+.prod-row{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:72px 0}
+.prod-row+.prod-row{border-top:1px solid var(--gray-100)}
+.prod-row.flip{direction:rtl}.prod-row.flip>*{direction:ltr}
+/* Image side */
+.prod-img-wrap{position:relative;border-radius:var(--r3);overflow:hidden;height:420px;box-shadow:var(--shadow-lg)}
+.prod-slides{position:absolute;inset:0}
+.prod-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.1s ease}
+.prod-slide.on{opacity:1}
+.prod-slide img{width:100%;height:100%;object-fit:cover;display:block}
+.prod-overlay{position:absolute;inset:0}
+.prod-overlay.dn{background:linear-gradient(160deg,rgba(232,84,26,.12),transparent 60%)}
+.prod-overlay.na{background:linear-gradient(160deg,rgba(59,130,196,.12),transparent 60%)}
+.prod-overlay.af{background:linear-gradient(160deg,rgba(26,158,80,.12),transparent 60%)}
+.prod-badge{position:absolute;top:16px;left:16px;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-radius:100px;padding:5px 12px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.prod-badge.dn{color:var(--orange)}.prod-badge.na{color:var(--blue-500)}.prod-badge.af{color:var(--green)}
+.prod-slide-nav{position:absolute;bottom:14px;left:16px;display:flex;gap:5px}
+.psn-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.4);transition:all .3s;cursor:pointer}
+.psn-dot.on{background:#fff;width:16px;border-radius:3px}
+/* Content side */
+.prod-label{display:inline-flex;align-items:center;gap:7px;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.prod-label.dn{color:var(--orange)}.prod-label.na{color:var(--blue-500)}.prod-label.af{color:var(--green)}
+.prod-title{font-size:clamp(22px,2.8vw,36px);font-weight:800;letter-spacing:-.025em;margin-bottom:8px;line-height:1.12;color:var(--navy)}
+.prod-pitch{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:8px;line-height:1.55}
+.prod-desc{font-size:13.5px;color:var(--gray-500);line-height:1.78;margin-bottom:22px}
+.prod-pills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px}
+.prod-pill{padding:4px 11px;border-radius:100px;font-size:11px;font-weight:600;background:var(--gray-50);border:1px solid var(--gray-200);color:var(--gray-700)}
+.prod-pill.hi{background:var(--blue-100);border-color:rgba(59,130,196,.2);color:var(--blue-500)}
+
+/* ─── SERVICE CARDS (TAaaS / Dedicated / R&D etc.) ───────
+   Full-width expandable cards — image left, content right
+   ──────────────────────────────────────────────────────── */
+.svc-card{display:grid;grid-template-columns:380px 1fr;border-radius:var(--r3);overflow:hidden;background:var(--white);border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);transition:all .28s;margin-bottom:20px}
+.svc-card:hover{box-shadow:var(--shadow-lg);border-color:var(--gray-300);transform:translateY(-2px)}
+.svc-card-img{position:relative;overflow:hidden}
+.svc-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;min-height:280px}
+.svc-card:hover .svc-card-img img{transform:scale(1.04)}
+.svc-card-img-ov{position:absolute;inset:0;background:linear-gradient(to right,transparent,rgba(255,255,255,.05))}
+.svc-card-num{position:absolute;top:14px;left:14px;font-size:10px;font-weight:700;letter-spacing:.1em;color:rgba(255,255,255,.6);font-family:monospace}
+.svc-card-body{padding:32px 36px;display:flex;flex-direction:column;justify-content:center}
+.svc-card-tag{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-500);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.svc-card-tag::before{content:"";display:block;width:10px;height:2px;background:var(--blue-500);border-radius:1px}
+.svc-card-name{font-size:clamp(18px,2vw,24px);font-weight:800;color:var(--navy);letter-spacing:-.02em;margin-bottom:8px;line-height:1.2}
+.svc-card-desc{font-size:13px;color:var(--gray-500);line-height:1.72;margin-bottom:20px}
+/* 3-col pill grid inside service card */
+.svc-pill-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:20px}
+.spg-col-h{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:5px;color:var(--gray-500)}
+.spg-col-h::before{content:"";width:8px;height:2px;border-radius:1px;display:block;flex-shrink:0}
+.spg-options .spg-col-h{color:var(--orange)}.spg-options .spg-col-h::before{background:var(--orange)}
+.spg-benefits .spg-col-h{color:var(--green)}.spg-benefits .spg-col-h::before{background:var(--green)}
+.spg-why .spg-col-h{color:var(--blue-500)}.spg-why .spg-col-h::before{background:var(--blue-500)}
+.spg-pills{display:flex;flex-direction:column;gap:5px}
+.spg-pill{padding:6px 9px;border-radius:7px;font-size:11.5px;font-weight:500;color:var(--gray-700);background:var(--gray-50);border:1px solid var(--gray-200);transition:all .18s;display:flex;align-items:center;gap:6px;line-height:1.3}
+.spg-pill:hover{transform:translateX(3px)}
+.spg-options .spg-pill:hover{background:var(--orange-lt);border-color:rgba(232,84,26,.18);color:var(--orange)}
+.spg-benefits .spg-pill:hover{background:rgba(26,158,80,.06);border-color:rgba(26,158,80,.18);color:var(--green)}
+.spg-why .spg-pill:hover{background:var(--blue-100);border-color:rgba(59,130,196,.2);color:var(--blue-500)}
+.svc-cta-row{display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid var(--gray-100)}
+.svc-cta-note{font-size:12px;color:var(--gray-500);line-height:1.55;max-width:360px}
+
+/* ─── ADDITIONAL SERVICES GRID ───────────────────────────
+   Managed, Custom, Partner — 3-col compact cards
+   ──────────────────────────────────────────────────────── */
+.add-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.add-card{border-radius:var(--r2);overflow:hidden;border:1px solid var(--gray-200);background:var(--white);box-shadow:var(--shadow-sm);transition:all .25s}
+.add-card:hover{box-shadow:var(--shadow-md);border-color:var(--blue-300);transform:translateY(-2px)}
+.add-card-img{height:160px;overflow:hidden;position:relative}
+.add-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .38s ease}
+.add-card:hover .add-card-img img{transform:scale(1.05)}
+.add-card-img-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,27,62,.5),transparent)}
+.add-card-body{padding:20px}
+.add-card-ico{font-size:20px;margin-bottom:8px}
+.add-card-title{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:5px}
+.add-card-desc{font-size:12.5px;color:var(--gray-500);line-height:1.65;margin-bottom:12px}
+.add-card-list{list-style:none}
+.add-card-list li{font-size:11.5px;color:var(--gray-700);padding:4px 0;border-bottom:1px solid var(--gray-100);display:flex;gap:6px;line-height:1.45}
+.add-card-list li:last-child{border-bottom:none}
+.add-card-list.chk li::before{content:"✓";color:var(--green);font-weight:700;flex-shrink:0;font-size:10px;margin-top:1px}
+.add-card-list.arr li::before{content:"→";color:var(--blue-500);font-weight:700;flex-shrink:0;font-size:10px;margin-top:2px}
+
+/* ─── TESTIMONIALS ───────────────────────────────────────
+   Horizontal scroll — navy section
+   ──────────────────────────────────────────────────────── */
+.testi-outer{overflow:hidden;margin-top:44px}
+.testi-track{display:flex;gap:18px;transition:transform .5s cubic-bezier(.4,0,.2,1)}
+.tc{flex:0 0 calc(33.333% - 12px);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:var(--r2);padding:24px;transition:all .25s}
+.tc:hover{background:rgba(255,255,255,.1);transform:translateY(-3px)}
+.tc-sector{display:inline-flex;background:rgba(59,130,196,.15);border:1px solid rgba(59,130,196,.2);border-radius:100px;padding:3px 10px;font-size:9.5px;font-weight:700;color:#93C4E8;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+.tc-q{font-size:22px;color:rgba(255,255,255,.25);line-height:1;margin-bottom:9px}
+.tc-text{font-size:13px;color:rgba(255,255,255,.65);line-height:1.75;margin-bottom:16px;font-style:italic}
+.tc-auth{display:flex;align-items:center;gap:10px}
+.tc-av{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0}
+.tc-name{font-size:12.5px;font-weight:700;color:#fff;margin-bottom:2px}
+.tc-role{font-size:11px;color:rgba(255,255,255,.4)}
+/* Scroll controls */
+.scr-nav{display:flex;align-items:center;justify-content:space-between;margin-top:20px}
+.scr-dots{display:flex;gap:7px}
+.scr-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:all .22s}
+.scr-dot.on{background:#fff;width:20px;border-radius:3px}
+.scr-arrows{display:flex;gap:8px}
+.scr-arr{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:13px;color:#fff;transition:all .22s;user-select:none}
+.scr-arr:hover{background:rgba(255,255,255,.16)}
+.scr-arr.dis{opacity:.3;pointer-events:none}
+
+/* ─── PAGE HERO (inner pages) ───────────────────────────── */
+.ph-wrap{position:relative;height:420px;overflow:hidden}
+.ph-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+.ph-ov{position:absolute;inset:0;background:linear-gradient(to right,rgba(13,27,62,.92) 40%,rgba(13,27,62,.4) 100%)}
+.ph-body{position:absolute;inset:0;display:flex;align-items:center;padding:68px clamp(16px,4%,48px) 24px}
+.ph-inner{max-width:600px}
+.ph-eyebrow{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.ph-eyebrow::before{content:"";display:block;width:12px;height:2px;border-radius:1px}
+.ph-eyebrow.o{color:#FF9A76}.ph-eyebrow.o::before{background:var(--orange)}
+.ph-eyebrow.b{color:#93C4E8}.ph-eyebrow.b::before{background:var(--blue-500)}
+.ph-eyebrow.g{color:#6EE0A0}.ph-eyebrow.g::before{background:var(--green)}
+.ph-h{font-size:clamp(24px,4vw,48px);font-weight:800;color:#fff;letter-spacing:-.03em;margin-bottom:10px;line-height:1.07}
+.ph-p{font-size:15px;color:rgba(255,255,255,.68);line-height:1.75;max-width:480px;margin-bottom:22px}
+.ph-btns{display:flex;gap:10px;flex-wrap:wrap}
+
+/* ─── PRODUCT DETAIL (inner pages) ─────────────────────── */
+.det-sec{padding:64px 0}
+.ps-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:40px}
+.pbox{border-radius:var(--r2);padding:26px}
+.pbox.prob{background:var(--gray-50);border:1px solid var(--gray-200);border-top:3px solid var(--orange)}
+.pbox.sol{background:var(--blue-100);border:1px solid rgba(59,130,196,.18);border-top:3px solid var(--blue-500)}
+.pbox-tag{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+.pbox-tag.o{color:var(--orange)}.pbox-tag.b{color:var(--blue-500)}
+.pbox-list{list-style:none}
+.pbox-list li{font-size:13px;color:var(--gray-500);padding:6px 0;border-bottom:1px solid rgba(13,27,62,.06);display:flex;gap:8px;line-height:1.55}
+.pbox-list li:last-child{border-bottom:none}
+.pbox-list li::before{content:"→";font-weight:700;flex-shrink:0;font-size:10px;margin-top:2px}
+.pbox.prob .pbox-list li::before{color:var(--orange)}.pbox.sol .pbox-list li::before{color:var(--blue-500)}
+/* Feature tabs */
+.ft-wrap{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--r3);overflow:hidden;margin-bottom:40px}
+.ft-nav{
+  display:flex;flex-wrap:nowrap;gap:0;
+  background:var(--white);border-bottom:1px solid var(--gray-200);
+  overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.ft-nav::-webkit-scrollbar{display:none}
+.ft-tab{
+  flex:0 0 auto;flex-shrink:0;
+  padding:13px 16px;text-align:center;cursor:pointer;
+  font-size:12.5px;font-weight:600;color:var(--gray-500);
+  transition:all .2s;border-bottom:2px solid transparent;white-space:nowrap;
+}
+@media(min-width:768px){
+  .ft-nav{overflow-x:visible}
+  .ft-tab{flex:1;min-width:0;padding:13px 10px}
+}
+.ft-tab.on{color:var(--blue-500);border-bottom-color:var(--blue-500);background:rgba(59,130,196,.03)}
+.ft-panel{display:none;padding:24px}.ft-panel.on{display:block}
+.fi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:11px}
+.fi{background:var(--white);border-radius:var(--r);padding:15px 16px;border:1px solid var(--gray-200);transition:all .25s;display:flex;gap:11px;align-items:start}
+.fi:hover{border-color:var(--blue-300);box-shadow:var(--shadow-sm);transform:translateX(3px)}
+.fi-ico{width:30px;height:30px;border-radius:7px;background:var(--blue-100);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.fi-t{font-size:12.5px;font-weight:700;color:var(--navy);margin-bottom:2px}
+.fi-d{font-size:11.5px;color:var(--gray-500);line-height:1.55}
+/* Who grid */
+.wg{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:9px;margin-bottom:0}
+.wg-card{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--r);padding:14px;text-align:center;transition:all .2s}
+.wg-card:hover{background:var(--white);border-color:var(--blue-300);box-shadow:var(--shadow-sm)}
+.wg-ico{font-size:20px;margin-bottom:4px}.wg-n{font-size:11px;font-weight:600;color:var(--navy)}
+/* Inline CTA banner */
+.ic-wrap{border-radius:var(--r3);overflow:hidden;position:relative;margin-top:40px}
+.ic-wrap img{width:100%;height:220px;object-fit:cover;display:block}
+.ic-ov{position:absolute;inset:0;background:linear-gradient(95deg,rgba(13,27,62,.93) 38%,rgba(13,27,62,.5) 100%)}
+.ic-body{position:absolute;inset:0;display:flex;align-items:center;padding:0 clamp(20px,5%,56px)}
+.ic-body h2{font-size:clamp(15px,2.1vw,26px);font-weight:800;color:#fff;letter-spacing:-.02em;margin-bottom:7px;max-width:360px;line-height:1.2}
+.ic-body p{font-size:12px;color:rgba(255,255,255,.6);max-width:280px;margin-bottom:18px;line-height:1.6}
+.ic-btns{display:flex;gap:9px;flex-wrap:wrap}
+
+/* ─── ABOUT PAGE ─────────────────────────────────────────── */
+.ab-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.tl-wrap{position:relative;padding-left:20px;margin-top:22px}
+.tl-wrap::before{content:"";position:absolute;left:3px;top:8px;bottom:8px;width:2px;background:linear-gradient(to bottom,var(--blue-500),var(--gray-200))}
+.tl-item{position:relative;padding-bottom:22px}.tl-item:last-child{padding-bottom:0}
+.tl-dot{position:absolute;left:-21px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--white);border:2px solid var(--blue-500);box-shadow:0 0 0 3px rgba(59,130,196,.12)}
+.tl-item:nth-child(2) .tl-dot{border-color:var(--green);box-shadow:0 0 0 3px rgba(26,158,80,.1)}
+.tl-item:nth-child(3) .tl-dot{border-color:var(--orange);box-shadow:0 0 0 3px rgba(232,84,26,.1)}
+.tl-item:nth-child(4) .tl-dot{border-color:var(--navy);box-shadow:0 0 0 3px rgba(13,27,62,.08)}
+.tl-yr{font-size:10.5px;font-weight:700;color:var(--blue-500);letter-spacing:.07em;margin-bottom:3px;text-transform:uppercase}
+.tl-item:nth-child(2) .tl-yr{color:var(--green)}.tl-item:nth-child(3) .tl-yr{color:var(--orange)}.tl-item:nth-child(4) .tl-yr{color:var(--navy)}
+.tl-tx{font-size:12.5px;color:var(--gray-500);line-height:1.7}
+.stat-2{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:20px}
+.sb{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--r);padding:16px;position:relative;overflow:hidden;transition:all .22s}
+.sb::before{content:"";position:absolute;top:0;left:0;right:0;height:2px}
+.sb:nth-child(1)::before{background:var(--blue-500)}.sb:nth-child(2)::before{background:var(--orange)}
+.sb:nth-child(3)::before{background:var(--green)}.sb:nth-child(4)::before{background:var(--navy)}
+.sb:hover{background:var(--white);box-shadow:var(--shadow-md)}
+.sb-n{font-size:28px;font-weight:800;color:var(--navy);line-height:1;letter-spacing:-.03em}
+.sb-n em{font-style:normal;color:var(--orange)}.sb-l{font-size:11px;color:var(--gray-500);margin-top:3px;font-weight:500}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pil{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--r);padding:12px 14px;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:8px}
+.pil:hover{background:var(--blue-100);border-color:rgba(59,130,196,.25)}
+.pil-ico{font-size:16px;flex-shrink:0}.pil-t{font-size:12px;font-weight:700;color:var(--navy);margin-bottom:1px}.pil-d{font-size:10.5px;color:var(--gray-500)}
+
+/* ─── CONTACT PAGE ─────────────────────────────────────────── */
+.ct-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:52px;align-items:start}
+.ci-b{margin-bottom:15px;padding-bottom:15px;border-bottom:1px solid var(--gray-100)}.ci-b:last-of-type{border-bottom:none}
+.ci-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--gray-500);margin-bottom:3px}
+.ci-val{font-size:13px;color:var(--navy);font-weight:600}.ci-val a{color:var(--blue-500)}
+.ch-btns{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}
+.ch-btn{display:flex;align-items:center;gap:7px;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:8px;padding:9px 14px;font-size:12.5px;font-weight:600;color:var(--navy);cursor:pointer;transition:all .2s}
+.ch-btn:hover{background:var(--white);border-color:var(--blue-300);color:var(--blue-500);box-shadow:var(--shadow-sm)}
+.fw{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--r3);padding:30px;position:relative;overflow:visible;max-width:100%;min-width:0}
+.fw::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--navy),var(--blue-500))}
+.fw-h{font-size:17px;font-weight:800;letter-spacing:-.02em;margin-bottom:18px;color:var(--navy)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:10px}.fg{margin-bottom:10px}
+.fg label{display:block;font-size:9.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--gray-500);margin-bottom:4px}
+.fg input,.fg select,.fg textarea{
+  display:block;width:100%;max-width:100%;box-sizing:border-box;
+  padding:10px 12px;background:var(--white);border:1px solid var(--gray-200);border-radius:7px;
+  font-size:13px;font-family:var(--f);color:var(--navy);outline:none;transition:all .18s;
+  -webkit-appearance:none;appearance:none;
+}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--gray-300)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--blue-500);box-shadow:0 0 0 3px rgba(59,130,196,.1)}
+.fg select{
+  cursor:pointer;padding-right:36px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 12px center;background-size:12px;
+}
+.fg textarea{height:86px;min-height:86px;resize:vertical;line-height:1.5}
+.csel{position:relative;width:100%;max-width:100%;min-width:0;z-index:1}
+.csel.is-open{z-index:200}
+.csel-trigger{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  width:100%;min-height:48px;padding:10px 12px;padding-right:36px;
+  background:var(--white);border:1px solid var(--gray-200);border-radius:7px;
+  font-size:13px;font-family:var(--f);color:var(--navy);text-align:left;
+  cursor:pointer;box-sizing:border-box;transition:border-color .18s,box-shadow .18s;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 12px center;background-size:12px;
+}
+.csel-trigger:focus,.csel-trigger[aria-expanded="true"]{border-color:var(--blue-500);box-shadow:0 0 0 3px rgba(59,130,196,.1);outline:none}
+.csel-value{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.csel-value.is-placeholder{color:var(--gray-500)}
+.csel-menu{
+  position:absolute;top:calc(100% + 6px);left:0;right:0;width:100%;
+  max-height:min(280px,52vh);overflow-y:auto;overflow-x:hidden;
+  background:#fff;border:1px solid var(--gray-200);border-radius:10px;
+  box-shadow:0 10px 36px rgba(13,27,62,.14);z-index:201;
+  list-style:none;margin:0;padding:6px 0;box-sizing:border-box;
+  -webkit-overflow-scrolling:touch;
+}
+.csel-menu[hidden]{display:none}
+.csel-group{padding:8px 14px 4px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-500)}
+.csel-opt{
+  display:block;width:100%;padding:12px 14px;border:none;background:#fff;
+  font-size:14px;font-family:var(--f);color:var(--navy);text-align:left;
+  cursor:pointer;box-sizing:border-box;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  position:relative;z-index:1;
+}
+.csel-opt:hover,.csel-opt[aria-selected="true"]{background:var(--blue-100);color:var(--blue-500)}
+.csel-group{background:#fff;position:relative;z-index:1}
+.csel-native{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;overflow:hidden;clip:rect(0,0,0,0)}
+.ct-grid>*{min-width:0;max-width:100%}
+.fsub{width:100%;padding:12px;background:var(--navy);color:#fff;border:none;border-radius:8px;font-size:13.5px;font-weight:700;font-family:var(--f);cursor:pointer;transition:all .22s;margin-top:5px;touch-action:manipulation}
+.fsub:hover{background:var(--blue-700);box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.fsucc{display:none;margin-top:9px;background:#EDFAF3;border:1px solid rgba(26,158,80,.25);border-radius:7px;padding:11px 14px;font-size:12.5px;color:#166534;text-align:center;font-weight:600}
+/* Region tags */
+.region-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.rt{background:var(--blue-100);border:1px solid rgba(59,130,196,.18);border-radius:100px;padding:4px 12px;font-size:11.5px;font-weight:600;color:var(--blue-500)}
+.ct-tip{margin-top:14px;padding:14px 16px;border-radius:var(--r)}
+.ct-tip-blue{background:var(--blue-100);border:1px solid rgba(59,130,196,.18);border-left:3px solid var(--blue-500)}
+.ct-tip-orange{background:var(--orange-lt);border:1px solid rgba(232,84,26,.14);border-left:3px solid var(--orange)}
+.ct-tip-title{font-size:12.5px;font-weight:700;color:var(--navy);margin-bottom:2px}
+.ct-tip-body{font-size:11.5px;color:var(--gray-500);line-height:1.65}
+
+/* ─── FOOTER ─────────────────────────────────────────────── */
+footer{background:var(--navy)}
+.ft-top-bar{height:3px;background:linear-gradient(90deg,var(--blue-500),var(--blue-300))}
+.ft-in{max-width:1200px;margin:0 auto;padding:44px clamp(16px,4%,48px) 22px}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:32px}
+.ft-brand p{font-size:12px;color:rgba(255,255,255,.35);line-height:1.75;max-width:210px;margin-top:8px}
+.ft-logo{font-size:16px;font-weight:800;color:#fff;letter-spacing:-.02em;margin-bottom:6px}
+.ft-logo em{font-style:normal;color:var(--orange)}
+.ft-col h4{font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:13px}
+.ft-col a{display:block;font-size:12.5px;color:rgba(255,255,255,.44);margin-bottom:8px;transition:color .18s}
+.ft-col a:hover{color:#fff}
+.ft-bot{border-top:1px solid rgba(255,255,255,.06);padding-top:17px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:7px}
+.ft-bot p{font-size:11.5px;color:rgba(255,255,255,.24)}
+
+/* ─── FLOATING WHATSAPP ─────────────────────────────────── */
+.wa{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:999;font-size:20px;cursor:pointer;box-shadow:0 4px 14px rgba(37,211,102,.35);transition:transform .2s}
+.wa:hover{transform:scale(1.1)}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────── */
+@media(max-width:1024px){
+  .hero-img-main{height:340px}
+  .hero-float{display:none}
+  .prod-row,.prod-row.flip{direction:ltr;grid-template-columns:1fr}.prod-row.flip>*{direction:ltr}
+  .prod-img-wrap{height:280px}
+  .svc-card{grid-template-columns:1fr}.svc-card-img{min-height:220px}
+  .add-grid{grid-template-columns:1fr 1fr}
+  .ab-grid,.ct-grid{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .vp-grid{grid-template-columns:1fr 1fr}
+  .tc{flex:0 0 calc(50% - 9px)}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-menu-btn{display:flex}
+  .sec{padding:60px 0}.sec-sm{padding:44px 0}
+  .hero{padding:110px 0 60px}.hero-metrics{flex-wrap:wrap;gap:12px}.hm{padding:0 14px}
+  .prod-row{padding:48px 0}.prod-img-wrap{height:240px}
+  .svc-pill-grid{grid-template-columns:1fr}
+  .add-grid{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr 1fr;gap:22px}
+  .frow{grid-template-columns:1fr}
+  .ps-2{grid-template-columns:1fr}
+  .tc{flex:0 0 calc(85% - 9px)}
+}
+@media(max-width:480px){
+  .ft-grid{grid-template-columns:1fr}
+  .fw{padding:20px 14px}
+  .hero-cta-row{flex-direction:column;align-items:flex-start}
+  .vp-grid{grid-template-columns:1fr}
+}
+
+/* ─── SERVICE OVERVIEW CARDS (homepage only) ──────────────
+   Compact: image + name + 1-line desc + 1-line outcome
+   No feature lists. No pill grids. No detail expansion.
+   ──────────────────────────────────────────────────────── */
+.svc-ov-card{
+  border-radius:var(--r2);overflow:hidden;background:var(--white);
+  border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);
+  transition:all .25s;cursor:pointer;
+}
+.svc-ov-card:hover{
+  box-shadow:var(--shadow-md);border-color:var(--blue-300);
+  transform:translateY(-3px);
+}
+.svc-ov-img{
+  height:180px;overflow:hidden;position:relative;
+}
+.svc-ov-img img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .38s ease;
+}
+.svc-ov-card:hover .svc-ov-img img{transform:scale(1.05)}
+.svc-ov-ov{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(13,27,62,.55) 0%,transparent 60%);
+}
+.svc-ov-num{
+  position:absolute;top:12px;left:13px;
+  font-size:10px;font-weight:700;letter-spacing:.1em;
+  color:rgba(255,255,255,.6);font-family:monospace;
+}
+.svc-ov-body{padding:18px 20px 20px}
+.svc-ov-tag{
+  font-size:9.5px;font-weight:700;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--blue-500);margin-bottom:6px;
+}
+.svc-ov-name{
+  font-size:14.5px;font-weight:700;color:var(--navy);
+  margin-bottom:7px;line-height:1.3;letter-spacing:-.01em;
+}
+.svc-ov-desc{
+  font-size:12.5px;color:var(--gray-500);line-height:1.6;margin-bottom:6px;
+}
+.svc-ov-outcome{
+  font-size:11.5px;font-weight:600;color:var(--blue-500);
+  padding-top:6px;border-top:1px solid var(--gray-100);
+}
+@media(max-width:768px){
+  .svc-ov-card .svc-ov-img{height:150px}
+}
+@media(max-width:600px){
+  /* stack to 1 col on very small screens */
+  div[style*="grid-template-columns:repeat(3,1fr)"]{
+    grid-template-columns:1fr !important;
+  }
+}
+
+/* ─── HERO SHOWCASE — rotating panel system ──────────────────
+   Elegant cross-fade between 5 panels (products + services)
+   Clean, professional — no flashy effects
+   ──────────────────────────────────────────────────────────── */
+.hero-showcase{
+  position:relative;
+}
+/* ═══════════════════════════════════════════════
+   HERO SHOWCASE — IMMERSIVE BLENDED TREATMENT
+   No card borders. Image fades into navy bg.
+   Left edge dissolves into content area.
+   ═══════════════════════════════════════════════ */
+.hero-showcase{
+  position:relative;
+  padding-bottom:0;
+  /* Slight negative margin left so image reaches closer to content */
+  margin-left:-20px;
+}
+.hs-frame{
+  position:relative;
+  /* NO border-radius — no card look */
+  overflow:visible; /* allow pseudo-elements to bleed */
+  height:520px;
+  /* NO box-shadow */
+  background:transparent;
+  /* Clip the actual image content */
+  clip-path:inset(0);
+}
+.hs-panel{
+  position:absolute;inset:0;
+  opacity:0;
+  transition:opacity 1s cubic-bezier(.4,0,.2,1);
+  pointer-events:none;
+  overflow:hidden;
+}
+.hs-panel.active{
+  opacity:1;
+  pointer-events:auto;
+}
+.hs-panel img{
+  width:100%;height:100%;
+  object-fit:cover;display:block;
+  transform:scale(1.04);
+  transition:transform 6s ease;
+  /* Slightly right-biased crop for portrait images */
+  object-position:center center;
+}
+.hs-panel.active img{
+  transform:scale(1);
+}
+/* Multi-directional gradient overlay:
+   - Left edge: strong fade to navy (blends into content)
+   - Top: subtle dark vignette
+   - Bottom: label area darkening
+   - Right: light vignette */
+.hs-panel-ov{
+  position:absolute;inset:0;
+  background:
+    /* Left fade — key effect: dissolves into hero bg */
+    linear-gradient(to right,
+      var(--navy) 0%,
+      rgba(13,27,62,.85) 15%,
+      rgba(13,27,62,.4) 35%,
+      rgba(13,27,62,.1) 55%,
+      transparent 70%
+    ),
+    /* Top vignette */
+    linear-gradient(to bottom,
+      rgba(13,27,62,.5) 0%,
+      transparent 30%
+    ),
+    /* Bottom label area */
+    linear-gradient(to top,
+      rgba(13,27,62,.88) 0%,
+      rgba(13,27,62,.3) 30%,
+      transparent 55%
+    );
+  pointer-events:none;
+  z-index:1;
+}
+/* Bottom label — sits above the gradient */
+.hs-panel-label{
+  position:absolute;
+  bottom:0;left:0;right:0;
+  padding:28px 28px 24px;
+  z-index:2;
+  /* No extra background — already handled by overlay gradient */
+}
+.hpl-type{
+  font-size:9px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(255,255,255,.45);margin-bottom:6px;
+  display:flex;align-items:center;gap:6px;
+}
+.hpl-type::before{
+  content:'';display:block;width:16px;height:1.5px;
+  background:var(--orange);border-radius:1px;
+}
+.hpl-name{
+  font-size:22px;font-weight:800;color:#fff;
+  letter-spacing:-.025em;margin-bottom:4px;line-height:1.15;
+  text-shadow:0 2px 12px rgba(13,27,62,.6);
+}
+.hpl-desc{
+  font-size:13px;color:rgba(255,255,255,.6);
+  font-weight:400;line-height:1.5;
+}
+/* Right-side round mask for softer edge */
+.hs-frame::after{
+  content:'';
+  position:absolute;
+  top:0;right:0;bottom:0;width:80px;
+  background:linear-gradient(to left,var(--navy) 0%,transparent 100%);
+  z-index:2;pointer-events:none;
+}
+/* Top rounded softening */
+.hs-frame::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;height:60px;
+  background:linear-gradient(to bottom,rgba(13,27,62,.6) 0%,transparent 100%);
+  z-index:2;pointer-events:none;
+}
+/* Dot indicators — below the frame, aligned left */
+.hs-dots{
+  display:flex;align-items:center;gap:8px;
+  margin-top:18px;
+  padding-left:28px;
+}
+.hs-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:rgba(255,255,255,.2);
+  cursor:pointer;transition:all .3s;
+  border:none;
+}
+.hs-dot.active{
+  background:var(--orange);
+  width:24px;border-radius:3px;
+}
+.hs-dot:hover{background:rgba(255,255,255,.5);}
+
+  .hpl-name{font-size:16px;}
+}
+
+/* ═══════════════════════════════════════════════════════
+   GLOBAL ICON SYSTEM — single source of truth
+   Applied to: vp-ico, fi-ico, add-card-ico, wg-ico,
+   hb-ico, svc-ov tag icons, pillar icons, stat icons
+   Standard: light-orange bg, dark-orange icon, orange border
+   ═══════════════════════════════════════════════════════ */
+:root {
+  --ico-bg:rgba(232,84,26,.08);
+  --ico-border:rgba(232,84,26,.18);
+  --ico-color:var(--orange);
+}
+
+/* Value Prop icons */
+.vp-ico{
+  width:40px;height:40px;border-radius:10px;
+  background:var(--ico-bg);border:1px solid var(--ico-border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;margin-bottom:12px;
+}
+
+/* Feature item icons (product detail tabs) */
+.fi-ico{
+  width:32px;height:32px;border-radius:8px;
+  background:var(--ico-bg) !important;
+  border:1px solid var(--ico-border) !important;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;flex-shrink:0;
+}
+
+/* Additional service card icons */
+.add-card-ico{
+  width:36px;height:36px;border-radius:9px;
+  background:var(--ico-bg);border:1px solid var(--ico-border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;margin-bottom:8px;
+}
+
+/* Who-grid icons */
+.wg-ico{
+  width:36px;height:36px;border-radius:9px;
+  background:var(--ico-bg);border:1px solid var(--ico-border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;margin:0 auto 6px;
+}
+
+/* Hero badge icon */
+.hb-ico{
+  width:36px;height:36px;border-radius:8px;
+  background:var(--ico-bg);border:1px solid var(--ico-border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:17px;flex-shrink:0;
+}
+
+/* Stat block accent bars (use orange for all) */
+.sb:nth-child(1)::before,.sb:nth-child(2)::before,
+.sb:nth-child(3)::before,.sb:nth-child(4)::before{
+  background:var(--orange);
+}
+
+/* Metric section top-bar */
+.ft-top-bar,.tl-wrap::before{
+  background:var(--orange) !important;
+}
+
+/* Pillar icons */
+.pil-ico{
+  width:32px;height:32px;border-radius:8px;
+  background:var(--ico-bg);border:1px solid var(--ico-border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;flex-shrink:0;
+}
+
+/* Timeline dots — unified orange */
+.tl-dot,
+.tl-item:nth-child(2) .tl-dot,
+.tl-item:nth-child(3) .tl-dot,
+.tl-item:nth-child(4) .tl-dot{
+  border-color:var(--orange) !important;
+  box-shadow:0 0 0 3px rgba(232,84,26,.1) !important;
+}
+.tl-yr,
+.tl-item:nth-child(2) .tl-yr,
+.tl-item:nth-child(3) .tl-yr,
+.tl-item:nth-child(4) .tl-yr{
+  color:var(--orange) !important;
+}
+
+/* Feature tabs — active state uses orange */
+.ft-tab.on{
+  color:var(--orange) !important;
+  border-bottom-color:var(--orange) !important;
+  background:var(--ico-bg) !important;
+}
+
+/* Eyebrow — all use orange */
+.eyebrow,.eyebrow.bl,.eyebrow.navy,.eyebrow.orange,.eyebrow.green{
+  color:var(--orange) !important;
+}
+.eyebrow::before,.eyebrow.bl::before,.eyebrow.navy::before,
+.eyebrow.orange::before,.eyebrow.green::before{
+  background:var(--orange) !important;
+}
+
+/* Service card tags — orange */
+.svc-card-tag{color:var(--orange) !important;}
+.svc-card-tag::before{background:var(--orange) !important;}
+.svc-ov-tag{color:var(--orange) !important;}
+
+/* Service col headers in detail pages */
+.spg-col-h,.spg-options .spg-col-h,.spg-benefits .spg-col-h,.spg-why .spg-col-h{
+  color:var(--orange) !important;
+}
+.spg-col-h::before,.spg-options .spg-col-h::before,
+.spg-benefits .spg-col-h::before,.spg-why .spg-col-h::before{
+  background:var(--orange) !important;
+}
+
+/* Card list bullets — orange */
+.add-card-list.arr li::before{color:var(--orange) !important;}
+.add-card-list.chk li::before{color:var(--orange) !important;}
+.pbox-list li::before{color:var(--orange) !important;}
+.pbox.sol .pbox-list li::before{color:var(--orange) !important;}
+
+/* Pbox borders — unify to orange top */
+.pbox.sol{border-top-color:var(--orange) !important;}
+.pbox.prob{border-top-color:var(--orange) !important;}
+
+/* Svc overview outcome text — use orange */
+.svc-ov-outcome{color:var(--orange) !important;border-top-color:var(--ico-border) !important;}
+
+/* Who card hover border */
+.wg-card:hover{border-color:var(--ico-border) !important;box-shadow:0 2px 12px rgba(232,84,26,.1) !important;}
+
+/* Scroll dots — orange active */
+.scr-dot.on{background:var(--orange) !important;}
+.hs-dot.active{background:var(--orange) !important;}
+.psn-dot.on{background:var(--orange) !important;}
+
+/* Prod badge — keep product-specific colors but standardize container */
+/* (orange=dn, blue=na, green=af — keep as brand differentiators) */
+
+/* Hero tag */
+.hero-tag{
+  background:var(--ico-bg) !important;
+  border-color:var(--ico-border) !important;
+  color:var(--orange) !important;
+}
+.hero-dot{background:var(--orange) !important;}
+
+/* vp-grid hover */
+.vp-item:hover{border-left:2px solid var(--orange);}
+
+/* Feature tabs nav */
+.ft-nav{border-bottom:1px solid var(--ico-border);}
+
+/* ─── SOCIAL MEDIA LINKS ─────────────────────────────────── */
+.social-links{display:flex;align-items:center;gap:10px;margin-top:14px}
+.social-link{
+  width:34px;height:34px;border-radius:8px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  display:flex;align-items:center;justify-content:center;
+  transition:all .2s;text-decoration:none;
+  color:rgba(255,255,255,.55);flex-shrink:0;
+}
+.social-link:hover{
+  background:rgba(255,255,255,.14);
+  border-color:rgba(255,255,255,.25);
+  color:#fff;
+  transform:translateY(-2px);
+}
+.social-link svg{width:16px;height:16px;fill:currentColor;display:block}
+
+/* Contact page social links */
+.contact-social{display:flex;align-items:center;gap:10px;margin-top:16px}
+.contact-social-link{
+  display:flex;align-items:center;gap:8px;
+  background:var(--gray-50);border:1px solid var(--gray-200);
+  border-radius:8px;padding:8px 14px;
+  font-size:12.5px;font-weight:600;color:var(--navy);
+  text-decoration:none;transition:all .2s;
+}
+.contact-social-link:hover{
+  background:var(--white);border-color:var(--blue-300);
+  color:var(--blue-500);box-shadow:var(--shadow-sm);
+  transform:translateY(-1px);
+}
+.contact-social-link svg{width:15px;height:15px;fill:currentColor;flex-shrink:0}
+
+
+/* ═══════════════════════════════════════════════════════
+   HERO TEXT — ensure legibility on navy background
+   ═══════════════════════════════════════════════════════ */
+.hero .heading-xl{color:#fff !important;}
+.hero .body-lg{color:rgba(255,255,255,.72) !important;}
+.hero .hero-tag{
+  background:rgba(232,84,26,.12) !important;
+  border:1px solid rgba(232,84,26,.25) !important;
+  color:var(--orange) !important;
+}
+.hero .hero-dot{background:var(--orange);}
+.hero .blue-accent{color:var(--blue-300) !important;}
+.hero .hm-n{color:#fff;}
+.hero .hm-l{color:rgba(255,255,255,.45);}
+.hero .hm{border-right-color:rgba(255,255,255,.12);}
+.hero-metrics{border-top-color:rgba(255,255,255,.1) !important;}
+
+/* ═══════════════════════════════════════════════════════
+   HERO SHOWCASE — FULL RESPONSIVE BEHAVIOR
+   ═══════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════
+   HERO RESPONSIVE — MOBILE-FIRST CONTENT PRIORITY
+   Priority order on mobile/tablet:
+   1. Heading  2. Sub-heading  3. CTA  4. Image slider
+   ═══════════════════════════════════════════════════ */
+
+/* Large desktop — wider frame */
+@media(max-width:1200px){
+  .hs-frame{height:460px;}
+}
+
+/* ── TABLET (≤1024px) ──────────────────────────────
+   Single column: text FIRST, image BELOW
+   ─────────────────────────────────────────────────── */
+@media(max-width:1024px){
+  .hero{
+    padding-top:78px; /* nav height + small gap */
+    padding-bottom:0;
+  }
+  .hero-inner{
+    grid-template-columns:1fr;
+    gap:0;
+    /* Flex column ensures text is always first */
+    display:flex;
+    flex-direction:column;
+  }
+  /* TEXT block: order 1 = appears first */
+  .hero-inner > .fade-up{
+    order:1;
+    padding:32px clamp(16px,5%,48px) 28px;
+  }
+  /* IMAGE block: order 2 = appears BELOW text */
+  .hero-showcase{
+    order:2;
+    margin-left:0;
+    width:100%;
+    padding-bottom:0;
+  }
+  .hs-frame{
+    height:clamp(240px,36vw,320px);
+    width:100%;
+    border-radius:0;
+  }
+  /* Tablet overlay: top fade strong (blends upward into hero bg) */
+  .hs-panel-ov{
+    background:
+      linear-gradient(to bottom,
+        rgba(13,27,62,.75) 0%,
+        rgba(13,27,62,.25) 35%,
+        transparent 55%,
+        rgba(13,27,62,.6) 85%,
+        rgba(13,27,62,.88) 100%
+      ) !important;
+  }
+  /* Right/left edge fades on tablet */
+  .hs-frame::after{width:40px;}
+  .hs-frame::before{height:80px;}
+  .hs-dots{
+    padding-left:0;
+    justify-content:center;
+    margin-top:14px;
+    padding-bottom:0;
+  }
+  /* Hero metrics tighter on tablet */
+  .hero-metrics{
+    flex-wrap:wrap;
+    gap:8px 0;
+    padding-top:16px;
+    margin-top:0;
+  }
+  .hm{padding:0 14px !important;}
+  .hm:first-child{padding-left:0 !important;}
+}
+
+/* ── MOBILE LANDSCAPE / SMALL TABLET (≤768px) ────── */
+@media(max-width:768px){
+  .hero{padding-top:70px;}
+  .hero-inner > .fade-up{
+    padding:24px 16px 20px;
+  }
+  .hero-showcase{width:100%;}
+  .hpl-name{font-size:17px;}
+  .hpl-desc{font-size:12px;}
+  .hpl-type{font-size:8.5px;}
+  .hs-panel-label{padding:18px 16px 14px;}
+  .hero-metrics{flex-wrap:wrap;gap:8px 0;}
+  .hm{padding:0 12px !important;}
+  .hero-cta-row{margin-bottom:20px;}
+  /* Remove extra padding below metrics */
+  .hero-inner > .fade-up > .hero-metrics{margin-top:14px;padding-top:14px;}
+}
+
+/* ── MOBILE PORTRAIT (≤480px) ──────────────────────── */
+@media(max-width:480px){
+  .hero{padding-top:68px;}
+  .hero-inner > .fade-up{
+    padding:20px 14px 18px;
+  }
+  .hpl-name{font-size:15px;}
+  .hpl-desc{font-size:11px;}
+  .hs-panel-label{padding:14px 14px 12px;}
+  /* Headline stays prominent */
+  .hero .heading-xl{
+    font-size:clamp(24px,7.5vw,36px) !important;
+    line-height:1.1;
+  }
+  .hero-sub{
+    font-size:14px !important;
+    margin-bottom:20px !important;
+  }
+  /* CTA full-width on tiny screens */
+  .hero-cta-row .btn{
+    width:100%;
+    justify-content:center;
+    padding:13px 20px;
+  }
+  /* Metrics: 2×2 grid */
+  .hero-metrics{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    border-top:1px solid rgba(255,255,255,.1);
+    padding-top:14px;
+  }
+  .hm{
+    padding:0 !important;
+    border-right:none !important;
+  }
+  .hm-n{font-size:18px;}
+  .hm-l{font-size:10px;}
+  .hs-dots{
+    justify-content:center;
+    gap:6px;
+  }
+}
+
+/* ── VERY SMALL (≤360px) ──────────────────────────── */
+@media(max-width:360px){
+  .hero .heading-xl{font-size:clamp(22px,7vw,30px) !important;}
+  .hero-tag{font-size:10px;}
+}
+@media(min-width:1025px){
+  /* Desktop: left overlay extra strong for text readability */
+  .hs-panel-ov{
+    background:
+      linear-gradient(to right,
+        var(--navy) 0%,
+        rgba(13,27,62,.9) 12%,
+        rgba(13,27,62,.5) 32%,
+        rgba(13,27,62,.15) 52%,
+        transparent 68%
+      ),
+      linear-gradient(to bottom,
+        rgba(13,27,62,.55) 0%,
+        transparent 28%
+      ),
+      linear-gradient(to top,
+        rgba(13,27,62,.88) 0%,
+        rgba(13,27,62,.2) 32%,
+        transparent 55%
+      ) !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════
+   NAV — base desktop styles (mobile overridden in mobile.css)
+   ═══════════════════════════════════════════════════════ */
+.nav-links a{font-family:var(--f);}
+
+/* ═══════════════════════════════════════════════════════
+   PAGE HEROES — ALL INNER PAGES
+   ═══════════════════════════════════════════════════════ */
+.ph-wrap{margin-top:0;}
+.ph-body{
+  /* Ensure text always starts well below nav */
+  padding-top:max(68px, 68px) !important;
+  align-items:center;
+}
+/* Responsive page heroes */
+@media(max-width:768px){
+  .ph-wrap{height:auto !important;min-height:min(400px,88vw) !important;}
+  .ph-wrap:has(.ph-btns){min-height:min(500px,118vw) !important;}
+  .ph-body{padding:20px 16px 24px !important;align-items:flex-end !important;}
+  .ph-inner{max-width:100%;width:100%;}
+  .ph-h{font-size:clamp(20px,5.5vw,28px) !important;line-height:1.12 !important;}
+  .ph-p{font-size:13.5px !important;margin-bottom:14px !important;}
+  .ph-ov{background:linear-gradient(to top,rgba(13,27,62,.96) 0%,rgba(13,27,62,.75) 45%,rgba(13,27,62,.35) 100%) !important;}
+  .pbox{padding:18px 16px !important;box-sizing:border-box;}
+  .pbox-list li{min-width:0;overflow-wrap:break-word;word-break:break-word;}
+  .page.active{padding-bottom:calc(76px + env(safe-area-inset-bottom));}
+}
+@media(max-width:480px){
+  .ph-wrap:has(.ph-btns){min-height:min(540px,128vw) !important;}
+  .ph-h{font-size:clamp(18px,6vw,26px) !important;}
+  .ph-btns{flex-direction:column;gap:8px;}
+  .ph-btns .btn{width:100%;justify-content:center;}
+}
+
+/* ═══════════════════════════════════════════════════════
+   PRODUCT ROWS — RESPONSIVE
+   ═══════════════════════════════════════════════════════ */
+@media(max-width:768px){
+  .prod-row{padding:36px 0 !important;}
+  .prod-img-wrap{height:220px !important;}
+}
+
+/* ═══════════════════════════════════════════════════════
+   SERVICE CARDS — RESPONSIVE STACKING
+   ═══════════════════════════════════════════════════════ */
+@media(max-width:900px){
+  .svc-card{grid-template-columns:1fr !important;}
+  .svc-card-img{min-height:180px !important;}
+}
+@media(max-width:768px){
+  .svc-pill-grid{grid-template-columns:1fr !important;}
+}
+
+/* ═══════════════════════════════════════════════════════
+   TESTIMONIALS — RESPONSIVE
+   ═══════════════════════════════════════════════════════ */
+@media(max-width:600px){
+  .tc{flex:0 0 calc(100% - 8px) !important;}
+}
+
+/* ═══════════════════════════════════════════════════════
+   FORMS — RESPONSIVE
+   ═══════════════════════════════════════════════════════ */
+@media(max-width:600px){
+  .frow{grid-template-columns:1fr !important;}
+}
+
+/* ═══════════════════════════════════════════════════════
+   FOOTER — RESPONSIVE
+   ═══════════════════════════════════════════════════════ */
+@media(max-width:600px){
+  .ft-grid{grid-template-columns:1fr !important;gap:20px !important;}
+  .social-links{flex-wrap:wrap;}
+}
+
+/* ═══════════════════════════════════════════════════════
+   VALUE PROP GRID — RESPONSIVE
+   ═══════════════════════════════════════════════════════ */
+@media(max-width:640px){
+  .vp-grid{grid-template-columns:1fr 1fr !important;}
+}
+@media(max-width:380px){
+  .vp-grid{grid-template-columns:1fr !important;}
+}
+
+/* ═══════════════════════════════════════════════════════
+   SERVICE OVERVIEW GRID — RESPONSIVE
+   ═══════════════════════════════════════════════════════ */
+@media(max-width:900px){
+  div[style*="grid-template-columns:repeat(3,1fr)"]{
+    grid-template-columns:1fr 1fr !important;
+  }
+}
+@media(max-width:560px){
+  div[style*="grid-template-columns:repeat(3,1fr)"]{
+    grid-template-columns:1fr !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════
+   METRICS BAND — RESPONSIVE
+   ═══════════════════════════════════════════════════════ */
+@media(max-width:768px){
+  .m-in{grid-template-columns:1fr !important;gap:36px !important;}
+}
+
+/* ═══════════════════════════════════════════════════════
+   ABOUT GRID — RESPONSIVE
+   ═══════════════════════════════════════════════════════ */
+@media(max-width:768px){
+  .ab-grid{grid-template-columns:1fr !important;}
+  .stat-2{grid-template-columns:1fr 1fr !important;}
+  .pillars{grid-template-columns:1fr !important;}
+}
+
+/* ═══════════════════════════════════════════════════════
+   ADD-GRID — RESPONSIVE
+   ═══════════════════════════════════════════════════════ */
+@media(max-width:768px){
+  .add-grid{grid-template-columns:1fr 1fr !important;}
+}
+@media(max-width:500px){
+  .add-grid{grid-template-columns:1fr !important;}
+}
+
+/* ═══════════════════════════════════════════════════════
+   CONTACT GRID — RESPONSIVE
+   ═══════════════════════════════════════════════════════ */
+@media(max-width:900px){
+  .ct-grid{grid-template-columns:1fr !important;gap:36px !important;}
+}
+
+/* ═══════════════════════════════════════════════════════
+   ACTIVE STATES & FOCUS ACCESSIBILITY
+   ═══════════════════════════════════════════════════════ */
+a:focus-visible,button:focus-visible,.btn:focus-visible{
+  outline:2px solid var(--orange);
+  outline-offset:3px;
+  border-radius:4px;
+}
+.nav-links a.on{
+  color:var(--navy) !important;
+  background:var(--gray-50) !important;
+  font-weight:700 !important;
+}
+.btn:active{transform:translateY(0) !important;opacity:.9;}
+.scr-arr:focus-visible,.hs-dot:focus-visible{
+  outline:2px solid var(--orange);outline-offset:2px;
+}
+
+/* ═══════════════════════════════════════════════════════
+   HOVER STATES — consistent site-wide
+   ═══════════════════════════════════════════════════════ */
+.ft-col a:hover{color:#fff !important;}
+.ch-btn:hover{transform:translateY(-1px);}
+.svc-ov-card{cursor:pointer;}
+
+/* ═══════════════════════════════════════════════════════
+   SMOOTH SCROLL & PERFORMANCE
+   ═══════════════════════════════════════════════════════ */
+html{scroll-behavior:smooth;}
+img{max-width:100%;height:auto;}
+*{-webkit-tap-highlight-color:transparent;}
+
+/* ─── MOBILE MENU — handled in mobile.css ─────────────── */
+
+/* ═══════════════════════════════════════════════════════
+   SECTION SPACING — CONSISTENT ACROSS BREAKPOINTS
+   ═══════════════════════════════════════════════════════ */
+@media(max-width:768px){
+  .sec{padding:56px 0 !important;}
+  .sec-sm{padding:40px 0 !important;}
+  .wrap{padding:0 16px !important;}
+}
+@media(max-width:480px){
+  .sec{padding:44px 0 !important;}
+  .wrap{padding:0 14px !important;}
+}
+
+/* ═══════════════════════════════════════════════════════
+   CROSS-BROWSER — Safari / Firefox specific
+   ═══════════════════════════════════════════════════════ */
+/* Safari: clip-path fallback */
+@supports not (clip-path:inset(0)){
+  .hs-frame{border-radius:var(--r3);overflow:hidden;}
+}
+/* Firefox: smooth font rendering */
+@-moz-document url-prefix(){
+  body{-moz-osx-font-smoothing:grayscale;}
+}
+
+
+/* ─── HERO HEIGHT BEHAVIOR ───────────────────────────── */
+@media(max-width:1024px){
+  .hero{
+    min-height:auto !important;
+    /* Remove the 100vh forcing on tablet/mobile */
+  }
+  .hero-inner{
+    min-height:auto;
+  }
+  /* Ensure showcase doesn't take too much vertical space */
+  .hero-showcase{
+    flex-shrink:0;
+  }
+}
+/* ─── IMAGE PANEL SMOOTH ANIMATION ON TOUCH ──────────── */
+@media(max-width:1024px){
+  .hs-panel img{
+    /* Reduce Ken Burns on mobile for performance */
+    transform:scale(1.01) !important;
+    transition:transform 4s ease !important;
+  }
+  .hs-panel.active img{
+    transform:scale(1) !important;
+  }
+  /* Slightly faster crossfade on mobile */
+  .hs-panel{
+    transition:opacity .7s ease !important;
+  }
+}
+/* ─── ENSURE ADEQUATE SPACING TEXT → IMAGE ────────────── */
+@media(max-width:1024px){
+  /* Visual separator between text block and image */
+  .hero-showcase::before{
+    content:'';
+    display:block;
+    height:1px;
+    background:rgba(255,255,255,.06);
+    margin:0 clamp(16px,4%,48px);
+  }
+}
+
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Wenthura Solutions (Private) Limited","alternateName":"Wenthura","url":"https://wenthura.lk","logo":"https://wenthura.lk/img/logo.png","contactPoint":{"@type":"ContactPoint","email":"hello@wenthura.lk","contactType":"customer service"},"address":{"@type":"PostalAddress","addressLocality":"Colombo","addressCountry":"LK"},"sameAs":["https://www.linkedin.com/company/wenthurasolutions/","https://x.com/wenthuras","https://www.facebook.com/wenthurasolutions/"],"description":"Purpose-built software platforms, dedicated engineering teams, and expert talent acquisition."}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-shell">
+    <div class="nav-in">
+      <a href="#" class="nav-logo" onclick="return go('home')">
+        <img src="img/logo-dark.png" alt="Wenthura" class="nav-logo-dark" id="nlogo">
+        <img src="img/logo-white.png" alt="" class="nav-logo-light" aria-hidden="true">
+      </a>
+      <div class="nav-links">
+        <a href="#" onclick="return go('home')" data-p="home" class="on">Home</a>
+        <a href="#" onclick="return go('products')" data-p="products">Products</a>
+        <a href="#" onclick="return go('services')" data-p="services">Services</a>
+        <a href="#" onclick="return go('about')" data-p="about">About</a>
+        <a href="#" onclick="return go('contact')" data-p="contact">Contact</a>
+      </div>
+      <div class="nav-right">
+        <a href="#" class="btn btn-outline nav-desk-cta" onclick="return go('about')">Our Story</a>
+        <a href="#" class="btn btn-primary nav-desk-cta" onclick="return go('contact')">Get Started</a>
+        <button type="button" class="nav-menu-btn" id="hamBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobMenu" onclick="toggleMob()">
+          <span class="nav-menu-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Premium full-screen mobile menu -->
+<div class="mob" id="mobMenu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Site navigation">
+  <div class="mob-canvas" aria-hidden="true">
+    <div class="mob-mesh"></div>
+    <div class="mob-grid"></div>
+  </div>
+  <div class="mob-inner">
+    <div class="mob-topbar">
+      <img src="img/logo-white.png" alt="Wenthura" class="mob-top-logo" width="110" height="18">
+      <button type="button" class="mob-close-btn" onclick="closeMob()" aria-label="Close menu">
+        <i data-lucide="x"></i>
+        <span>Close</span>
+      </button>
+    </div>
+    <div class="mob-nav" role="navigation" aria-label="Mobile navigation">
+      <a href="#" onclick="return go('home')" data-p="home" class="mob-link on">
+        <span class="mob-link-num">01</span>
+        <span class="mob-link-body">
+          <span class="mob-link-text">Home</span>
+          <span class="mob-link-sub">Start here</span>
+        </span>
+        <i data-lucide="arrow-up-right" class="mob-link-arrow"></i>
+      </a>
+      <a href="#" onclick="return go('products')" data-p="products" class="mob-link">
+        <span class="mob-link-num">02</span>
+        <span class="mob-link-body">
+          <span class="mob-link-text">Products</span>
+          <span class="mob-link-sub">DoodleNest · Nena AI · AutoFlow</span>
+        </span>
+        <i data-lucide="arrow-up-right" class="mob-link-arrow"></i>
+      </a>
+      <a href="#" onclick="return go('services')" data-p="services" class="mob-link">
+        <span class="mob-link-num">03</span>
+        <span class="mob-link-body">
+          <span class="mob-link-text">Services</span>
+          <span class="mob-link-sub">Teams · R&amp;D · Managed IT</span>
+        </span>
+        <i data-lucide="arrow-up-right" class="mob-link-arrow"></i>
+      </a>
+      <a href="#" onclick="return go('about')" data-p="about" class="mob-link">
+        <span class="mob-link-num">04</span>
+        <span class="mob-link-body">
+          <span class="mob-link-text">About</span>
+          <span class="mob-link-sub">Our story &amp; values</span>
+        </span>
+        <i data-lucide="arrow-up-right" class="mob-link-arrow"></i>
+      </a>
+      <a href="#" onclick="return go('contact')" data-p="contact" class="mob-link">
+        <span class="mob-link-num">05</span>
+        <span class="mob-link-body">
+          <span class="mob-link-text">Contact</span>
+          <span class="mob-link-sub">Let's build together</span>
+        </span>
+        <i data-lucide="arrow-up-right" class="mob-link-arrow"></i>
+      </a>
+    </div>
+
+    <div class="mob-products">
+      <p class="mob-section-label">Featured Products</p>
+      <div class="mob-prod-scroll">
+        <a href="#" onclick="return go('doodlenest')" class="mob-prod-card mob-prod-o">
+          <img src="img/doodlenest.png" alt="" loading="lazy" width="120" height="80">
+          <span class="mob-prod-name"><i data-lucide="palette"></i> DoodleNest</span>
+        </a>
+        <a href="#" onclick="return go('nena')" class="mob-prod-card mob-prod-b">
+          <img src="img/nena-ai.png" alt="" loading="lazy" width="120" height="80">
+          <span class="mob-prod-name"><i data-lucide="brain-circuit"></i> Nena AI</span>
+        </a>
+        <a href="#" onclick="return go('autoflow')" class="mob-prod-card mob-prod-g">
+          <img src="img/autoflow.png" alt="" loading="lazy" width="120" height="80">
+          <span class="mob-prod-name"><i data-lucide="wrench"></i> AutoFlow</span>
+        </a>
+      </div>
+    </div>
+
+    <footer class="mob-foot">
+      <div class="mob-foot-contacts">
+        <a href="mailto:hello@wenthura.lk" class="mob-contact-chip">
+          <span class="mob-contact-ico" aria-hidden="true"><i data-lucide="mail"></i></span>
+          <span class="mob-contact-text">
+            <span class="mob-contact-label">Email</span>
+            <span class="mob-contact-value">hello@wenthura.lk</span>
+          </span>
+        </a>
+        <a href="https://wa.me/94778282186?text=Hi%20Wenthura%2C%20I%27d%20like%20to%20learn%20more." class="mob-contact-chip mob-contact-wa" target="_blank" rel="noopener noreferrer">
+          <span class="mob-contact-ico" aria-hidden="true"><i data-lucide="message-circle"></i></span>
+          <span class="mob-contact-text">
+            <span class="mob-contact-label">WhatsApp</span>
+            <span class="mob-contact-value">+94 77 828 2186</span>
+          </span>
+        </a>
+      </div>
+      <div class="mob-foot-social">
+        <span class="mob-foot-social-label">Connect</span>
+        <div class="mob-social">
+          <a href="https://www.linkedin.com/company/wenthurasolutions/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+          <a href="https://x.com/wenthuras" target="_blank" rel="noopener noreferrer" aria-label="X"><i data-lucide="twitter"></i></a>
+          <a href="https://www.facebook.com/wenthurasolutions/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+        </div>
+      </div>
+      <a href="#" class="mob-cta" onclick="return go('contact')">
+        <span class="mob-cta-text">Start a Project</span>
+        <span class="mob-cta-arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+      </a>
+    </footer>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     HOME PAGE
+═══════════════════════════════════════════ -->
+<div id="home" class="page active">
+
+<!-- HERO — clean left copy + right rotating showcase -->
+<section class="hero">
+  <div class="hero-inner">
+
+    <!-- LEFT: copy — single CTA, minimal -->
+    <div class="fade-up">
+      <div class="hero-tag"><span class="hero-dot"></span>Products · Engineering Teams · Talent</div>
+      <h1 class="heading-xl hero-headline">
+        Built for businesses<br>
+        that can't afford<br>
+        <span class="blue-accent">to get it wrong.</span>
+      </h1>
+      <p class="body-lg hero-sub">Purpose-built platforms, dedicated engineering teams, and expert talent acquisition — precision-engineered for outcomes that last.</p>
+      <div class="hero-cta-row">
+        <a href="#" class="btn btn-primary btn-lg" onclick="return go('contact')">Get Started <i data-lucide="arrow-right" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i></a>
+      </div>
+      <div class="hero-metrics">
+        <div class="hm"><div class="hm-n">18<span>+</span></div><div class="hm-l">Clients Served</div></div>
+        <div class="hm"><div class="hm-n">500<span>+</span></div><div class="hm-l">Active Users</div></div>
+        <div class="hm"><div class="hm-n">25<span>+</span></div><div class="hm-l">Solutions Built</div></div>
+        <div class="hm"><div class="hm-n">35<span>+</span></div><div class="hm-l">Engineers</div></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: rotating showcase — elegant cross-fade, 3.5s interval -->
+    <div class="hero-showcase fade-right d1">
+      <!-- Panel wrapper — clips and positions all panels -->
+      <div class="hs-frame" id="hsFrame">
+
+        <!-- Panel 1: DoodleNest -->
+        <div class="hs-panel active" data-label="DoodleNest" data-type="Product" data-ico="🎨" data-color="#E8541A">
+          <img src="img/doodlenest.png" alt="DoodleNest — preschool learning" loading="eager" width="900" height="600" decoding="async">
+          <div class="hs-panel-ov"></div>
+          <div class="hs-panel-label">
+            <div class="hpl-type">Product</div>
+            <div class="hpl-name"><i data-lucide="palette"></i> DoodleNest</div>
+            <div class="hpl-desc">All-in-one preschool management</div>
+          </div>
+        </div>
+
+        <!-- Panel 2: Nena AI -->
+        <div class="hs-panel" data-label="Nena AI" data-type="Product" data-ico="🧠" data-color="#3B82C4">
+          <img src="img/nena-ai.png" alt="South Asian, Filipino and Muslim students learning on tablet — Nena AI" loading="lazy" decoding="async">
+          <div class="hs-panel-ov"></div>
+          <div class="hs-panel-label">
+            <div class="hpl-type">Product</div>
+            <div class="hpl-name"><i data-lucide="brain-circuit"></i> Nena AI</div>
+            <div class="hpl-desc">AI-powered learning platform</div>
+          </div>
+        </div>
+
+        <!-- Panel 3: AutoFlow -->
+        <div class="hs-panel" data-label="AutoFlow" data-type="Product" data-ico="🔧" data-color="#1A9E50">
+          <img src="img/autoflow.png" alt="AutoFlow Smart Service Center — car wash, service and engine repair" loading="lazy" decoding="async">
+          <div class="hs-panel-ov"></div>
+          <div class="hs-panel-label">
+            <div class="hpl-type">Product</div>
+            <div class="hpl-name"><i data-lucide="wrench"></i> AutoFlow</div>
+            <div class="hpl-desc">Smart automotive service management</div>
+          </div>
+        </div>
+
+        <!-- Panel 4: TAaaS -->
+        <div class="hs-panel" data-label="TAaaS" data-type="Service" data-ico="🎯" data-color="#3B82C4">
+          <img src="img/talent-acquisition.png" alt="Talent Acquisition as a Service — recruiter reviewing candidates" loading="lazy" decoding="async">
+          <div class="hs-panel-ov"></div>
+          <div class="hs-panel-label">
+            <div class="hpl-type">Service</div>
+            <div class="hpl-name"><i data-lucide="target"></i> Talent Acquisition</div>
+            <div class="hpl-desc">Your extended hiring team</div>
+          </div>
+        </div>
+
+        <!-- Panel 5: Dedicated Team -->
+        <div class="hs-panel" data-label="Dedicated Teams" data-type="Service" data-ico="👥" data-color="#0D1B3E">
+          <img src="img/dedicated-team.png" alt="Dedicated engineering team — sprint planning and agile delivery" loading="lazy" decoding="async">
+          <div class="hs-panel-ov"></div>
+          <div class="hs-panel-label">
+            <div class="hpl-type">Service</div>
+            <div class="hpl-name"><i data-lucide="users"></i> Dedicated Teams</div>
+            <div class="hpl-desc">Engineering squads for your product</div>
+          </div>
+        </div>
+
+      </div><!-- /hs-frame -->
+
+      <!-- Indicator dots — one per panel -->
+      <div class="hs-dots" id="hsDots">
+        <div class="hs-dot active" onclick="hsGo(0)"></div>
+        <div class="hs-dot" onclick="hsGo(1)"></div>
+        <div class="hs-dot" onclick="hsGo(2)"></div>
+        <div class="hs-dot" onclick="hsGo(3)"></div>
+        <div class="hs-dot" onclick="hsGo(4)"></div>
+      </div>
+
+    </div><!-- /hero-showcase -->
+
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <div class="t-item"><span class="t-sep"></span><strong>DoodleNest</strong> Early Learning Platform</div>
+    <div class="t-item"><span class="t-sep"></span><strong>Nena AI</strong> AI-Powered Learning</div>
+    <div class="t-item"><span class="t-sep"></span><strong>AutoFlow</strong> Automotive ERP</div>
+    <div class="t-item"><span class="t-sep"></span><strong>TAaaS</strong> Talent Acquisition as a Service</div>
+    <div class="t-item"><span class="t-sep"></span><strong>Dedicated Teams</strong> Engineering Squads</div>
+    <div class="t-item"><span class="t-sep"></span><strong>Product R&amp;D</strong> Build-Operate-Transfer</div>
+    <div class="t-item"><span class="t-sep"></span><strong>Managed Services</strong> 24/7 Infrastructure</div>
+    <div class="t-item"><span class="t-sep"></span><strong>Partner Solutions</strong> Technology &amp; Mentoring</div>
+    <div class="t-item"><span class="t-sep"></span><strong>DoodleNest</strong> Early Learning Platform</div>
+    <div class="t-item"><span class="t-sep"></span><strong>Nena AI</strong> AI-Powered Learning</div>
+    <div class="t-item"><span class="t-sep"></span><strong>AutoFlow</strong> Automotive ERP</div>
+    <div class="t-item"><span class="t-sep"></span><strong>TAaaS</strong> Talent Acquisition as a Service</div>
+    <div class="t-item"><span class="t-sep"></span><strong>Dedicated Teams</strong> Engineering Squads</div>
+    <div class="t-item"><span class="t-sep"></span><strong>Product R&amp;D</strong> Build-Operate-Transfer</div>
+    <div class="t-item"><span class="t-sep"></span><strong>Managed Services</strong> 24/7 Infrastructure</div>
+    <div class="t-item"><span class="t-sep"></span><strong>Partner Solutions</strong> Technology &amp; Mentoring</div>
+  </div>
+</div>
+
+<!-- VALUE PROPOSITION — 4 pillars, white bg -->
+<section class="sec sec-bg-white">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:44px">
+      <div class="eyebrow fade-up" style="justify-content:center">Why Wenthura</div>
+      <h2 class="heading-lg fade-up d1">Innovation engineered for impact.</h2>
+      <p class="body-lg fade-up d2" style="max-width:520px;margin:0 auto">We build what businesses need — not what's easy. Every solution is purpose-built, every team is outcome-focused.</p>
+    </div>
+    <div class="vp-grid fade-up d2">
+      <div class="vp-item">
+        <div class="vp-ico"><i data-lucide="target"></i></div>
+        <div class="vp-title">Domain Expertise</div>
+        <div class="vp-desc">Deep specialization in education, automotive, and enterprise technology — not generic consulting.</div>
+      </div>
+      <div class="vp-item">
+        <div class="vp-ico"><i data-lucide="zap"></i></div>
+        <div class="vp-title">Speed to Market</div>
+        <div class="vp-desc">Dedicated teams and proven delivery models get your product live faster without sacrificing quality.</div>
+      </div>
+      <div class="vp-item">
+        <div class="vp-ico"><i data-lucide="microscope"></i></div>
+        <div class="vp-title">Full Outcome Ownership</div>
+        <div class="vp-desc">We stay accountable across the full delivery cycle — not just individual tasks or milestones.</div>
+      </div>
+      <div class="vp-item">
+        <div class="vp-ico"><i data-lucide="globe"></i></div>
+        <div class="vp-title">Scalable Partnerships</div>
+        <div class="vp-desc">Flexible engagement models that scale with your business — on-demand, dedicated, or BOT.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRODUCTS SECTION ── -->
+<section class="sec sec-bg-gray">
+  <div class="wrap">
+    <div class="section-label"><span class="sl-text">Our Products</span></div>
+
+    <!-- DoodleNest — overview only -->
+    <div class="prod-row fade-up">
+      <div class="prod-img-wrap">
+        <img src="img/doodlenest.png" alt="Nursery learning class — DoodleNest" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;" loading="lazy">
+        <div class="prod-overlay dn"></div>
+        <div class="prod-badge dn"><i data-lucide="palette"></i> Early Learning</div>
+      </div>
+      <div>
+        <div class="prod-label dn">DoodleNest</div>
+        <div class="prod-title">All-in-one preschool management platform.</div>
+        <p class="prod-desc" style="margin-bottom:24px">Simplifies daily operations, parent communication, transport, and early learning — in a single platform built exclusively for preschools.</p>
+        <a href="#" class="btn btn-accent" onclick="return go('doodlenest')">See How It Works <i data-lucide="arrow-right" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i></a>
+      </div>
+    </div>
+
+    <!-- Nena AI — overview only -->
+    <div class="prod-row flip fade-up">
+      <div class="prod-img-wrap">
+        <img src="img/nena-ai.png" alt="South Asian, Filipino and Muslim students learning on tablet — Nena AI" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;" loading="lazy">
+        <div class="prod-overlay na"></div>
+        <div class="prod-badge na"><i data-lucide="brain-circuit"></i> AI Learning</div>
+      </div>
+      <div>
+        <div class="prod-label na">Nena AI</div>
+        <div class="prod-title">AI-powered learning for modern institutions.</div>
+        <p class="prod-desc" style="margin-bottom:24px">Enables students to study smarter with adaptive AI tools, while giving institutions a branded digital platform — with zero build required.</p>
+        <a href="#" class="btn btn-blue" onclick="return go('nena')">See How It Works <i data-lucide="arrow-right" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i></a>
+      </div>
+    </div>
+
+    <!-- AutoFlow — overview only -->
+    <div class="prod-row fade-up">
+      <div class="prod-img-wrap">
+        <img src="img/autoflow.png" alt="AutoFlow Smart Service Center — car wash, service and engine repair" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;" loading="lazy">
+        <div class="prod-overlay af"></div>
+        <div class="prod-badge af" style="color:var(--green)"><span class="ico-inline"><i data-lucide="wrench"></i></span> Automotive ERP</div>
+      </div>
+      <div>
+        <div class="prod-label af">AutoFlow</div>
+        <div class="prod-title">Smart vehicle service and repair management.</div>
+        <p class="prod-desc" style="margin-bottom:24px">Replaces manual job cards with digital workflow tracking — giving garages and service stations full control over bays, inventory, and billing.</p>
+        <a href="#" class="btn btn-primary" onclick="return go('autoflow')" style="background:var(--green)">See How It Works <i data-lucide="arrow-right" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── SERVICES SECTION ── -->
+<section class="sec sec-bg-white">
+  <div class="wrap">
+    <div class="section-label"><span class="sl-text">Talent &amp; Engineering Services</span></div>
+    <div class="sec-intro-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:52px">
+      <div class="fade-left">
+        <div class="eyebrow">Scalable Teams. Real Outcomes.</div>
+        <h2 class="heading-lg">Hire faster.<br>Build smarter.<br>Grow confidently.</h2>
+      </div>
+      <div class="fade-right">
+        <p class="body-lg" style="margin-bottom:20px">Whether you need to close a hiring gap or launch a full product team — we have the right model for where you are.</p>
+        <a href="#" class="btn btn-primary" onclick="return go('services')">View All Services <i data-lucide="arrow-right" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i></a>
+      </div>
+    </div>
+
+    <!-- 6 service overview cards — 3 columns, image + name + 1-line desc + outcome -->
+    <div class="svc-ov-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
+
+      <!-- TAaaS -->
+      <div class="svc-ov-card fade-up" onclick="go('services')">
+        <div class="svc-ov-img"><img src="img/talent-acquisition.png" alt="Talent Acquisition as a Service — recruiter reviewing candidates" loading="lazy" decoding="async"><div class="svc-ov-ov"></div><span class="svc-ov-num">01</span></div>
+        <div class="svc-ov-body">
+          <div class="svc-ov-tag">Talent Acquisition</div>
+          <div class="svc-ov-name">Talent Acquisition as a Service</div>
+          <p class="svc-ov-desc">Your extended hiring team — sourcing and delivering technical talent on demand.</p>
+          <p class="svc-ov-outcome">Hire faster. Pay only for results.</p>
+        </div>
+      </div>
+
+      <!-- Dedicated Team -->
+      <div class="svc-ov-card fade-up d1" onclick="go('services')">
+        <div class="svc-ov-img"><img src="img/dedicated-team.png" alt="Dedicated engineering team — sprint planning and agile delivery" loading="lazy" decoding="async"><div class="svc-ov-ov"></div><span class="svc-ov-num">02</span></div>
+        <div class="svc-ov-body">
+          <div class="svc-ov-tag">Engineering Teams</div>
+          <div class="svc-ov-name">Dedicated Team as a Service</div>
+          <p class="svc-ov-desc">Dedicated engineering squads working exclusively on your product.</p>
+          <p class="svc-ov-outcome">Ship faster with a team built around your goals.</p>
+        </div>
+      </div>
+
+      <!-- Product R&D -->
+      <div class="svc-ov-card fade-up d2" onclick="go('services')">
+        <div class="svc-ov-img"><img src="img/product-rnd.png" alt="Product R&D Team — product strategy and roadmap session" loading="lazy" decoding="async"><div class="svc-ov-ov"></div><span class="svc-ov-num">03</span></div>
+        <div class="svc-ov-body">
+          <div class="svc-ov-tag">Product Engineering</div>
+          <div class="svc-ov-name">Product R&amp;D Team as a Service</div>
+          <p class="svc-ov-desc">Strategy, engineering, QA, and custom software delivery — accelerating product development end-to-end.</p>
+          <p class="svc-ov-outcome">From concept to launched product — with built-in expertise.</p>
+        </div>
+      </div>
+
+      <!-- Managed Services -->
+      <div class="svc-ov-card fade-up" onclick="go('services')">
+        <div class="svc-ov-img"><img src="img/managed-services.png" alt="Managed Services — IT engineer monitoring server infrastructure" loading="lazy" decoding="async"><div class="svc-ov-ov"></div><span class="svc-ov-num">04</span></div>
+        <div class="svc-ov-body">
+          <div class="svc-ov-tag">Infrastructure</div>
+          <div class="svc-ov-name">Managed Services</div>
+          <p class="svc-ov-desc">24/7 cloud and infrastructure operations — keeping your systems reliable and secure.</p>
+          <p class="svc-ov-outcome">Zero downtime focus. Enterprise-grade ops.</p>
+        </div>
+      </div>
+
+      <!-- Partner Solutions -->
+      <div class="svc-ov-card fade-up d2" onclick="go('services')">
+        <div class="svc-ov-img"><img src="img/partner-solutions.png" alt="Partner Solutions — technology partnership and global collaboration" loading="lazy" decoding="async"><div class="svc-ov-ov"></div><span class="svc-ov-num">05</span></div>
+        <div class="svc-ov-body">
+          <div class="svc-ov-tag">Partnerships</div>
+          <div class="svc-ov-name">Partner Solutions</div>
+          <p class="svc-ov-desc">Fintech, cloud, and automation technology delivered through trusted global partnerships.</p>
+          <p class="svc-ov-outcome">The right technology, properly implemented.</p>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:36px" class="fade-up">
+      <a href="#" class="btn btn-outline btn-lg" onclick="return go('services')">Explore All Services in Detail <i data-lucide="arrow-right" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS — navy section -->
+<section class="sec sec-bg-navy">
+  <div class="wrap">
+    <div class="metrics-band-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center">
+      <div class="metrics-stats-grid fade-left" style="display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid rgba(255,255,255,.08);border-radius:var(--r3);overflow:hidden">
+        <div style="padding:28px 24px;border-right:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)"><div style="font-size:48px;font-weight:800;color:#fff;line-height:1;letter-spacing:-.03em">18<em style="font-style:normal;color:var(--orange)">+</em></div><div style="font-size:12px;color:rgba(255,255,255,.4);margin-top:5px">Clients Served</div></div>
+        <div style="padding:28px 24px;border-bottom:1px solid rgba(255,255,255,.08)"><div style="font-size:48px;font-weight:800;color:#fff;line-height:1;letter-spacing:-.03em">25<em style="font-style:normal;color:var(--orange)">+</em></div><div style="font-size:12px;color:rgba(255,255,255,.4);margin-top:5px">Solutions Built</div></div>
+        <div style="padding:28px 24px;border-right:1px solid rgba(255,255,255,.08)"><div style="font-size:48px;font-weight:800;color:#fff;line-height:1;letter-spacing:-.03em">500<em style="font-style:normal;color:var(--orange)">+</em></div><div style="font-size:12px;color:rgba(255,255,255,.4);margin-top:5px">Active Users</div></div>
+        <div style="padding:28px 24px"><div style="font-size:48px;font-weight:800;color:#fff;line-height:1;letter-spacing:-.03em">35<em style="font-style:normal;color:var(--orange)">+</em></div><div style="font-size:12px;color:rgba(255,255,255,.4);margin-top:5px">Engineering Professionals</div></div>
+      </div>
+      <div class="fade-right">
+        <div class="eyebrow" style="color:var(--blue-300)"><span style="background:var(--blue-500);width:14px;height:2px;display:inline-block;border-radius:1px;margin-right:8px"></span>Our Track Record</div>
+        <h2 style="font-size:clamp(22px,2.8vw,38px);font-weight:800;color:#fff;letter-spacing:-.025em;margin-bottom:12px;line-height:1.15">We don't just build software.<br>We engineer momentum.</h2>
+        <p style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.78;margin-bottom:24px">Since 2019, we've been building intelligent platforms and delivering engineering teams for schools, automotive businesses, enterprises, and startups.</p>
+        <a href="#" class="btn btn-primary" style="background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)" onclick="return go('about')">Our Full Story <i data-lucide="arrow-right" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS — navy section continues -->
+<section style="background:var(--navy);padding:0 0 80px">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:44px">
+      <div class="eyebrow fade-up" style="justify-content:center;color:var(--blue-300)"><span style="background:var(--blue-500);width:14px;height:2px;display:inline-block;border-radius:1px;margin-right:8px"></span>Client Stories</div>
+      <h2 class="heading-lg fade-up d1" style="color:#fff">Real results. Real businesses.</h2>
+    </div>
+    <div class="testi-outer">
+      <div class="testi-track" id="tstTrack">
+        <div class="tc"><div class="tc-sector">Early Education</div><div class="tc-q">"</div><p class="tc-text">DoodleNest transformed how we run our centers. Parent communication alone saved us 3 hours a day. Transport tracking gave parents peace of mind we never could before.</p><div class="tc-auth"><div class="tc-av">SK</div><div><div class="tc-name">Samantha K.</div><div class="tc-role">Director, Multi-Branch Preschool</div></div></div></div>
+        <div class="tc"><div class="tc-sector">Automotive</div><div class="tc-q">"</div><p class="tc-text">AutoFlow cut our service time by 30% in the first month. Paper job cards cost us bays and customers. Now every technician knows exactly what to do, every minute.</p><div class="tc-auth"><div class="tc-av">RA</div><div><div class="tc-name">Roshan A.</div><div class="tc-role">Owner, Multi-Bay Service Station</div></div></div></div>
+        <div class="tc"><div class="tc-sector">Engineering</div><div class="tc-q">"</div><p class="tc-text">Wenthura's Dedicated Team felt like our own engineers from day one — deep in the product, accountable, and genuinely world-class. Our velocity tripled in the first quarter.</p><div class="tc-auth"><div class="tc-av">MJ</div><div><div class="tc-name">Michael J.</div><div class="tc-role">CTO, SaaS Platform</div></div></div></div>
+        <div class="tc"><div class="tc-sector">EdTech</div><div class="tc-q">"</div><p class="tc-text">Nena AI gave our students a genuinely smart study companion. Our enrollment went up 22% after launching the branded platform. Parents notice the difference immediately.</p><div class="tc-auth"><div class="tc-av">AP</div><div><div class="tc-name">Anjali P.</div><div class="tc-role">Principal, Private Education Center</div></div></div></div>
+        <div class="tc"><div class="tc-sector">Talent</div><div class="tc-q">"</div><p class="tc-text">TAaaS filled 3 senior engineering roles in under 3 weeks. The technical screening was exceptional — we hired all 3 on first interview. Faster than any recruiter we'd used before.</p><div class="tc-auth"><div class="tc-av">DL</div><div><div class="tc-name">David L.</div><div class="tc-role">Head of Engineering, Fintech</div></div></div></div>
+      </div>
+    </div>
+    <div class="scr-nav">
+      <div class="scr-dots" id="tstDots">
+        <div class="scr-dot on" onclick="tstGo(0)"></div>
+        <div class="scr-dot" onclick="tstGo(1)"></div>
+        <div class="scr-dot" onclick="tstGo(2)"></div>
+      </div>
+      <div class="scr-arrows">
+        <div class="scr-arr dis" id="tstL" onclick="tstMv(-1)"><i data-lucide="chevron-left"></i></div>
+        <div class="scr-arr" id="tstR" onclick="tstMv(1)"><i data-lucide="arrow-right" style="width:14px;height:14px"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /home -->
+
+
+<!-- ═══════════════════════════════════════════
+     PRODUCTS OVERVIEW
+═══════════════════════════════════════════ -->
+<div id="products" class="page">
+  <div class="ph-wrap"><img src="img/doodlenest.png" alt="Products"><div class="ph-ov"></div><div class="ph-body"><div class="ph-inner"><div class="ph-eyebrow b">Our Products</div><h1 class="ph-h">Platforms Built for Your Industry</h1><p class="ph-p">Purpose-built software with real domain depth — not templates adapted from another market.</p><div class="ph-btns"><a href="#" class="btn btn-accent" onclick="return go('doodlenest')"><span class="ico-inline"><i data-lucide="palette"></i></span> DoodleNest</a><a href="#" class="btn btn-blue" onclick="return go('nena')"><span class="ico-inline"><i data-lucide="brain-circuit"></i></span> Nena AI</a><a href="#" class="btn btn-ghost-dk" onclick="return go('autoflow')"><span class="ico-inline"><i data-lucide="wrench"></i></span> AutoFlow</a></div></div></div></div>
+  <section class="sec sec-bg-gray">
+    <div class="wrap">
+      <!-- DoodleNest row -->
+      <div class="prod-row fade-up">
+        <div class="prod-img-wrap">
+          <img src="img/doodlenest.png" alt="Nursery learning class — DoodleNest" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;" loading="lazy">
+        <div class="prod-overlay dn"></div>
+          <div class="prod-badge dn"><i data-lucide="palette"></i> DoodleNest</div>
+        </div>
+        <div><div class="prod-label dn">Early Learning Platform</div><div class="prod-title">Your preschool deserves more than spreadsheets.</div><p class="prod-desc">One platform for operations, parent engagement, transport, billing, and early learning. Built for preschools that want to grow.</p><div class="prod-pills"><span class="prod-pill hi">Smart Operations</span><span class="prod-pill hi">Parent App</span><span class="prod-pill">Transport</span><span class="prod-pill">Billing</span><span class="prod-pill">LMS</span></div><a href="#" class="btn btn-accent" onclick="return go('doodlenest')">See DoodleNest <i data-lucide="arrow-right" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i></a></div>
+      </div>
+      <!-- Nena AI row -->
+      <div class="prod-row flip fade-up">
+        <div class="prod-img-wrap">
+          <img src="img/nena-ai.png" alt="South Asian, Filipino and Muslim students learning on tablet — Nena AI" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;" loading="lazy">
+        <div class="prod-overlay na"></div>
+          <div class="prod-badge na"><i data-lucide="brain-circuit"></i> Nena AI</div>
+        </div>
+        <div><div class="prod-label na">AI Learning Platform</div><div class="prod-title">Your students are ready for AI. Is your institution?</div><p class="prod-desc">White-label AI learning platform for institutions. Smart study companion for students. Zero build cost required.</p><div class="prod-pills"><span class="prod-pill hi">AI Study Tools</span><span class="prod-pill hi">White-Label SaaS</span><span class="prod-pill">Analytics</span><span class="prod-pill">Digital Revenue</span></div><a href="#" class="btn btn-blue" onclick="return go('nena')">See Nena AI <i data-lucide="arrow-right" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i></a></div>
+      </div>
+      <!-- AutoFlow row -->
+      <div class="prod-row fade-up">
+        <div class="prod-img-wrap">
+          <img src="img/autoflow.png" alt="AutoFlow Smart Service Center — car wash, service and engine repair" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;" loading="lazy">
+        <div class="prod-overlay af"></div>
+          <div class="prod-badge af" style="color:var(--green)"><span class="ico-inline"><i data-lucide="wrench"></i></span> AutoFlow</div>
+        </div>
+        <div><div class="prod-label af">Automotive ERP</div><div class="prod-title">Paper job cards are costing you bays and customers.</div><p class="prod-desc">Real-time job cards, smart bay allocation, inventory, automated billing, customer comms — with full multi-branch visibility.</p><div class="prod-pills"><span class="prod-pill hi">Job Cards</span><span class="prod-pill hi">Bay Management</span><span class="prod-pill">Inventory</span><span class="prod-pill">Invoicing</span><span class="prod-pill">Reports</span></div><a href="#" class="btn btn-primary" style="background:var(--green)" onclick="return go('autoflow')">See AutoFlow <i data-lucide="arrow-right" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i></a></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     DOODLENEST DETAIL
+═══════════════════════════════════════════ -->
+<div id="doodlenest" class="page">
+  <div class="ph-wrap"><img src="img/doodlenest.png" alt="DoodleNest"><div class="ph-ov"></div><div class="ph-body"><div class="ph-inner"><div class="ph-eyebrow o">Early Learning Platform</div><h1 class="ph-h"><i data-lucide="palette"></i> Your Preschool. Fully Digital.</h1><p class="ph-p">Stop managing chaos with spreadsheets. DoodleNest brings your whole preschool into one beautiful, simple platform.</p><div class="ph-btns"><a href="#" class="btn btn-accent btn-lg" onclick="return go('contact')">Request a Demo</a><a href="#" class="btn btn-ghost-dk" onclick="return go('contact')">Talk to Us</a></div></div></div></div>
+  <section class="det-sec sec-bg-white"><div class="wrap">
+    <div class="ps-2 fade-up">
+      <div class="pbox prob"><div class="pbox-tag o">The Problem</div><ul class="pbox-list"><li>Scattered tools and manual processes drain admin time</li><li>WhatsApp groups are unreliable for parent communication</li><li>Paper attendance creates child safety gaps</li><li>Transport coordination causes daily stress and confusion</li><li>No branch-level visibility for multi-location operators</li><li>No structured early learning tools for home use</li></ul></div>
+      <div class="pbox sol"><div class="pbox-tag b">The Solution</div><ul class="pbox-list"><li>One unified dashboard for all operations</li><li>Structured parent communication with media and consent</li><li>Real-time transport tracking — every child visible</li><li>Automated billing and multi-branch payments</li><li>Branch-level analytics for every operator</li><li>Early Learning LMS with home learning modules</li></ul></div>
+    </div>
+    <h2 class="heading-md fade-up" style="margin-bottom:14px">Features &amp; Benefits</h2>
+    <div class="ft-wrap fade-up">
+      <div class="ft-nav">
+        <div class="ft-tab on" onclick="ftab(this)">Operations</div>
+        <div class="ft-tab" onclick="ftab(this)">Parent &amp; Comms</div>
+        <div class="ft-tab" onclick="ftab(this)">Transport &amp; Safety</div>
+        <div class="ft-tab" onclick="ftab(this)">Learning &amp; Growth</div>
+      </div>
+      <div class="ft-panel on"><div class="fi-grid"><div class="fi"><div class="fi-ico"><i data-lucide="clipboard-list"></i></div><div><div class="fi-t">Smart Daily Operations</div><div class="fi-d">Automate attendance, schedules, and daily reporting. Less admin, more time with children.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="credit-card"></i></div><div><div class="fi-t">Unified Billing</div><div class="fi-d">Multi-branch ready. Automated invoicing, tracking, and overdue reminders.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="bar-chart-3"></i></div><div><div class="fi-t">Reports &amp; Insights</div><div class="fi-d">Enrollments, attendance trends, and revenue at a glance across all branches.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="building-2"></i></div><div><div class="fi-t">Multi-Branch Management</div><div class="fi-d">One platform for all locations. Consistent operations, unified reporting.</div></div></div></div></div>
+      <div class="ft-panel"><div class="fi-grid"><div class="fi"><div class="fi-ico"><i data-lucide="message-circle"></i></div><div><div class="fi-t">Parent Engagement App</div><div class="fi-d">Structured messaging, announcements, and daily updates — replacing WhatsApp.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="camera"></i></div><div><div class="fi-t">Media &amp; Consent</div><div class="fi-d">Secure photo sharing, field trip consent, event documentation — private and compliant.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="party-popper"></i></div><div><div class="fi-t">Events &amp; Activities</div><div class="fi-d">Plan, communicate, and manage events. Parents RSVP and receive real-time updates.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="file-text"></i></div><div><div class="fi-t">Daily Reports</div><div class="fi-d">Automated summaries of meals, activities, and learning milestones sent to parents.</div></div></div></div></div>
+      <div class="ft-panel"><div class="fi-grid"><div class="fi"><div class="fi-ico"><i data-lucide="bus"></i></div><div><div class="fi-t">Live Transport Tracking</div><div class="fi-d">Parents see the bus live on their phone. Every child visible, every route managed.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="check-circle"></i></div><div><div class="fi-t">Digital Attendance</div><div class="fi-d">QR-based or teacher-marked attendance. Instant parent notification on arrival/departure.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="bell"></i></div><div><div class="fi-t">Pickup Authorization</div><div class="fi-d">Manage authorized pickups digitally. Verification alerts sent to parents instantly.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="moon"></i></div><div><div class="fi-t">Daycare &amp; Extended Care</div><div class="fi-d">Track meals, activities, and check-ins beyond standard school hours.</div></div></div></div></div>
+      <div class="ft-panel"><div class="fi-grid"><div class="fi"><div class="fi-ico"><i data-lucide="book-open"></i></div><div><div class="fi-t">Early Learning LMS</div><div class="fi-d">Structured curriculum beyond the classroom. Assign activities, track progress at home.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="palette"></i></div><div><div class="fi-t">Interactive Activities</div><div class="fi-d">Age-appropriate digital activities and learning packs for early childhood development.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="trending-up"></i></div><div><div class="fi-t">Development Tracking</div><div class="fi-d">Monitor milestones across cognitive, social, emotional, and physical development.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="home"></i></div><div><div class="fi-t">Home Learning Packs</div><div class="fi-d">Weekly learning packs to parents. Structured learning beyond classroom walls.</div></div></div></div></div>
+    </div>
+    <h2 class="heading-sm fade-up" style="margin-bottom:12px">Who It's For</h2>
+    <div class="wg fade-up" style="margin-bottom:0"><div class="wg-card"><div class="wg-ico"><i data-lucide="school"></i></div><div class="wg-n">Preschools</div></div><div class="wg-card"><div class="wg-ico"><i data-lucide="baby"></i></div><div class="wg-n">Daycare Centers</div></div><div class="wg-card"><div class="wg-ico"><i data-lucide="book-open"></i></div><div class="wg-n">Early Learning</div></div><div class="wg-card"><div class="wg-ico"><i data-lucide="building-2"></i></div><div class="wg-n">Multi-Branch Ops</div></div><div class="wg-card"><div class="wg-ico"><i data-lucide="clipboard-list"></i></div><div class="wg-n">School Franchises</div></div></div>
+    <div class="ic-wrap fade-up"><img src="img/doodlenest.png" alt="Children learning and playing with teacher — DoodleNest early learning platform" loading="lazy" decoding="async"><div class="ic-ov"></div><div class="ic-body"><div><h2>Ready to transform your preschool?</h2><p>Join preschools already running on DoodleNest — less admin, happier parents, better learning.</p><div class="ic-btns"><a href="#" class="btn btn-accent btn-lg" onclick="return go('contact')">Request a Demo</a><a href="#" class="btn btn-ghost-dk" onclick="return go('contact')">Talk to Us</a></div></div></div></div>
+  </div></section>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     NENA AI DETAIL
+═══════════════════════════════════════════ -->
+<div id="nena" class="page">
+  <div class="ph-wrap"><img src="img/nena-ai.png" alt="South Asian, Filipino and Muslim students learning on tablet — Nena AI"><div class="ph-ov"></div><div class="ph-body"><div class="ph-inner"><div class="ph-eyebrow b">AI Learning Platform</div><h1 class="ph-h"><i data-lucide="brain-circuit"></i> AI Learning That Actually Works.</h1><p class="ph-p">Students learn smarter. Institutions modernize faster. Nena AI brings both together in one ecosystem.</p><div class="ph-btns"><a href="#" class="btn btn-blue btn-lg" onclick="return go('contact')">Book a Demo</a><a href="#" class="btn btn-ghost-dk" onclick="return go('contact')">Talk to Us</a></div></div></div></div>
+  <section class="det-sec sec-bg-white"><div class="wrap">
+    <div class="ps-2 fade-up">
+      <div class="pbox prob"><div class="pbox-tag o">The Problem</div><ul class="pbox-list"><li>Students drown in passive, unstructured content</li><li>No personalized feedback — one-size-fits-all fails</li><li>Institutions lag with outdated digital tools</li><li>No branded platforms or digital revenue channels</li><li>Building technology in-house is expensive and slow</li></ul></div>
+      <div class="pbox sol"><div class="pbox-tag b">The Solution</div><ul class="pbox-list"><li>AI-powered adaptive learning tailored to each student</li><li>Smart notes, flashcards, mind maps, and voice learning</li><li>White-label platform branded to your institution</li><li>Institutional analytics and digital revenue tools</li><li>Zero build cost — ready to deploy immediately</li></ul></div>
+    </div>
+    <h2 class="heading-md fade-up" style="margin-bottom:14px">Features &amp; Benefits</h2>
+    <div class="ft-wrap fade-up">
+      <div class="ft-nav">
+        <div class="ft-tab on" onclick="ftab(this)">For Institutions</div>
+        <div class="ft-tab" onclick="ftab(this)">For Students</div>
+        <div class="ft-tab" onclick="ftab(this)">AI Capabilities</div>
+      </div>
+      <div class="ft-panel on"><div class="fi-grid"><div class="fi"><div class="fi-ico"><i data-lucide="landmark"></i></div><div><div class="fi-t">Branded Learning Hub</div><div class="fi-d">Your institution's name, your branding — a modern digital platform competitors don't have.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="lock"></i></div><div><div class="fi-t">Access &amp; Role Management</div><div class="fi-d">Full control over who learns what. Student, teacher, admin, and institutional-level access.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="wallet"></i></div><div><div class="fi-t">Digital Revenue Tools</div><div class="fi-d">Sell courses, study packs, and subscriptions online. New revenue stream, zero extra infrastructure.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="bar-chart-3"></i></div><div><div class="fi-t">Institutional Analytics</div><div class="fi-d">See engagement, performance, and learning outcomes across your institution.</div></div></div></div></div>
+      <div class="ft-panel"><div class="fi-grid"><div class="fi"><div class="fi-ico"><i data-lucide="file-text"></i></div><div><div class="fi-t">Smart Notes &amp; Summaries</div><div class="fi-d">AI summarizes, highlights, and structures any content. Cut study time without cutting results.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="layers"></i></div><div><div class="fi-t">Flashcards &amp; Mind Maps</div><div class="fi-d">Better retention. AI generates study cards and visual concept maps automatically.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="target"></i></div><div><div class="fi-t">Adaptive Quizzes</div><div class="fi-d">Personalized feedback on every question. The AI adapts where each student struggles.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="trending-up"></i></div><div><div class="fi-t">Progress Tracking</div><div class="fi-d">Visual dashboards, streak tracking, and exam readiness scores for every student.</div></div></div></div></div>
+      <div class="ft-panel"><div class="fi-grid"><div class="fi"><div class="fi-ico"><i data-lucide="mic"></i></div><div><div class="fi-t">Voice &amp; Chat Learning</div><div class="fi-d">The AI tutor answers questions and explains concepts conversationally in real-time.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="bot"></i></div><div><div class="fi-t">Adaptive AI Engine</div><div class="fi-d">Adapts to each student's pace, style, and knowledge gaps. Gets smarter over time.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="globe"></i></div><div><div class="fi-t">Multi-language Support</div><div class="fi-d">Learn in any language. AI translates and assesses in the student's preferred language.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="smartphone"></i></div><div><div class="fi-t">Mobile-First Design</div><div class="fi-d">Full-featured iOS and Android apps with offline content support.</div></div></div></div></div>
+    </div>
+    <h2 class="heading-sm fade-up" style="margin-bottom:12px">Who It's For</h2>
+    <div class="wg fade-up" style="margin-bottom:0"><div class="wg-card"><div class="wg-ico"><i data-lucide="school"></i></div><div class="wg-n">Schools &amp; Colleges</div></div><div class="wg-card"><div class="wg-ico"><i data-lucide="landmark"></i></div><div class="wg-n">Universities</div></div><div class="wg-card"><div class="wg-ico"><i data-lucide="book-marked"></i></div><div class="wg-n">Tuition Centers</div></div><div class="wg-card"><div class="wg-ico"><i data-lucide="briefcase"></i></div><div class="wg-n">Training Providers</div></div><div class="wg-card"><div class="wg-ico"><i data-lucide="graduation-cap"></i></div><div class="wg-n">Students</div></div></div>
+    <div class="ic-wrap fade-up"><img src="img/nena-ai.png" alt="South Asian, Filipino and Muslim students learning on tablet — Nena AI" loading="lazy" decoding="async"><div class="ic-ov"></div><div class="ic-body"><div><h2>Modernize your institution with AI.</h2><p>Give your students smarter tools and your institution a real competitive edge.</p><div class="ic-btns"><a href="#" class="btn btn-blue btn-lg" onclick="return go('contact')">For Institutions</a><a href="#" class="btn btn-ghost-dk" onclick="return go('contact')">For Students</a></div></div></div></div>
+  </div></section>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     AUTOFLOW DETAIL
+═══════════════════════════════════════════ -->
+<div id="autoflow" class="page">
+  <div class="ph-wrap"><img src="img/autoflow.png" alt="AutoFlow Smart Service Center — car wash, service and engine repair"><div class="ph-ov"></div><div class="ph-body"><div class="ph-inner"><div class="ph-eyebrow g">Automotive ERP</div><h1 class="ph-h"><i data-lucide="wrench"></i> Your Garage. Fully Automated.</h1><p class="ph-p">Paper job cards and inventory chaos are over. AutoFlow runs your workshop like a precision machine.</p><div class="ph-btns"><a href="#" class="btn btn-primary btn-lg" style="background:var(--green)" onclick="return go('contact')">Schedule a Walkthrough</a><a href="#" class="btn btn-ghost-dk" onclick="return go('contact')">Talk to Us</a></div></div></div></div>
+  <section class="det-sec sec-bg-white"><div class="wrap">
+    <div class="ps-2 fade-up">
+      <div class="pbox prob"><div class="pbox-tag o">The Problem</div><ul class="pbox-list"><li>Manual job cards slow down every service bay</li><li>Poor bay allocation means idle time and customer wait</li><li>Inventory mismatches cause delays and lost revenue</li><li>Customers leave without updates and don't return</li><li>No visibility across branches for group operators</li></ul></div>
+      <div class="pbox sol"><div class="pbox-tag b">The Solution</div><ul class="pbox-list"><li>Digital job cards with real-time status tracking</li><li>Smart bay and technician allocation system</li><li>Integrated inventory and parts management</li><li>Automated customer communication at every step</li><li>Branch-level reporting and multi-branch management</li></ul></div>
+    </div>
+    <h2 class="heading-md fade-up" style="margin-bottom:14px">Features &amp; Benefits</h2>
+    <div class="ft-wrap fade-up">
+      <div class="ft-nav">
+        <div class="ft-tab on" onclick="ftab(this)">Workshop Operations</div>
+        <div class="ft-tab" onclick="ftab(this)">Customer Experience</div>
+        <div class="ft-tab" onclick="ftab(this)">Management &amp; Visibility</div>
+      </div>
+      <div class="ft-panel on"><div class="fi-grid"><div class="fi"><div class="fi-ico"><i data-lucide="clipboard-list"></i></div><div><div class="fi-t">Digital Job Cards</div><div class="fi-d">Every job tracked from intake to completion. Zero paperwork, zero lost cards.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="parking-square"></i></div><div><div class="fi-t">Bay &amp; Technician Allocation</div><div class="fi-d">Smart scheduling ensures every bay is used efficiently. Maximum throughput.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="cog"></i></div><div><div class="fi-t">Inventory &amp; Parts</div><div class="fi-d">Right part, right place, right time. Automated reorder alerts and parts tracking.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="banknote"></i></div><div><div class="fi-t">Billing &amp; Invoicing</div><div class="fi-d">Instant invoices, faster payments, better cashflow. Multiple payment methods.</div></div></div></div></div>
+      <div class="ft-panel"><div class="fi-grid"><div class="fi"><div class="fi-ico"><i data-lucide="smartphone"></i></div><div><div class="fi-t">Automated Customer Updates</div><div class="fi-d">SMS/email updates at every job stage. Customers who know what's happening return.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="star"></i></div><div><div class="fi-t">Service History</div><div class="fi-d">Every vehicle's full service history at a glance. Build loyalty with personalized care.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="calendar"></i></div><div><div class="fi-t">Online Appointment Booking</div><div class="fi-d">Customers book online. You approve, schedule, and confirm — no phone tag.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="bell"></i></div><div><div class="fi-t">Service Due Reminders</div><div class="fi-d">Automated reminders for next service and part replacements. Passive repeat business.</div></div></div></div></div>
+      <div class="ft-panel"><div class="fi-grid"><div class="fi"><div class="fi-ico"><i data-lucide="bar-chart-3"></i></div><div><div class="fi-t">Branch-Level Reporting</div><div class="fi-d">Revenue, throughput, and technician performance by branch. See everything.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="building-2"></i></div><div><div class="fi-t">Multi-Branch Management</div><div class="fi-d">One system for your whole group. Consistent operations, central control.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="hard-hat"></i></div><div><div class="fi-t">Technician Tracking</div><div class="fi-d">Track jobs, time, and customer ratings per technician. Reward your best people.</div></div></div><div class="fi"><div class="fi-ico"><i data-lucide="trending-down"></i></div><div><div class="fi-t">Revenue Analytics</div><div class="fi-d">Know your most profitable services, peak hours, and growth opportunities.</div></div></div></div></div>
+    </div>
+    <h2 class="heading-sm fade-up" style="margin-bottom:12px">Who It's For</h2>
+    <div class="wg fade-up" style="margin-bottom:0"><div class="wg-card"><div class="wg-ico"><i data-lucide="wrench"></i></div><div class="wg-n">Garages</div></div><div class="wg-card"><div class="wg-ico">⛽</div><div class="wg-n">Service Stations</div></div><div class="wg-card"><div class="wg-ico"><i data-lucide="building-2"></i></div><div class="wg-n">Multi-Branch Groups</div></div></div>
+    <div class="ic-wrap fade-up"><img src="img/autoflow.png" alt="AutoFlow Smart Service Center — car wash, service and engine repair" loading="lazy" decoding="async"><div class="ic-ov"></div><div class="ic-body"><div><h2>Ready to run a smarter workshop?</h2><p>Join garages and service stations operating at a completely different level.</p><div class="ic-btns"><a href="#" class="btn btn-primary btn-lg" style="background:var(--green)" onclick="return go('contact')">Schedule a Walkthrough</a><a href="#" class="btn btn-ghost-dk" onclick="return go('contact')">Talk to Us</a></div></div></div></div>
+  </div></section>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SERVICES PAGE
+═══════════════════════════════════════════ -->
+<div id="services" class="page">
+  <div class="ph-wrap"><img src="img/talent-acquisition.png" alt="Services"><div class="ph-ov"></div><div class="ph-body"><div class="ph-inner"><div class="ph-eyebrow b">Talent &amp; Engineering Services</div><h1 class="ph-h">Your team. Your systems. Our engineers.</h1><p class="ph-p">From Talent Acquisition to Product Development — hire faster, build smarter, grow confidently.</p></div></div></div>
+  <section class="sec sec-bg-white"><div class="wrap">
+
+    <!-- TAaaS: HR recruiter / technical interview -->
+    <div class="svc-card fade-up">
+      <div class="svc-card-img"><img src="img/talent-acquisition.png" alt="Talent Acquisition as a Service — recruiter reviewing candidates" loading="lazy" decoding="async"><div class="svc-card-img-ov"></div><div class="svc-card-num">01</div></div>
+      <div class="svc-card-body">
+        <div class="svc-card-tag">Talent Solutions</div>
+        <div class="svc-card-name">Talent Acquisition as a Service (TAaaS)</div>
+        <p class="svc-card-desc">We become your extended hiring team — sourcing, screening, and delivering qualified talent across technical and business roles, faster and more cost-efficiently than traditional recruitment.</p>
+        <div class="svc-pill-grid">
+          <div class="spg-options"><div class="spg-col-h">Engagement Options</div><div class="spg-pills"><div class="spg-pill">Success-Based Hiring</div><div class="spg-pill">Dedicated Recruiter / HR</div><div class="spg-pill">Recruitment Process Outsourcing</div></div></div>
+          <div class="spg-benefits"><div class="spg-col-h">Key Benefits</div><div class="spg-pills"><div class="spg-pill"><span class="ico-inline"><i data-lucide="zap"></i></span> Faster hiring cycles</div><div class="spg-pill"><span class="ico-inline"><i data-lucide="wallet"></i></span> Reduced cost-per-hire</div><div class="spg-pill"><span class="ico-inline"><i data-lucide="target"></i></span> Pre-screened talent pool</div><div class="spg-pill"><span class="ico-inline"><i data-lucide="trending-up"></i></span> Scalable hiring support</div></div></div>
+          <div class="spg-why"><div class="spg-col-h">Roles We Cover</div><div class="spg-pills"><div class="spg-pill">Engineering &amp; Product</div><div class="spg-pill">Sales &amp; Business Dev</div><div class="spg-pill">HR &amp; IT Project Mgmt</div><div class="spg-pill">Profiles in 48 hours</div></div></div>
+        </div>
+        <div class="svc-cta-row"><p class="svc-cta-note">Stop letting slow hiring block your growth. We own the process — from search through to offer accepted.</p><a href="#" class="btn btn-primary" onclick="return go('contact')">Start Hiring Smarter <i data-lucide="arrow-right" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i></a></div>
+      </div>
+    </div>
+
+    <!-- Dedicated Team: IT team coding -->
+    <div class="svc-card fade-up">
+      <div class="svc-card-img"><img src="img/dedicated-team.png" alt="Dedicated engineering team — sprint planning and agile delivery" loading="lazy" decoding="async"><div class="svc-card-img-ov"></div><div class="svc-card-num">02</div></div>
+      <div class="svc-card-body">
+        <div class="svc-card-tag">Engineering Teams</div>
+        <div class="svc-card-name">Dedicated Team as a Service</div>
+        <p class="svc-card-desc">Build and manage dedicated engineering teams that work exclusively on your products — delivering full-stack development, QA, and DevOps under your direction, on your timelines.</p>
+        <div class="svc-pill-grid">
+          <div class="spg-options"><div class="spg-col-h">Engagement Options</div><div class="spg-pills"><div class="spg-pill">Dedicated Developers</div><div class="spg-pill">Dedicated Product Teams</div><div class="spg-pill">Managed Delivery Teams</div></div></div>
+          <div class="spg-benefits"><div class="spg-col-h">Key Benefits</div><div class="spg-pills"><div class="spg-pill"><span class="ico-inline"><i data-lucide="rocket"></i></span> Rapid team scaling</div><div class="spg-pill"><span class="ico-inline"><i data-lucide="wallet"></i></span> Predictable monthly cost</div><div class="spg-pill"><span class="ico-inline"><i data-lucide="target"></i></span> Full product focus</div><div class="spg-pill"><span class="ico-inline"><i data-lucide="zap"></i></span> Reduced mgmt overhead</div></div></div>
+          <div class="spg-why"><div class="spg-col-h">Team Composition</div><div class="spg-pills"><div class="spg-pill">Full Stack &amp; Mobile Devs</div><div class="spg-pill">QA &amp; Test Automation</div><div class="spg-pill">DevOps Engineers</div><div class="spg-pill">PM / Scrum Master</div></div></div>
+        </div>
+        <div class="svc-cta-row"><p class="svc-cta-note">A full engineering team on your product within weeks — without the hiring overhead.</p><a href="#" class="btn btn-primary" onclick="return go('contact')">Build Your Team <i data-lucide="arrow-right" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i></a></div>
+      </div>
+    </div>
+
+    <!-- Product R&D: tech architect presenting -->
+    <div class="svc-card fade-up">
+      <div class="svc-card-img"><img src="img/product-rnd.png" alt="Product R&D Team — product strategy and roadmap session" loading="lazy" decoding="async"><div class="svc-card-img-ov"></div><div class="svc-card-num">03</div></div>
+      <div class="svc-card-body">
+        <div class="svc-card-tag">Product Engineering</div>
+        <div class="svc-card-name">Product R&amp;D Team as a Service</div>
+        <p class="svc-card-desc">Accelerate product development with experienced product, engineering, QA, and DevOps professionals — available on-demand, as a dedicated R&amp;D team, or via Build-Operate-Transfer.</p>
+        <div class="svc-pill-grid">
+          <div class="spg-options"><div class="spg-col-h">Engagement Options</div><div class="spg-pills"><div class="spg-pill">On-Demand Engineering</div><div class="spg-pill">Dedicated R&amp;D Team</div><div class="spg-pill">Build-Operate-Transfer (BOT)</div></div></div>
+          <div class="spg-benefits"><div class="spg-col-h">Key Benefits</div><div class="spg-pills"><div class="spg-pill"><span class="ico-inline"><i data-lucide="rocket"></i></span> Faster time-to-market</div><div class="spg-pill"><span class="ico-inline"><i data-lucide="shield"></i></span> Lower product risk</div><div class="spg-pill"><span class="ico-inline"><i data-lucide="refresh-cw"></i></span> Flexible models</div><div class="spg-pill"><span class="ico-inline"><i data-lucide="home"></i></span> In-house absorption</div></div></div>
+          <div class="spg-why"><div class="spg-col-h">R&amp;D Capabilities</div><div class="spg-pills"><div class="spg-pill">Product Strategy &amp; Roadmap</div><div class="spg-pill">Full-Stack Engineering &amp; Architecture</div><div class="spg-pill">QA &amp; Test Automation</div><div class="spg-pill">Custom Software &amp; Low-Code</div><div class="spg-pill">Workflow Automation &amp; APIs</div><div class="spg-pill">Internal Tools &amp; Dashboards</div></div></div>
+        </div>
+        <div class="svc-cta-row"><p class="svc-cta-note">From idea to shipped product — with an R&amp;D team that moves fast without breaking things.</p><a href="#" class="btn btn-primary" onclick="return go('contact')">Start Your R&amp;D <i data-lucide="arrow-right" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i></a></div>
+      </div>
+    </div>
+
+    <!-- Tagline Banner — blue section -->
+    <div style="background:var(--navy);border-radius:var(--r3);padding:44px 48px;margin:40px 0;text-align:center;position:relative;overflow:hidden" class="fade-up svc-banner">
+      <div style="position:absolute;inset:0;background:url('img/dedicated-team.png') center/cover no-repeat;opacity:.07"></div>
+      <div style="position:relative;z-index:1">
+        <h2 style="font-size:clamp(15px,2vw,24px);font-weight:700;color:#fff;max-width:680px;margin:0 auto 9px;line-height:1.45;letter-spacing:-.01em">"From Talent Acquisition to Product Development, we provide scalable teams that help businesses <em style="font-style:normal;color:var(--orange)">hire faster, build smarter, and grow confidently.</em>"</h2>
+        <p style="font-size:13px;color:rgba(255,255,255,.5);max-width:460px;margin:0 auto 20px;line-height:1.65">Whether you need one engineer or a full product team — we have the model, talent, and processes to deliver.</p>
+        <div style="display:flex;justify-content:center;gap:11px;flex-wrap:wrap"><a href="#" class="btn btn-primary" style="background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)" onclick="return go('contact')">Talk to Us <i data-lucide="arrow-right" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i></a><a href="#" class="btn btn-accent" onclick="return go('contact')">Book a Discovery Call</a></div>
+      </div>
+    </div>
+
+    <!-- Additional Services -->
+    <div style="margin-top:16px">
+      <h2 class="heading-md fade-up" style="margin-bottom:6px">Additional Services</h2>
+      <p class="body-md fade-up d1" style="margin-bottom:22px">Infrastructure, delivery, and technology implementations to complete your stack.</p>
+      <div class="add-grid">
+        <!-- Managed Services: server room / data center -->
+        <div class="add-card fade-up">
+          <div class="add-card-img"><img src="img/managed-services.png" alt="Managed Services — IT engineer monitoring server infrastructure" loading="lazy" decoding="async"><div class="add-card-img-ov"></div></div>
+          <div class="add-card-body"><div class="add-card-ico"><i data-lucide="cloud"></i></div><div class="add-card-title">Managed Services</div><div class="add-card-desc">24/7 cloud, infrastructure, and application management — enterprise-grade reliability.</div><ul class="add-card-list chk"><li>24/7 monitoring &amp; incident response</li><li>Cloud operations &amp; optimization</li><li>Security &amp; compliance management</li><li>Infrastructure scaling</li></ul></div>
+        </div>
+        
+        <!-- Partner Solutions: IT mentoring with laptop -->
+        <div class="add-card fade-up d2">
+          <div class="add-card-img"><img src="img/partner-solutions.png" alt="Partner Solutions — technology partnership and global collaboration" loading="lazy" decoding="async"><div class="add-card-img-ov"></div></div>
+          <div class="add-card-body"><div class="add-card-ico"><i data-lucide="handshake"></i></div><div class="add-card-title">Partner Solutions</div><div class="add-card-desc">Globally-backed fintech, cloud, and enterprise automation technology implementations.</div><ul class="add-card-list arr"><li>Payment solutions &amp; devices</li><li>Workflow automation platforms</li><li>Analytical &amp; BI solutions</li><li>Enterprise platform integrations</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </div></section>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     ABOUT PAGE
+═══════════════════════════════════════════ -->
+<div id="about" class="page">
+  <div class="ph-wrap"><img src="img/dedicated-team.png" alt="Team"><div class="ph-ov"></div><div class="ph-body"><div class="ph-inner"><div class="ph-eyebrow b">About Wenthura</div><h1 class="ph-h">We Don't Just Build Software.<br>We Engineer Momentum.</h1><p class="ph-p">Since 2019, building intelligent platforms and delivering engineering teams for businesses that refuse to settle for generic.</p></div></div></div>
+  <section class="sec sec-bg-white"><div class="wrap">
+    <div class="ab-grid">
+      <div class="fade-left">
+        <div class="eyebrow">Our Story</div>
+        <h2 class="heading-lg">From Dev Shop to Product Company in 7 Years.</h2>
+        <p class="body-md" style="margin:14px 0 10px">Founded in 2019 as a bespoke software development company, Wenthura has grown into a team of 35+ permanent engineering professionals with deep product, technology, and domain expertise — building purpose-built platforms and running enterprise services. Supported by an on-demand network of freelance specialists and trusted delivery partners, we bring the right expertise to every engagement.</p>
+        <p class="body-md" style="margin-bottom:6px">Headquartered in Colombo, Sri Lanka, we build software platforms, engineering teams, and education technology solutions for businesses across the region. Our solutions support organisations in Sri Lanka, UAE, Thailand, and Cambodia.</p>
+        <div class="tl-wrap">
+          <div class="tl-item"><div class="tl-dot"></div><div><div class="tl-yr">2019</div><div class="tl-tx">Founded as a bespoke software development company with custom builds for early clients.</div></div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div><div class="tl-yr">2020–2023</div><div class="tl-tx">Delivered 30+ custom solutions across multiple industries. Grew the team to 35+ permanent engineering professionals.</div></div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div><div class="tl-yr">2024</div><div class="tl-tx">Launched Nena AI — AI-powered learning platform for students and institutions.</div></div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div><div class="tl-yr">2025–2026</div><div class="tl-tx">Launched DoodleNest &amp; AutoFlow. Expanding through a growing network of regional partners.</div></div></div>
+        </div>
+      </div>
+      <div class="fade-right">
+        <div class="eyebrow navy">By the Numbers</div>
+        <h3 class="heading-md" style="margin-bottom:18px">Numbers that tell the story.</h3>
+        <div class="stat-2">
+          <div class="sb"><div class="sb-n">18<em>+</em></div><div class="sb-l">Clients Served</div></div>
+          <div class="sb"><div class="sb-n">25<em>+</em></div><div class="sb-l">Solutions Built</div></div>
+          <div class="sb"><div class="sb-n">500<em>+</em></div><div class="sb-l">Active Users</div></div>
+          <div class="sb"><div class="sb-n">35<em>+</em></div><div class="sb-l">Engineering Professionals</div></div>
+        </div>
+        <div class="eyebrow navy" style="margin-bottom:11px">Focus Areas</div>
+        <div class="pillars">
+          <div class="pil" onclick="go('products')"><span class="pil-ico"><i data-lucide="package"></i></span><div><div class="pil-t">Products</div><div class="pil-d">DoodleNest · Nena AI · AutoFlow</div></div></div>
+          <div class="pil" onclick="go('services')"><span class="pil-ico"><i data-lucide="target"></i></span><div><div class="pil-t">TAaaS</div><div class="pil-d">Talent Acquisition</div></div></div>
+          <div class="pil" onclick="go('services')"><span class="pil-ico"><i data-lucide="users"></i></span><div><div class="pil-t">Dedicated Teams</div><div class="pil-d">Engineering delivery</div></div></div>
+          <div class="pil" onclick="go('services')"><span class="pil-ico"><i data-lucide="microscope"></i></span><div><div class="pil-t">Product R&amp;D</div><div class="pil-d">Build-Operate-Transfer</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="ic-wrap fade-up" style="margin-top:44px"><img src="img/partner-solutions.png" alt="Wenthura team collaboration" loading="lazy"><div class="ic-ov"></div><div class="ic-body"><div><h2>Ready to work together?</h2><p>Whether it's a product, a team, or a system — let's start a conversation.</p><div class="ic-btns"><a href="#" class="btn btn-primary btn-lg" onclick="return go('contact')">Get in Touch</a><a href="#" class="btn btn-ghost-dk" onclick="return go('contact')">Book a Discovery Call</a></div></div></div></div>
+  </div></section>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     CONTACT PAGE
+═══════════════════════════════════════════ -->
+<div id="contact" class="page">
+  <div class="ph-wrap"><img src="img/partner-solutions.png" alt="Contact"><div class="ph-ov"></div><div class="ph-body"><div class="ph-inner"><div class="ph-eyebrow b">Get in Touch</div><h1 class="ph-h">Let's Build Something Together.</h1><p class="ph-p">Tell us what you need — we'll put the right product, team, or solution together. No fluff, no runaround.</p></div></div></div>
+  <section class="sec sec-bg-white contact-sec"><div class="wrap">
+    <div class="ct-grid">
+      <div class="fade-left ct-info">
+        <h2 class="heading-md ct-heading">Talk to Our Team</h2>
+        <div class="ci-b"><div class="ci-lbl">Email</div><div class="ci-val"><a href="mailto:hello@wenthura.lk">hello@wenthura.lk</a></div></div>
+        <div class="ci-b"><div class="ci-lbl">WhatsApp</div><div class="ci-val"><a href="https://wa.me/94778282186?text=Hi%20Wenthura%2C%20I%27d%20like%20to%20learn%20more." target="_blank" rel="noopener">+94 77 828 2186</a></div></div>
+        <div class="ci-b"><div class="ci-lbl">Headquarters</div><div class="ci-val">Colombo, Sri Lanka</div></div>
+        <div class="ci-b"><div class="ci-lbl">Company</div><div class="ci-val">Wenthura Solutions (Private) Limited</div></div>
+        <div class="ci-b">
+          <div class="ci-lbl">Regional Partners</div>
+          <div class="region-tags">
+            <span class="rt">UAE</span>
+            <span class="rt">Philippines</span>
+            <span class="rt">India</span>
+            <span class="rt">Cambodia</span>
+          </div>
+        </div>
+        <div class="ch-btns"><div class="ch-btn"><span class="ico-inline"><i data-lucide="calendar"></i></span> Book a Discovery Call</div><div class="ch-btn"><span class="ico-inline"><i data-lucide="message-circle"></i></span> WhatsApp Us</div></div>
+        <div style="margin-top:18px">
+          <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-500);margin-bottom:10px">Connect With Us</div>
+          <div class="contact-social">
+            <a href="https://www.linkedin.com/company/wenthurasolutions/" target="_blank" rel="noopener" class="contact-social-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://x.com/wenthuras" target="_blank" rel="noopener" class="contact-social-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              X (Twitter)
+            </a>
+            <a href="https://www.facebook.com/wenthurasolutions/" target="_blank" rel="noopener" class="contact-social-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Facebook
+            </a>
+          </div>
+        </div>
+        <div class="ct-tip ct-tip-blue"><div class="ct-tip-title">Interested in a specific product?</div><div class="ct-tip-body">Mention DoodleNest, Nena AI, or AutoFlow — we'll connect you with the right specialist.</div></div>
+        <div class="ct-tip ct-tip-orange"><div class="ct-tip-title">Need a team or talent fast?</div><div class="ct-tip-body">Share role requirements — candidate profiles or team proposals within 48 hours.</div></div>
+      </div>
+      <div class="fade-right ct-form">
+        <div class="fw">
+          <div class="fw-h">Send a Message</div>
+          <div class="frow"><div class="fg"><label for="fn">Full Name *</label><input type="text" name="name" id="fn" placeholder="Your name" autocomplete="name" required></div><div class="fg"><label for="fc">Company</label><input type="text" name="company" id="fc" placeholder="Company name" autocomplete="organization"></div></div>
+          <div class="frow"><div class="fg"><label for="fe">Email *</label><input type="email" name="email" id="fe" placeholder="you@company.com" autocomplete="email" inputmode="email" required></div><div class="fg"><label for="fp">Phone</label><input type="tel" name="phone" id="fp" placeholder="+94 77 828 2186" autocomplete="tel" inputmode="tel"></div></div>
+          <div class="fg"><label for="fi">I'm interested in...</label>
+            <div class="csel" id="interestCsel">
+              <button type="button" class="csel-trigger" id="fi-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="fi-menu">
+                <span class="csel-value is-placeholder">Select an option</span>
+              </button>
+              <ul class="csel-menu" id="fi-menu" role="listbox" hidden>
+                <li class="csel-group" role="presentation">Services</li>
+                <li role="presentation"><button type="button" class="csel-opt" role="option" data-value="taas">TAaaS</button></li>
+                <li role="presentation"><button type="button" class="csel-opt" role="option" data-value="dedicated-team">Dedicated Team</button></li>
+                <li role="presentation"><button type="button" class="csel-opt" role="option" data-value="product-rnd">Product R&amp;D</button></li>
+                <li role="presentation"><button type="button" class="csel-opt" role="option" data-value="managed-services">Managed Services</button></li>
+                <li role="presentation"><button type="button" class="csel-opt" role="option" data-value="partner-solutions">Partner Solutions</button></li>
+                <li class="csel-group" role="presentation">Products</li>
+                <li role="presentation"><button type="button" class="csel-opt" role="option" data-value="doodlenest">DoodleNest</button></li>
+                <li role="presentation"><button type="button" class="csel-opt" role="option" data-value="nena-ai">Nena AI</button></li>
+                <li role="presentation"><button type="button" class="csel-opt" role="option" data-value="autoflow">AutoFlow</button></li>
+                <li role="presentation"><button type="button" class="csel-opt" role="option" data-value="general">General Enquiry</button></li>
+              </ul>
+              <select name="interest" id="fi" class="csel-native" tabindex="-1" aria-hidden="true">
+                <option value="">Select an option</option>
+                <option value="taas">TAaaS</option>
+                <option value="dedicated-team">Dedicated Team</option>
+                <option value="product-rnd">Product R&amp;D</option>
+                <option value="managed-services">Managed Services</option>
+                <option value="partner-solutions">Partner Solutions</option>
+                <option value="doodlenest">DoodleNest</option>
+                <option value="nena-ai">Nena AI</option>
+                <option value="autoflow">AutoFlow</option>
+                <option value="general">General Enquiry</option>
+              </select>
+            </div>
+          </div>
+          <div class="fg"><label for="fm">Message</label><textarea name="message" id="fm" placeholder="Tell us what you're working on, what's not working, or what you'd like to build..." rows="5"></textarea></div>
+          <button type="button" class="fsub" onclick="submitForm()">Submit — Talk to Us <i data-lucide="arrow-right" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i></button>
+          <div class="fsucc" id="fsucc"><i data-lucide="check-circle" style="width:14px;height:14px;display:inline;vertical-align:-2px;color:var(--green)"></i> Message received — we'll be in touch within 1 business day.</div>
+        </div>
+      </div>
+    </div>
+  </div></section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-top-bar"></div>
+  <div class="ft-in">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <div class="ft-logo">WENTHURA<em>®</em></div>
+        <p>Disruptive Digital Solutions. Intelligent platforms and scalable engineering teams built for businesses that demand more.</p>
+        <p style="margin-top:6px;color:rgba(255,255,255,.2);font-size:11px">hello@wenthura.lk · Colombo, Sri Lanka</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/company/wenthurasolutions/" target="_blank" rel="noopener" class="social-link" title="LinkedIn"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="https://x.com/wenthuras" target="_blank" rel="noopener" class="social-link" title="X (Twitter)"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://www.facebook.com/wenthurasolutions/" target="_blank" rel="noopener" class="social-link" title="Facebook"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      </div>
+    </div>
+      <div class="ft-col"><h4>Products</h4><a href="#" onclick="return go('doodlenest')">DoodleNest</a><a href="#" onclick="return go('nena')">Nena AI</a><a href="#" onclick="return go('autoflow')">AutoFlow</a>
+    </div>
+      <div class="ft-col"><h4>Services</h4><a href="#" onclick="return go('services')">TAaaS</a><a href="#" onclick="return go('services')">Dedicated Teams</a><a href="#" onclick="return go('services')">Product R&D</a><a href="#" onclick="return go('services')">Managed Services</a></div>
+      <div class="ft-col"><h4>Company</h4><a href="#" onclick="return go('about')">About Us</a><a href="#" onclick="return go('contact')">Contact</a><a href="#" onclick="return go('contact')">Book a Call</a><a href="mailto:hello@wenthura.lk">hello@wenthura.lk</a></div>
+    </div>
+    <div class="ft-bot"><p>© 2026 Wenthura Solutions (Private) Limited. All rights reserved.</p><p style="font-size:11px;color:rgba(255,255,255,.18)">Colombo, Sri Lanka</p></div>
+  </div>
+</footer>
+<div class="wa" title="WhatsApp" onclick="openWhatsApp()" role="button" tabindex="0" aria-label="Chat on WhatsApp"><i data-lucide="message-circle"></i></div>
+
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="js/wenthura-premium.js"></script>
+<script src="js/wenthura-chatbot.js"></script>
+<script>
+/* ─── PAGE ROUTING ─────────────────────────── */
+function go(id){
+  // Hide all pages
+  document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+  // Show target page
+  var pg=document.getElementById(id);
+  if(pg){
+    pg.classList.add("active");
+    window.scrollTo({top:0,behavior:"smooth"});
+    // Trigger animations
+    setTimeout(animateVisible,80);
+    if(id==="contact"&&typeof initCustomSelects==="function")initCustomSelects(pg);
+  }
+  // Update nav active state
+  var aliases={doodlenest:"products",nena:"products",autoflow:"products"};
+  var target=aliases[id]||id;
+  document.querySelectorAll(".nav-links a, .mob-link").forEach(function(a){
+    a.classList.remove("on");
+    if(a.dataset.p===target||a.dataset.p===id) a.classList.add("on");
+  });
+  // Close mobile menu
+  closeMob();
+  // Update browser history (without page reload)
+  if(window.history && window.history.pushState){
+    window.history.pushState({page:id},document.title,'#'+id);
+  }
+  return false;
+}
+
+/* ─── SCROLL ANIMATIONS ─────────────────────── */
+function animateVisible(){
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("vis");});
+  },{threshold:0.07,rootMargin:"0px 0px -16px 0px"});
+  document.querySelectorAll(".page.active .fade-up:not(.vis),.page.active .fade-left:not(.vis),.page.active .fade-right:not(.vis)").forEach(el=>obs.observe(el));
+}
+
+/* ─── MOBILE MENU ─────────────────────────── */
+function openMob(){
+  var m=document.getElementById("mobMenu"),h=document.getElementById("hamBtn"),nav=document.getElementById("mainNav");
+  if(!m)return;
+  if(typeof window.setMenuOrigin==="function")window.setMenuOrigin();
+  m.classList.add("open");
+  if(h){h.classList.add("open");h.setAttribute("aria-expanded","true");h.setAttribute("aria-label","Close menu");var lbl=h.querySelector(".nav-menu-label");if(lbl)lbl.textContent="Close";}
+  if(nav)nav.classList.add("menu-open");
+  m.setAttribute("aria-hidden","false");
+  document.body.classList.add("nav-open");
+  if(typeof initIcons==='function') initIcons(m);
+}
+function closeMob(){
+  var m=document.getElementById("mobMenu"),h=document.getElementById("hamBtn"),nav=document.getElementById("mainNav");
+  if(!m)return;
+  m.classList.remove("open");
+  if(h){h.classList.remove("open");h.setAttribute("aria-expanded","false");h.setAttribute("aria-label","Open menu");var lbl=h.querySelector(".nav-menu-label");if(lbl)lbl.textContent="Menu";}
+  if(nav)nav.classList.remove("menu-open");
+  m.setAttribute("aria-hidden","true");
+  document.body.classList.remove("nav-open");
+}
+function toggleMob(){
+  var m=document.getElementById("mobMenu");
+  if(m&&m.classList.contains("open")) closeMob(); else openMob();
+}
+document.addEventListener("keydown",function(e){if(e.key==="Escape") closeMob();});
+
+/* Product slideshows removed — static images used on product/service pages */
+/* ─── TESTIMONIAL SCROLL ─────────────────────
+   Auto-advance every 5s
+   ─────────────────────────────────────────── */
+let tstPos=0,tstMax=2;
+function tstMv(d){tstPos=Math.max(0,Math.min(tstMax,tstPos+d));updateTst();}
+function tstGo(p){tstPos=p;updateTst();}
+function updateTst(){
+  const t=document.getElementById("tstTrack");
+  if(!t)return;
+  const card=t.querySelector(".tc");
+  const w=card?(card.offsetWidth+18):320;
+  t.style.transform="translateX(-"+(tstPos*w)+"px)";
+  document.querySelectorAll("#tstDots .scr-dot").forEach((d,i)=>d.classList.toggle("on",i===tstPos));
+  document.getElementById("tstL")?.classList.toggle("dis",tstPos===0);
+  document.getElementById("tstR")?.classList.toggle("dis",tstPos>=tstMax);
+}
+setInterval(()=>{tstPos=(tstPos+1)%(tstMax+1);updateTst();},5000);
+
+/* ─── FEATURE TABS ───────────────────────── */
+function ftab(el){
+  const wrap=el.closest(".ft-wrap");
+  if(!wrap)return;
+  const nav=wrap.querySelector(".ft-nav");
+  const tabs=wrap.querySelectorAll(".ft-tab");
+  const panels=wrap.querySelectorAll(".ft-panel");
+  const idx=[...tabs].indexOf(el);
+  tabs.forEach(t=>t.classList.remove("on"));
+  panels.forEach(p=>p.classList.remove("on"));
+  el.classList.add("on");
+  if(panels[idx])panels[idx].classList.add("on");
+  if(nav&&window.matchMedia("(max-width:767px)").matches){
+    el.scrollIntoView({behavior:"smooth",inline:"center",block:"nearest"});
+  }
+}
+
+/* ─── CUSTOM SELECT (no overflow on mobile) ─ */
+function initCustomSelects(root){
+  var scope=root||document;
+  scope.querySelectorAll(".csel").forEach(function(wrap){
+    if(wrap._cselInit)return;
+    wrap._cselInit=true;
+    var trigger=wrap.querySelector(".csel-trigger");
+    var menu=wrap.querySelector(".csel-menu");
+    var valueEl=wrap.querySelector(".csel-value");
+    var native=wrap.querySelector(".csel-native");
+    var opts=wrap.querySelectorAll(".csel-opt");
+    if(!trigger||!menu||!valueEl||!native)return;
+    function close(){
+      menu.hidden=true;
+      trigger.setAttribute("aria-expanded","false");
+      wrap.classList.remove("is-open");
+      var col=wrap.closest(".ct-form");
+      if(col)col.classList.remove("has-open-csel");
+    }
+    function open(){
+      menu.hidden=false;
+      trigger.setAttribute("aria-expanded","true");
+      wrap.classList.add("is-open");
+      var col=wrap.closest(".ct-form");
+      if(col)col.classList.add("has-open-csel");
+    }
+    function setValue(val,label){
+      native.value=val;
+      var selOpt=native.options[native.selectedIndex];
+      valueEl.textContent=label||(selOpt?selOpt.text:"Select an option");
+      valueEl.classList.toggle("is-placeholder",!val);
+      opts.forEach(function(o){o.setAttribute("aria-selected",o.dataset.value===val?"true":"false");});
+      close();
+    }
+    trigger.addEventListener("click",function(e){
+      e.stopPropagation();
+      if(menu.hidden)open(); else close();
+    });
+    opts.forEach(function(opt){
+      opt.addEventListener("click",function(e){
+        e.stopPropagation();
+        setValue(opt.dataset.value||"",opt.textContent.trim());
+      });
+    });
+    document.addEventListener("click",function(){close();});
+    document.addEventListener("keydown",function(e){
+      if(e.key==="Escape")close();
+    });
+  });
+}
+
+/* ─── CONTACT FORM ───────────────────────── */
+function submitForm(){
+  const n=document.getElementById("fn"),e=document.getElementById("fe");
+  if(!n?.value.trim()||!e?.value.trim()){alert("Please fill in your name and email.");return;}
+  const s=document.getElementById("fsucc");
+  if(s)s.style.display="block";
+  const b=document.querySelector(".fsub");
+  if(b){
+    b.disabled=true;
+    b.innerHTML='Sent <i data-lucide="check"></i>';
+    b.style.background="var(--green)";
+    if(typeof initIcons==='function') initIcons(b);
+  }
+}
+
+/* ─── HERO SHOWCASE ROTATOR ─────────────────────────────────
+   Immersive blended panel rotator
+   Smooth cross-fade, 4s interval, keyboard accessible
+   ──────────────────────────────────────────────────────── */
+(function(){
+  var cur = 0;
+  var INTERVAL = 4000;
+  var timer;
+  var paused = false;
+
+  function panels() { return document.querySelectorAll('.hs-panel'); }
+  function dots()   { return document.querySelectorAll('#hsDots .hs-dot'); }
+
+  function show(n) {
+    var ps = panels(), ds = dots();
+    if (!ps.length) return;
+    ps[cur].classList.remove('active');
+    if (ds[cur]) ds[cur].classList.remove('active');
+    cur = ((n % ps.length) + ps.length) % ps.length;
+    ps[cur].classList.add('active');
+    if (ds[cur]) ds[cur].classList.add('active');
+    // Update aria-label for accessibility
+    var frame = document.getElementById('hsFrame');
+    if (frame) frame.setAttribute('aria-label', 'Showcase: ' + (ps[cur].dataset.label || ''));
+  }
+
+  function startTimer() {
+    clearInterval(timer);
+    if (!paused) {
+      timer = setInterval(function(){ show(cur + 1); }, INTERVAL);
+    }
+  }
+
+  // Expose for dot click handler
+  window.hsGo = function(n) {
+    show(n);
+    startTimer();
+  };
+
+  // Pause on hover for better UX
+  var showcase = document.querySelector('.hero-showcase');
+  if (showcase) {
+    showcase.addEventListener('mouseenter', function(){ 
+      paused = true; clearInterval(timer); 
+    });
+    showcase.addEventListener('mouseleave', function(){ 
+      paused = false; startTimer(); 
+    });
+    // Touch: pause briefly then resume
+    showcase.addEventListener('touchstart', function(){ 
+      paused = true; clearInterval(timer); 
+    }, {passive:true});
+    showcase.addEventListener('touchend', function(){ 
+      paused = false; setTimeout(startTimer, 2000); 
+    }, {passive:true});
+  }
+
+  // Keyboard navigation (left/right arrow)
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowLeft') { show(cur - 1); startTimer(); }
+    if (e.key === 'ArrowRight') { show(cur + 1); startTimer(); }
+  });
+
+  startTimer();
+})();
+
+// Init on load
+animateVisible();
+
+/* ─── BROWSER BACK/FORWARD BUTTON SUPPORT ─── */
+window.addEventListener('popstate', function(e){
+  var id = (e.state && e.state.page) || 'home';
+  var pg = document.getElementById(id);
+  if(pg){
+    document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
+    pg.classList.add('active');
+    window.scrollTo({top:0,behavior:'instant'});
+    animateVisible();
+  }
+});
+/* Set initial state from hash (deep links) */
+(function(){
+  var hash = (window.location.hash || '').replace(/^#/, '');
+  var valid = ['home','products','services','about','contact','doodlenest','nena','autoflow'];
+  if (hash && valid.indexOf(hash) !== -1) {
+    go(hash);
+  } else if (window.history && window.history.replaceState) {
+    window.history.replaceState({page:'home'},'','#home');
+  }
+  if (typeof initIcons === 'function') initIcons();
+  if (typeof initCustomSelects === 'function') initCustomSelects();
+  if (typeof hookGo === 'function') hookGo();
+})();
+
+</script>
+</body>
+</html>

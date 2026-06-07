@@ -1,5 +1,5 @@
 ﻿import type { Metadata } from "next";
-import { Mail, Phone, Globe, Users, Handshake, MapPin } from "lucide-react";
+import { Mail, Phone, Globe, Users, Handshake, MapPin, MessageCircle } from "lucide-react";
 import { contact } from "@/lib/content";
 import { ContactForm } from "@/components/ContactForm";
 import { Reveal } from "@/components/Reveal";
@@ -13,6 +13,12 @@ const rows = [
   { icon: Globe, label: "Website", value: contact.website, href: `https://${contact.website}` },
   { icon: Mail, label: "General", value: contact.email, href: `mailto:${contact.email}` },
   { icon: Phone, label: "Phone", value: contact.phone, href: `tel:${contact.phone.replace(/\s+/g, "")}` },
+  {
+    icon: MessageCircle,
+    label: "WhatsApp",
+    value: contact.whatsapp,
+    href: `${contact.whatsappLink}?text=${encodeURIComponent("Hi Wenthura, I'd like to learn more.")}`,
+  },
   { icon: Users, label: "Sales", value: contact.sales, href: `mailto:${contact.sales}` },
   { icon: Handshake, label: "Partnerships", value: contact.partner, href: `mailto:${contact.partner}` },
 ];

@@ -1,0 +1,101 @@
+# ═══════════════════════════════════════════════════════
+# Wenthura Website — Apache .htaccess
+# Best practice configuration for security, performance
+# and browser caching
+# ═══════════════════════════════════════════════════════
+
+# ─── SECURITY HEADERS ────────────────────────────────────
+<IfModule mod_headers.c>
+  # Prevent MIME type sniffing
+  Header always set X-Content-Type-Options "nosniff"
+
+  # XSS protection
+  Header always set X-XSS-Protection "1; mode=block"
+
+  # Prevent clickjacking
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # Referrer policy
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Content Security Policy
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self'; frame-ancestors 'none';"
+
+  # Permissions Policy
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+  # Remove server signature
+  Header unset Server
+  Header unset X-Powered-By
+</IfModule>
+
+# ─── PERFORMANCE: BROWSER CACHING ────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # HTML — short cache (content updates frequently)
+  ExpiresByType text/html                    "access plus 1 hour"
+
+  # Images — long cache (images rarely change)
+  ExpiresByType image/png                    "access plus 1 year"
+  ExpiresByType image/jpeg                   "access plus 1 year"
+  ExpiresByType image/gif                    "access plus 1 year"
+  ExpiresByType image/webp                   "access plus 1 year"
+  ExpiresByType image/svg+xml                "access plus 1 year"
+  ExpiresByType image/x-icon                 "access plus 1 year"
+
+  # CSS & JS
+  ExpiresByType text/css                     "access plus 1 year"
+  ExpiresByType application/javascript       "access plus 1 year"
+
+  # Fonts
+  ExpiresByType font/woff2                   "access plus 1 year"
+  ExpiresByType font/woff                    "access plus 1 year"
+</IfModule>
+
+# ─── PERFORMANCE: CACHE-CONTROL HEADERS ──────────────────
+<IfModule mod_headers.c>
+  <FilesMatch "\.(png|jpg|jpeg|gif|webp|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# ─── PERFORMANCE: COMPRESSION ────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE application/json
+</IfModule>
+
+# ─── PERFORMANCE: ETAG ───────────────────────────────────
+FileETag MTime Size
+
+# ─── FORCE HTTPS (uncomment when SSL is active) ──────────
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ─── WWW REDIRECT (choose one) ───────────────────────────
+# Redirect non-www → www:
+# RewriteEngine On
+# RewriteCond %{HTTP_HOST} !^www\. [NC]
+# RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# ─── DEFAULT INDEX ───────────────────────────────────────
+DirectoryIndex index.html
+
+# ─── BLOCK SENSITIVE FILES ───────────────────────────────
+<FilesMatch "(^#.*#|\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|sw[op])|~)$">
+  Require all denied
+</FilesMatch>
+
+# ─── CUSTOM ERROR PAGES (optional) ───────────────────────
+# ErrorDocument 404 /index.html

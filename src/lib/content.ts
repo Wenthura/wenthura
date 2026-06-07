@@ -257,6 +257,8 @@ export const contact = {
   website: "wenthura.lk",
   email: "info@wenthura.lk",
   phone: "+94 11 260 9571",
+  whatsapp: "+94 77 828 2186",
+  whatsappLink: "https://wa.me/94778282186",
   sales: "sales@wenthura.lk",
   partner: "partner@wenthura.lk",
 };

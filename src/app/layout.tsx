@@ -71,21 +71,28 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://wenthura.lk"),
   title: {
-    default: "Wenthura — Driving the Digital Revolution",
+    default: "Wenthura — Disruptive Digital Solutions",
     template: "%s · Wenthura",
   },
   description:
-    "Wenthura delivers groundbreaking Payment & Fintech, ERP and Digital Transformation solutions — cloud-ready, platform-agnostic, and seamlessly interoperable.",
+    "Purpose-built software platforms, dedicated engineering teams, and expert talent acquisition. Wenthura builds intelligent platforms and scalable teams for education, automotive, and enterprise.",
   openGraph: {
-    title: "Wenthura — Driving the Digital Revolution",
+    title: "Wenthura — Disruptive Digital Solutions",
     description:
-      "Next-generation technology solutions in Payment & Fintech, ERP and Digital Transformation.",
+      "Purpose-built platforms, dedicated engineering teams, and expert talent acquisition — precision-engineered for outcomes that last.",
     url: "https://wenthura.lk",
-    siteName: "Wenthura",
-    images: [{ url: "/cover.png", width: 1200, height: 630, alt: "Wenthura" }],
+    siteName: "Wenthura Solutions",
+    images: [{ url: "/img/autoflow.png", width: 1200, height: 630, alt: "Wenthura" }],
     type: "website",
   },
-  icons: { icon: "/logo.jpg" },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/img/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/img/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/img/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
